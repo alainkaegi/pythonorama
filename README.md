@@ -21,7 +21,7 @@ Topic | CS1 | CS2 | Algorithms | Software Development
 -|-|-|-|-
 Development Tools | [Command Line](development_tools/command_line.md) |[Visual Studio Code](development_tools/vs_code.md)<br>PyCharm | Git
 Control<br>Structures | The Main Function<br>[If Statements](control_structures/if_else.md)<br>[Loops](control_structures/loops.md)<br>Functional Decomposition | Recursion | |
-Data<br>Structures | [Primitive Types](data_structures/primitive_types.md)<br>Operators<br>Variables<br>Strings<br>Arrays | Inanimate Objects<br>References<br>Linked Lists<br>Stacks<br>Queues<br>Lists<br>Sets and Maps<br>Trees<br>Graphs | Binary Search Trees<br>Hash Tables<br>Priority Queues<br>Union-Find |
+Data<br>Structures | [Built-in Types](data_structures/built_in_types.md)<br>Operators<br>Variables<br>Strings<br>Arrays | Inanimate Objects<br>References<br>Linked Lists<br>Stacks<br>Queues<br>Lists<br>Sets and Maps<br>Trees<br>Graphs | Binary Search Trees<br>Hash Tables<br>Priority Queues<br>Union-Find |
 Algorithms | | Analysis of Algorithms<br>Search<br>Traversal | Algorithmic Strategies<br>Sorting<br>Graph Algorithms |
 Style | | Documentation<br>Omitting Needless Code | Defensive Programming |
 Object-<br>Oriented Programming | | Constructors<br>Instance Methods<br>Interfaces<br>Generics | Inheritance<br>Packages<br>Exceptions | Enums<br>Inner Classes
