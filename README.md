@@ -19,7 +19,7 @@ The table below shows which topics I expect people to learn in which courses. (C
 
 Topic | CS1 | CS2 | Algorithms | Software Development
 -|-|-|-|-
-Development Tools | [Command Line](development_tools/command_line.md) |[Visual Studio Code](development_tools/vs_code.md)<br>PyCharm | Git
+Development Tools | [Command Line](development_tools/command_line.md)<br>Jupyter / Google Colab |[Visual Studio Code](development_tools/vs_code.md)<br>PyCharm | Git
 Control<br>Structures | [Your First Program](control_structures/your_first_program.md)<br>[If Statements](control_structures/if_else.md)<br>[Loops](control_structures/loops.md)<br>[Functional Decomposition](control_structures/functional_decomposition.md) | Recursion | |
 Data<br>Structures | [Built-in Types](data_structures/built_in_types.md)<br>Operators<br>Variables<br>Strings<br>Arrays | Inanimate Objects<br>References<br>Linked Lists<br>Stacks<br>Queues<br>Lists<br>Sets and Maps<br>Trees<br>Graphs | Binary Search Trees<br>Hash Tables<br>Priority Queues<br>Union-Find |
 Algorithms | | Analysis of Algorithms<br>Search<br>Traversal | Algorithmic Strategies<br>Sorting<br>Graph Algorithms |
