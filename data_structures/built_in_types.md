@@ -43,7 +43,7 @@ Function | Description
 1. :star::star: What does the literal `float('nan')` mean?
 
 ## Answers
-1. Two: `true` and `false`.
+1. Two: `True` and `False`.
 1. There is no difference in this particular example. The use of either type of quotes is appropriate to specify a string literal. The use of one type of quotes is useful to embed the other type in a string without having to escape it. For example, `"mom's"` might be more readable than the equivalent `'mom\'s'`.
 1. An int value can be arbitrarily large, only constrained by the amount of available memory in your computer. 
 1. `float('nan')` is the float value *not a number*. It is the result of calculations such as `Infinity - Infinity`.
