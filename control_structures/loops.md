@@ -54,7 +54,7 @@ where `n` is a variable and `numbers` is a list of values.
 
 The first line of code above can be read, "for each `n` in `numbers`...".
 
-## Resources
+## Resource
 - Sedgewick, Wayne, and Dondero, *Introduction to Programming in Python*, [Section 1.3](https://introcs.cs.princeton.edu/python/13flow/)
 
 ## Questions
