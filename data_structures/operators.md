@@ -1,6 +1,6 @@
 # Operators
 ## Overview
-*Operators* are used to combine expressions (such as [literals](data_structures/built_in_types.md#Literals)) into larger expressions. For example, in `2 + 3`, the `+` operator combines the two operands `2` and `3` into a larger expression which evaluates to the value of 5.
+*Operators* are used to combine expressions (such as [literals](built_in_types.md#Literals)) into larger expressions. For example, in `2 + 3`, the `+` operator combines the two operands `2` and `3` into a larger expression which evaluates to the value of 5.
 
 *Binary operators*, like `+`, are *infix*, meaning that they appear between their two operands. *Unary operators*, like `-` when it is used for negation rather than subtraction, are *prefix* if they appear before the operand and *postfix* if they appear afterward. There is one *ternary operator*, conditional expression A if C else B, which takes three arguments, `A` before the `else`, `C` between the `if` and `else`, and `B` after the `else`.
 
