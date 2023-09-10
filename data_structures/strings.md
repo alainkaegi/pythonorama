@@ -56,8 +56,8 @@ returns `'owe'``.
 
 ## Resources
 - Sedgewick, Wayne, and Dondero, *Introduction to Programming in Python*, [Section 1.2](https://introcs.cs.princeton.edu/python/12types/)
-- Python official documentation, [String Methods](https://docs.python.org/3/library/stdtypes.html#string-methods)
-- Python official documentation, [slice](https://docs.python.org/3/library/functions.html#slice)
+- Python official documentation, The Python Standard Library, [String Methods](https://docs.python.org/3/library/stdtypes.html#string-methods)
+- Python official documentation, The Python Standard Library, [slice](https://docs.python.org/3/library/functions.html#slice)
 
 ## Questions
 1. :star: Can a String be zero characters long?

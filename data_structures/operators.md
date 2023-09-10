@@ -24,7 +24,7 @@ Like almost all modern languages, Python has an elaborate [operator precedence h
 ## Resources
 - Sedgewick, Wayne, and Dondero, *Introduction to Programming in Python*, [Section 1.2](https://introcs.cs.princeton.edu/python/12types/)
 - Sedgewick, Wayne, and Dondero, *Introduction to Programming in Python*, [Appendix A: Python Operator Precedence](https://introcs.cs.princeton.edu/python/appendix_precedence/)
-- The Python Language Reference, [Expressions](https://docs.python.org/3/reference/expressions.html)
+- Python official documentation, The Python Language Reference, [Expressions](https://docs.python.org/3/reference/expressions.html)
 - Anderson, [Bit Twiddling Hacks](https://graphics.stanford.edu/~seander/bithacks.html) (These are in C, but the operators are pretty much the same in C and in Java.)
 
 ## Questions
