@@ -1,6 +1,6 @@
 # Operators
 ## Overview
-*Operators* are used to combine expressions (such as [literals](data_structures/built_in_types.md#Literals)) into larger expressions. For example, in `2 + 3`, the `+` operator combines the two operands `2` and `3` into a larger expression which evaluates to the value of 5.
+*Operators* are used to combine expressions (such as [literals](built_in_types.md#Literals)) into larger expressions. For example, in `2 + 3`, the `+` operator combines the two operands `2` and `3` into a larger expression which evaluates to the value of 5.
 
 *Binary operators*, like `+`, are *infix*, meaning that they appear between their two operands. *Unary operators*, like `-` when it is used for negation rather than subtraction, are *prefix* if they appear before the operand and *postfix* if they appear afterward. There is one *ternary operator*, conditional expression A if C else B, which takes three arguments, `A` before the `else`, `C` between the `if` and `else`, and `B` after the `else`.
 
@@ -22,9 +22,9 @@ In an expression involving multiple operators, like `2 + 3 * 4`, *operator prece
 Like almost all modern languages, Python has an elaborate [operator precedence hierarchy](https://introcs.cs.princeton.edu/python/appendix_precedence/). You will gain some intuition about it with practice, but you are not expected to memorize it. If there is every any doubt, use parentheses to clarify order of operations. For example, you might write the expression above as `2 + (3 * 4)`. 
 
 ## Resources
-- Sedgewick and Wayne, *Introduction to Programming in Java*, [Section 1.2](https://introcs.cs.princeton.edu/python/12types/)
-- Sedgewick and Wayne, *Introduction to Programming in Java*, [Appendix A: Python Operator Precedence](https://introcs.cs.princeton.edu/python/appendix_precedence/)
-- The Python Language Reference, [Expressions](https://docs.python.org/3/reference/expressions.html)
+- Sedgewick, Wayne, and Dondero, *Introduction to Programming in Python*, [Section 1.2](https://introcs.cs.princeton.edu/python/12types/)
+- Sedgewick, Wayne, and Dondero, *Introduction to Programming in Python*, [Appendix A: Python Operator Precedence](https://introcs.cs.princeton.edu/python/appendix_precedence/)
+- Python official documentation, The Python Language Reference, [Expressions](https://docs.python.org/3/reference/expressions.html)
 - Anderson, [Bit Twiddling Hacks](https://graphics.stanford.edu/~seander/bithacks.html) (These are in C, but the operators are pretty much the same in C and in Java.)
 
 ## Questions
@@ -32,18 +32,18 @@ Like almost all modern languages, Python has an elaborate [operator precedence h
 1. :star: What is the value of `'1' + '2'`
 1. :star: What is the value of `5 - 2 * 3`?
 1. :star: What is the value of `83 % 10`?
-1. :star::star: `x << 1` is the same what common arithmetic operation?
+1. :star::star: `x << 1` is the same as what common arithmetic operation?
 1. :star::star: What is the value of `5 / 3`?
 1. :star::star: What is the value of `5 // 3`?
 1. :star::star: What is the value of `-1**2`?
 1. :star::star: What is the value of `1/0`?
-1. :star::star: A set of numbers represented as an `int`. Suppose `a` and `b` are two such sets. What Java expression produces the intersection of these two sets?
+1. :star::star: A set of numbers can be represented as an `int` where the first binary digit represents number zero, the second represents number one, et cetera. Suppose `a` and `b` are two such sets. What Python expression produces the intersection of these two sets?
 1. :star::star: Suppose the binary representation of `a` is `1100` and the binary representation of `b` is `1010`. What is the binary representation of `a ^ b`?
 1. :star::star::star: What is the value of `-32 % 10`?
 
 ## Answers
 1. The integer 3.
-1. The string `'1+2'`.
+1. The string `'12'`.
 1. -1, because multiplication has higher operator precedence than subtraction.
 1. 3, because when 83 is divided by 10 the remainder is 3.
 1. Multiplying by 2.

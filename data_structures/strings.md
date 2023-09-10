@@ -56,8 +56,8 @@ returns `'owe'``.
 
 ## Resources
 - Sedgewick, Wayne, and Dondero, *Introduction to Programming in Python*, [Section 1.2](https://introcs.cs.princeton.edu/python/12types/)
-- Python official documentation, [String Methods](https://docs.python.org/3/library/stdtypes.html#string-methods)
-- Python official documentation, [slice](https://docs.python.org/3/library/functions.html#slice)
+- Python official documentation, The Python Standard Library, [String Methods](https://docs.python.org/3/library/stdtypes.html#string-methods)
+- Python official documentation, The Python Standard Library, [slice](https://docs.python.org/3/library/functions.html#slice)
 
 ## Questions
 1. :star: Can a String be zero characters long?
@@ -83,5 +83,5 @@ returns `'owe'``.
     for c in s:
         ...
 1. Yes, but you must escape it: `'this string literal contains a \\ (backslash)'`.
-1. This expression does not return a value. Instead it throws a TypeError because the string context established with the initial part of the expression ("`three` +") demands that the second argument be a string, but `3` is an integer.
+1. This expression does not return a value. Instead it throws a TypeError at run time because the string context established with the initial part of the expression ("`three` +") demands that the second argument be a string, but `3` is an integer.
 1. `s.lstrip().replace('X', 'x').startswith('0x')` or `s.lstrip().lower().startswith('0x')`.

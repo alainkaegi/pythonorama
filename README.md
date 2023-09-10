@@ -21,9 +21,9 @@ Topic | CS1 | CS2 | Algorithms | Software Development
 -|-|-|-|-
 Development Tools | [Command Line](development_tools/command_line.md)<br>Jupyter / Google Colab |[Visual Studio Code](development_tools/vs_code.md)<br>PyCharm | Git
 Control<br>Structures | [Your First Program](control_structures/your_first_program.md)<br>[If Statements](control_structures/if_else.md)<br>[Loops](control_structures/loops.md)<br>[Functional Decomposition](control_structures/functional_decomposition.md) | Recursion | |
-Data<br>Structures | [Built-in Types](data_structures/built_in_types.md)<br>Operators<br>Variables<br>Strings<br>Arrays | Inanimate Objects<br>References<br>Linked Lists<br>Stacks<br>Queues<br>Lists<br>Sets and Maps<br>Trees<br>Graphs | Binary Search Trees<br>Hash Tables<br>Priority Queues<br>Union-Find |
+Data<br>Structures | [Built-in Types](data_structures/built_in_types.md)<br>[Operators](data_structures/operators.md)<br>[Variables](data_structures/variables.md)<br>[Strings](data_structures/strings.md)<br>Arrays | Inanimate Objects<br>References<br>Linked Lists<br>Stacks<br>Queues<br>Lists<br>Sets and Maps<br>Trees<br>Graphs | Binary Search Trees<br>Hash Tables<br>Priority Queues<br>Union-Find |
 Algorithms | | Analysis of Algorithms<br>Search<br>Traversal | Algorithmic Strategies<br>Sorting<br>Graph Algorithms |
 Style | | Documentation<br>Omitting Needless Code | Defensive Programming |
 Object-<br>Oriented Programming | | Constructors<br>Instance Methods<br>Interfaces<br>Generics | Inheritance<br>Packages<br>Exceptions | Enums<br>Inner Classes
 Libraries | | | | 
-Software<br>Development | | [Iterative Development](software_development/iterative_development.md)<br>Pair Programming<br>[Testing](software_development/testing.md)<br>Debugging | | Extreme Programming<br>Object-Oriented Design<br>Design Patterns
+Software<br>Development | | [Iterative Development](software_development/iterative_development.md)<br>[Pair Programming](software_development/pair_programming.md)<br>[Testing](software_development/testing.md)<br>Debugging | | Extreme Programming<br>Object-Oriented Design<br>Design Patterns

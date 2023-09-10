@@ -18,6 +18,6 @@
 1. Driver and navigator. Some sources call the navigator the observer.
 1. Increased programmer satisfaction, fewer errors, and spread of knowledge between programmers. Two programmers working in a pair can also complete a task faster than one working alone (although probably not twice as fast).
 1. It is used by many companies, though certainly not all.
-1. Looking up documentation, e.g., [the official documentation for Python ](https://docs.python.org) or [Stack Overflow](https://stackoverflow.com/).
+1. Looking up documentation, e.g., [the official documentation for Python](https://docs.python.org) or [Stack Overflow](https://stackoverflow.com/).
 1. The less-experienced member should drive first; one "expert" furiously typing in code using fancy techniques is likely to leave the other member feeling discouraged and disengaged. That said, the two members of the pair should switch roles regularly.
 1. Probably at least once an hour.
