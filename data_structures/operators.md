@@ -32,18 +32,18 @@ Like almost all modern languages, Python has an elaborate [operator precedence h
 1. :star: What is the value of `'1' + '2'`
 1. :star: What is the value of `5 - 2 * 3`?
 1. :star: What is the value of `83 % 10`?
-1. :star::star: `x << 1` is the same what common arithmetic operation?
+1. :star::star: `x << 1` is the same as what common arithmetic operation?
 1. :star::star: What is the value of `5 / 3`?
 1. :star::star: What is the value of `5 // 3`?
 1. :star::star: What is the value of `-1**2`?
 1. :star::star: What is the value of `1/0`?
-1. :star::star: A set of numbers represented as an `int`. Suppose `a` and `b` are two such sets. What Java expression produces the intersection of these two sets?
+1. :star::star: A set of numbers can be represented as an `int` where the first binary digit represents number zero, the second represents number one, et cetera. Suppose `a` and `b` are two such sets. What Python expression produces the intersection of these two sets?
 1. :star::star: Suppose the binary representation of `a` is `1100` and the binary representation of `b` is `1010`. What is the binary representation of `a ^ b`?
 1. :star::star::star: What is the value of `-32 % 10`?
 
 ## Answers
 1. The integer 3.
-1. The string `'1+2'`.
+1. The string `'12'`.
 1. -1, because multiplication has higher operator precedence than subtraction.
 1. 3, because when 83 is divided by 10 the remainder is 3.
 1. Multiplying by 2.
