@@ -41,7 +41,7 @@ The mental model for variables described so far is convenient but imprecise. Pyt
 The *scope* of a variable is the region of code where the variable can be accessed. Python distinguishes between *local* and *global* scope. The scope of local variables and function parameters is the entire function (local scope). The scope of global variables is the entire file which contains the variables (global scope).
 
 ## Resource
-- Sedgewick, Wayne and Dondero, *Introduction to Programming in Python*, [Section 1.2](https://introcs.cs.princeton.edu/python/12types/)
+- Sedgewick, Wayne, and Dondero, *Introduction to Programming in Python*, [Section 1.2](https://introcs.cs.princeton.edu/python/12types/)
 
 ## Questions
 1. :star: Explain the difference between `x = y` and `x == y`.

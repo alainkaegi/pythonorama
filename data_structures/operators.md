@@ -22,8 +22,8 @@ In an expression involving multiple operators, like `2 + 3 * 4`, *operator prece
 Like almost all modern languages, Python has an elaborate [operator precedence hierarchy](https://introcs.cs.princeton.edu/python/appendix_precedence/). You will gain some intuition about it with practice, but you are not expected to memorize it. If there is every any doubt, use parentheses to clarify order of operations. For example, you might write the expression above as `2 + (3 * 4)`. 
 
 ## Resources
-- Sedgewick and Wayne, *Introduction to Programming in Java*, [Section 1.2](https://introcs.cs.princeton.edu/python/12types/)
-- Sedgewick and Wayne, *Introduction to Programming in Java*, [Appendix A: Python Operator Precedence](https://introcs.cs.princeton.edu/python/appendix_precedence/)
+- Sedgewick, Wayne, and Dondero, *Introduction to Programming in Python*, [Section 1.2](https://introcs.cs.princeton.edu/python/12types/)
+- Sedgewick, Wayne, and Dondero, *Introduction to Programming in Python*, [Appendix A: Python Operator Precedence](https://introcs.cs.princeton.edu/python/appendix_precedence/)
 - The Python Language Reference, [Expressions](https://docs.python.org/3/reference/expressions.html)
 - Anderson, [Bit Twiddling Hacks](https://graphics.stanford.edu/~seander/bithacks.html) (These are in C, but the operators are pretty much the same in C and in Java.)
 
