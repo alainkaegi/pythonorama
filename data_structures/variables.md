@@ -35,7 +35,7 @@ x = 'abc'
 
 The type associated with variable `x` then changes from `int` to `str`.
 
-The mental model for variables described so far is convenient but imprecise. Python uses objects to represent all values and ties variables with those objects through references as explained in details elsewhere.
+The mental model for variables described so far is convenient but imprecise. Python uses objects to represent all values and ties variables with those objects through references as explained in details [elsewhere](references.md).
 
 ### Scope
 The *scope* of a variable is the region of code where the variable can be accessed. Python distinguishes between *local* and *global* scope. The scope of local variables and function parameters is the entire function (local scope). The scope of global variables is the entire file which contains the variables (global scope).
