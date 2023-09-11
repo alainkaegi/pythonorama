@@ -1,7 +1,7 @@
 # Pythonorama
 This repository holds topic summaries and questions for some of Lewis \& Clark introductory computer science courses based on the Python programming language.
 
-The content and organization of this site owes to Peter Drake's [Drakepedia](https://github.com/PeterDrake/drakepedia/).
+The contents and organization of this site owe to Peter Drake's [Drakepedia](https://github.com/PeterDrake/drakepedia/).
 
 We have three purposes in creating this repository:
 1. To keep our own notes and useful links organized.
