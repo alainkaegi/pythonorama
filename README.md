@@ -20,10 +20,10 @@ The table below shows which topics I expect people to learn in which courses. (C
 Topic | CS1 | CS2 | Algorithms | Software Development
 -|-|-|-|-
 Development Tools | [Command Line](development_tools/command_line.md)<br>Jupyter / Google Colab |[Visual Studio Code](development_tools/vs_code.md)<br>PyCharm | Git
-Control<br>Structures | [Your First Program](control_structures/your_first_program.md)<br>[If Statements](control_structures/if_else.md)<br>[Loops](control_structures/loops.md)<br>[Functional Decomposition](control_structures/functional_decomposition.md) | Recursion | |
-Data<br>Structures | [Built-in Types](data_structures/built_in_types.md)<br>[Operators](data_structures/operators.md)<br>[Variables](data_structures/variables.md)<br>[Strings](data_structures/strings.md)<br>[Arrays](data_structures/arrays.md) | Inanimate Objects<br>[References](data_structures/references.md)<br>[Tuples](data_structures/tuples.md)<br>Linked Lists<br>Stacks<br>Queues<br>Lists<br>Sets and Maps<br>Trees<br>Graphs | Binary Search Trees<br>Hash Tables<br>Priority Queues<br>Union-Find |
+Control<br>Structures | [Your First Program](control_structures/your_first_program.md)<br>[If Statements](control_structures/if_else.md)<br>[Loops](control_structures/loops.md)<br>[Functional Decomposition](control_structures/functional_decomposition.md) | Recursion | Higher-Order Functions |
+Data<br>Structures | [Built-in Types](data_structures/built_in_types.md)<br>[Operators](data_structures/operators.md)<br>[Variables](data_structures/variables.md)<br>[Strings](data_structures/strings.md)<br>[Arrays](data_structures/arrays.md)<br>Lists | [References](data_structures/references.md)<br>Equality<br>[Tuples](data_structures/tuples.md)<br>Sets<br>Dictionaries<br>Abstract Base Classes<br>Stacks<br>Queues<br>Implementing Collections<br>Trees<br>Graphs | Binary Search Trees<br>Hash Tables<br>Priority Queues<br>Union-Find |
 Algorithms | | Analysis of Algorithms<br>Search<br>Traversal | Algorithmic Strategies<br>Sorting<br>Graph Algorithms |
-Style | | Documentation<br>Omitting Needless Code | Defensive Programming |
-Object-<br>Oriented Programming | | Constructors<br>Instance Methods<br>Interfaces<br>Generics | Inheritance<br>Packages<br>Exceptions | Enums<br>Inner Classes
+Style | | Documentation<br>Omitting Needless Code | Names<br>Defensive Programming |
+Object-<br>Oriented Programming | | Objects<br>Initializers<br>Methods<br>Magic Methods | Inheritance<br>Packages<br>Exceptions |
 Libraries | | | | 
-Software<br>Development | | [Iterative Development](software_development/iterative_development.md)<br>[Pair Programming](software_development/pair_programming.md)<br>[Testing](software_development/testing.md)<br>Debugging | | Extreme Programming<br>Object-Oriented Design<br>Design Patterns
+Software<br>Development | Time Management | [Iterative Development](software_development/iterative_development.md)<br>[Pair Programming](software_development/pair_programming.md)<br>[Testing](software_development/testing.md)<br>Debugging | | Teamwork<br>Extreme Programming<br>UML<br>Object-Oriented Design<br>Design Patterns
