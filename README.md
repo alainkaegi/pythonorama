@@ -25,5 +25,5 @@ Data<br>Structures | [Built-in Types](data_structures/built_in_types.md)<br>[Ope
 Algorithms | | Analysis of Algorithms<br>Search<br>Traversal | Algorithmic Strategies<br>Sorting<br>Graph Algorithms |
 Style | | Documentation<br>Omitting Needless Code | Names<br>Defensive Programming |
 Object-<br>Oriented Programming | | Objects<br>Initializers<br>Methods<br>Magic Methods | Inheritance<br>Packages<br>Exceptions |
-Libraries | | | | 
+Libraries | | [stdlib](libraries/stdlib.md) | |
 Software<br>Development | Time Management | [Iterative Development](software_development/iterative_development.md)<br>[Pair Programming](software_development/pair_programming.md)<br>[Testing](software_development/testing.md)<br>Debugging | | Teamwork<br>Extreme Programming<br>UML<br>Object-Oriented Design<br>Design Patterns
