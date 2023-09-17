@@ -26,4 +26,4 @@ Algorithms | | Analysis of Algorithms<br>Search<br>Traversal | Algorithmic Strat
 Style | | Documentation<br>Omitting Needless Code | Names<br>Defensive Programming |
 Object-<br>Oriented Programming | | Objects<br>Initializers<br>Methods<br>Magic Methods | Inheritance<br>Packages<br>Exceptions |
 Libraries | | [stdlib](libraries/stdlib.md) | |
-Software<br>Development | Time Management | [Iterative Development](software_development/iterative_development.md)<br>[Pair Programming](software_development/pair_programming.md)<br>[Testing](software_development/testing.md)<br>Debugging | | Teamwork<br>Extreme Programming<br>UML<br>Object-Oriented Design<br>Design Patterns
+Software<br>Development | Time Management | [Iterative Development](software_development/iterative_development.md)<br>[Pair Programming](software_development/pair_programming.md)<br>[Testing](software_development/testing.md)<br>[Debugging](software_development/debugging.md) | | Teamwork<br>Extreme Programming<br>UML<br>Object-Oriented Design<br>Design Patterns
