@@ -10,8 +10,8 @@ Calling a method is almost exactly like calling a regular function, but you have
 One key advantage of this approach is that different classes can have methods with the same name. For example, suppose `c` is an instance of the `Circle` class and `s` is an instance of the `Square` class. (These classes will be defined below.) Asking for `c.area()` uses `Circle`'s `area` method, while `s.area()` uses `Square`'s. This ability for the same word to mean different things in different contexts is called *polymorphism*.
 ## Defining Methods
 Methods are defined exactly like regular functions, but with two differences:
-- Methods are defined inside a class, and
-- Methods have an extra first argument `self`.
+- methods are defined inside a class, and
+- methods have an extra first argument `self`.
 
 Here is a definition of `Circle`:
 
@@ -51,6 +51,14 @@ class Square:
     ```
 1. :star::star: Add a method `perimeter` to the `Square` class. It should take no arguments (other than `self`) and return the `Square`'s perimeter.
 1. :star::star: Is `self` a reserved word?
+1. :star::star::star: You could just define `area` directly as a regular function (below). What are the pros and cons of each approach?
+   ```python
+   def area(shape):
+       if isinstance(shape, Circle):
+           return math.pi * (shape.radius ** 2)
+       elif isinstance(shape, Square):
+           return shape.width ** 2
+   ```
 ## Answers
 1. Since `area` is a method, it has to be called *on* some particular object. The last line should be `print(s.area())`.
 1. Here is the complete class:
@@ -66,3 +74,4 @@ class Square:
             return self.width * 4
     ```
 1. No, but it is the conventional name for this argument. Using is consistenly will make your code more legible to other Python users.
+1. The difference is largely one of organization, which is no small concern for large software projects. The functional approach keeps all of the information about *areas* together, while the object-oriented approach keeps all of the information about *circles* together. The object-oriented approach can also be more efficient, because each object knows where to find its own methods; you don't have to go through a potentially long if/elif/else chain.
