@@ -20,7 +20,7 @@ The table below shows which topics I expect people to learn in which courses. (C
 Topic | CS1 | CS2 | Algorithms | Software Development
 -|-|-|-|-
 Development Tools | [Command Line](development_tools/command_line.md)<br>Jupyter / Google Colab |[Visual Studio Code](development_tools/vs_code.md)<br>PyCharm | Git
-Control<br>Structures | [Your First Program](control_structures/your_first_program.md)<br>[If Statements](control_structures/if_else.md)<br>[Loops](control_structures/loops.md)<br>[Functional Decomposition](control_structures/functional_decomposition.md) | Recursion | Higher-Order Functions |
+Control<br>Structures | [Your First Program](control_structures/your_first_program.md)<br>[If Statements](control_structures/if_else.md)<br>[Loops](control_structures/loops.md)<br>[Functional Decomposition](control_structures/functional_decomposition.md) | [Recursion](control_structures/recursion.md) | Higher-Order Functions |
 Data<br>Structures | [Built-in Types](data_structures/built_in_types.md)<br>[Operators](data_structures/operators.md)<br>[Variables](data_structures/variables.md)<br>[Strings](data_structures/strings.md)<br>[Arrays](data_structures/arrays.md)<br>Lists | [References](data_structures/references.md)<br>Equality<br>[Tuples](data_structures/tuples.md)<br>Sets<br>Dictionaries<br>Abstract Base Classes<br>Stacks<br>Queues<br>Implementing Collections<br>Trees<br>Graphs | Binary Search Trees<br>Hash Tables<br>Priority Queues<br>Union-Find |
 Algorithms | | Analysis of Algorithms<br>Search<br>Traversal | Algorithmic Strategies<br>Sorting<br>Graph Algorithms |
 Style | | [Documentation](style/documentation.md)<br>[Omitting Needless Code](style/omitting_needless_code.md) | Names<br>Defensive Programming |
