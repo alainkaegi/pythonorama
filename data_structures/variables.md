@@ -57,8 +57,8 @@ The *scope* of a variable is the region of code where the variable can be access
     ```
 1. :star: Is the following code legal?
     ```python
-    int variable = 2
-    int VARIABLE = 3
+    variable = 2
+    VARIABLE = 3
     ```
 1. :star: What is the scope of variable `g` in the following code snippet?
    ```python
@@ -102,7 +102,7 @@ The *scope* of a variable is the region of code where the variable can be access
 1. The scope of `n` is the entire function `fac()`.
 1. The scope of `i` is the entire function `fac()`.
 1. If `alive == True`, `alive` is true; if not, `alive` is false. In other words, `alive` and `alive == True` always have exactly the same value. The shorter version is always preferable as it is clearer, is more concise, and avoids the risk of accidentally typing `alive = True` (which is an assignment, not a comparison).
-1. No. If `x` was 1 and `y` was 2, then `x = y;` would change `x`'s value to 2, but `y = x;` would change `y`'s value to 1.
+1. No. If `x` was 1 and `y` was 2, then `x = y` would change `x`'s value to 2, but `y = x` would change `y`'s value to 1.
 1. No. The value on the left side of an assignment statement must be a variable (or some other place where a value can be stored, like an array element).
 1. Many programmers would use the following code sequence:
     ```python

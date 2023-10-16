@@ -80,7 +80,7 @@ Of course, a function called by your program may in turn call another function. 
         for v in b:
             sum_b += v
         }
-        return sum_a - sum_b;
+        return sum_a - sum_b
     }
     ```
 1. :star::star: Can my function have a return statement without specifying a value?
@@ -92,7 +92,7 @@ Of course, a function called by your program may in turn call another function. 
 ## Answers
 1. Don't put anything between the parentheses:
     ```python
-    quux();
+    quux()
     ```
 1.  ```python
     difference_of_sums(a, b):
