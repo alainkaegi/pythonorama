@@ -1,10 +1,10 @@
 # Strings
 ## Overview
-A String is a sequence of characters.
+A string is a sequence of characters.
 
 String literals are surrounded in single quotes:
 ```python
-s = 'This is a String.'
+s = 'This is a string.'
 ```
 Or in double quotes:
 ```python
@@ -60,16 +60,16 @@ returns `'owe'``.
 - Python official documentation, The Python Standard Library, [slice](https://docs.python.org/3/library/functions.html#slice)
 
 ## Questions
-1. :star: Can a String be zero characters long?
+1. :star: Can a string be zero characters long?
 1. :star: What does `sub in s` do?
 1. :star: How would you get the first character of a string `s`?
 1. :star: How would you get the first three characters of a string `s`?
 1. :star::star: How would you get the last character of a string `s`?
 1. :star::star: How would you get the last three characters of a string `s`?
-1. :star::star: Can the [for each loop](../control_structures/loops.md#for-each-loops) be used to iterate through the characters of a String `s`?
+1. :star::star: Can the [for each loop](../control_structures/loops.md#for-each-loops) be used to iterate through the characters of a string `s`?
 1. :star::star: Can a string literal include a backslash (`\`)?
 1. :star::star::star: What is the value of `'three' + 3`?
-1. :star::star::star: How would find out if a String `s` starts with optional spaces followed by either `"0x"` or `"0X"`?
+1. :star::star::star: How would find out if a string `s` starts with optional spaces followed by either `"0x"` or `"0X"`?
 
 ## Answers
 1. Yes: commonly `''` or `""`.

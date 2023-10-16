@@ -96,7 +96,7 @@ The first line of code above can be read, "for each `n` in `numbers`...".
     i = 0
     while (i < 5):
         print(i)
-        i++
+        i += 1
     ```
     This isn't *exactly* equivalent, because the local variable `i` holds a different value after the completion of the loop. After the `for` loop, `i` contains `4` (the last element of the range), but after the `while` loop `i` contains 5 (the first value of `i` that causes the condition to fail).
 1.

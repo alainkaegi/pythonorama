@@ -15,7 +15,7 @@ Questions are rated according to their difficulty:
 - :star::star: These questions may take a bit of thought, close reading, experimentation, or research.
 - :star::star::star: These questions require even more thought.
 
-The table below shows which topics I expect people to learn in which courses. (CS1 is taught in C, but for these topics C and Python are sufficiently similar.) Links are to existing pages in the Drakepedia.
+The table below shows which topics I expect people to learn in which courses. (CS1 is taught in C, but for these topics C and Python are sufficiently similar.) Links are to existing pages in the Pythonorama.
 
 Topic | CS1 | CS2 | Algorithms | Software Development
 -|-|-|-|-
