@@ -57,7 +57,6 @@ def iseven(n):
     else:
         return False
     return result
-}
 ```
 
 Now the local variable `result` can be eliminated completely:
@@ -101,7 +100,7 @@ def neighbor_sum(grid, r, c):
         sum += grid[r][c - 1]
     if c < len(grid[r]) - 1:
         sum += grid[r][c + 1]
-    return sum;
+    return sum
 ```
 
 The four if statements differ only in their tests and in the array indices. By storing the four directions in a separate array `offsets`, you can accomplish all of these in one loop:
