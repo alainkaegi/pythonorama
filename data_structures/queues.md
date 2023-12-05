@@ -7,7 +7,7 @@ The operations are:
 
 - `dequeue` (pronounced DQ) removes and returns the front item from the queue
 - `enqueue` (pronounced NQ) adds an item to the back of the queue
-- `is_empty` returns `True`` if the queue is empty
+- `is_empty` returns `True` if the queue is empty
 
 ## Array-Based Implementation
 The array-based implementation is similar to the array-implementation of a stack, with the front of the queue at index 0, but there are complications.
