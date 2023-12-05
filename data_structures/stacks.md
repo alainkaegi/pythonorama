@@ -10,7 +10,7 @@ The *stack* abstract data type defines a stack as a vertical sequence of items, 
 
 The standard metaphor for a stack is one of those spring-loaded stacks of plates you might find in a cafeteria. You can push a new plate onto the stack or pop one off the top, but there's no way to access the plates underneath. The sequence of previously-viewed pages that your web browser maintains to allow you to go back is also represented as a stack.
 
-Stacks are said to be *last in, first out* (LIFO).
+Because the last item pushed onto a stack will be the first one popped, stacks are said to be *last in, first out* (LIFO).
 
 There are multiple ways to implement this data type, two of them are described below.
 
@@ -115,8 +115,8 @@ class LinkedStack:
     def pop(self):
         if self._top is None:
             raise EmptyStackException()
-        result = self._top._item
-        self._top = self._top._next
+        result = self._top.item
+        self._top = self._top.next
         return result
 
     def is_empty(self):
@@ -124,8 +124,8 @@ class LinkedStack:
 
     class Node:
         def __init__(self, item, next):
-            self._item = item
-            self._next = next
+            self.item = item
+            self.next = next
 ```
 
 All three stack methods take constant time.

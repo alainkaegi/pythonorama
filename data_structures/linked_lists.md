@@ -60,12 +60,12 @@ Note: many sources, including other parts of Pythonorama, discuss linked lists i
 1. :star::star: The method below is supposed to determine the length of a linked list, but it contains an off-by-one error. How should it be fixed?
     ```python
     def length(list):
-        l = 0
+        count = 0
         n = list.next
         while n != None:
-            l += 1
+            count += 1
             n = n.next
-        return l
+        return count
     ```
 
 ## Answers

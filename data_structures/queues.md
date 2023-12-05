@@ -7,16 +7,14 @@ The operations are:
 
 - `dequeue` (pronounced DQ) removes and returns the front item from the queue
 - `enqueue` (pronounced NQ) adds an item to the back of the queue
-- `is_empty` returns `True`` if the queue is empty
+- `is_empty` returns `True` if the queue is empty
 
 ## Array-Based Implementation
 The array-based implementation is similar to the array-implementation of a stack, with the front of the queue at index 0, but there are complications.
 
-Enqueuing works just like pushing at first. To dequeue, you need to return the item at index 0, but then what? You could shift everything over (and decrement `_count`) so that that the queue begins at index 0, but that would take linear time. A better solution is to maintain two integers, `_front` and `_back`. The front item is at index `_front` and the next available index is `_back`.
+Enqueuing works just like pushing at first. To dequeue, you need to return the item at index 0, but then what? You could shift everything over (and decrement `_count`) so that that the queue begins at index 0, but that would take linear time. A better solution is to maintain two integers, `_front` and `_count`. The front item is at index `_front` and the next available index is `_front + _count`.
 
 This approach causes another problem: after a series of enqueue and dequeue operations, the queue will march down the array, so the indices close to 0 are unused but unavailable. To avoid wasting space, the queue is made to wrap around to the beginning. This is done using the `%` (remainder) operator.
-
-The last detail is that a full queue (requiring copying everything into a larger array) and an empty queue look exactly the same: `_front == _back`. A solution is to set the integers `_front` and `_back` to None when the queue is empty.
 
 Here is the code that rely on the [fixed-size array collection](stacks.md#fixed-size-array) described on the [stacks page](stacks.md):
 
@@ -27,38 +25,32 @@ from empty_queue_exception import EmptyQueueException
 class ArrayQueue:
     def __init__(self):
         self._data = Array(1)
-        self._front = None
-        self._back = None
+        self._front = 0
+        self._count = 0
 
     def dequeue(self):
-        if self._front is None:
+        if self._count == 0:
             raise EmptyQueueException()
         result = self._data[self._front]
         self._front = (self._front + 1) % len(self._data)
-        if self._back == self._front:
-            self._back = None
-            self._front = None
+        self._count -= 1
         return result
 
     def enqueue(self, item):
-        if not self._front is None and self._back == self._front:
+        if self._count == len(self._data):
             self._resize(len(self._data) * 2)
-        if self._front is None:
-            self._front = 0
-            self._back = 0
-        self._data[self._back] = item
-        self._back = (self._back + 1) % len(self._data)
+        self._data[(self._front + self._count) % len(self._data)] = item
+        self._count += 1
 
     def is_empty(self):
-        return self._front is None
+        return self._count == 0
 
     def _resize(self, new_size):
         new_data = Array(new_size)
         for i in range(len(self._data)):
             new_data[i] = self._data[(self._front + i) % len(self._data)]
-	    self._front = 0
-        self._back = len(self._data)
-	    self._data = new_data
+        self._front = 0
+        self._data = new_data
 ```
 
 The amortized running time for all of the queue operations is constant.
@@ -83,8 +75,8 @@ class LinkedQueue:
     def dequeue(self):
         if self._front is None:
             raise EmptyQueueException()
-        result = self._front._item
-        self._front = self._front._next
+        result = self._front.item
+        self._front = self._front.next
         return result
 
     def enqueue(self, item):
@@ -92,16 +84,16 @@ class LinkedQueue:
             self._front = self.Node(item)
             self._back = self._front
         else:
-            self._back._next = self.Node(item)
-            self._back = self._back._next
+            self._back.next = self.Node(item)
+            self._back = self._back.next
 
     def is_empty(self):
         return self._front is None
 
     class Node:
         def __init__(self, item):
-            self._item = item
-            self._next = None
+            self.item = item
+            self.next = None
 ```
 
 All operations take constant time.
