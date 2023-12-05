@@ -83,8 +83,8 @@ class LinkedQueue:
     def dequeue(self):
         if self._front is None:
             raise EmptyQueueException()
-        result = self._front._item
-        self._front = self._front._next
+        result = self._front.item
+        self._front = self._front.next
         return result
 
     def enqueue(self, item):
@@ -92,16 +92,16 @@ class LinkedQueue:
             self._front = self.Node(item)
             self._back = self._front
         else:
-            self._back._next = self.Node(item)
-            self._back = self._back._next
+            self._back.next = self.Node(item)
+            self._back = self._back.next
 
     def is_empty(self):
         return self._front is None
 
     class Node:
         def __init__(self, item):
-            self._item = item
-            self._next = None
+            self.item = item
+            self.next = None
 ```
 
 All operations take constant time.

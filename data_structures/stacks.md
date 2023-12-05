@@ -115,8 +115,8 @@ class LinkedStack:
     def pop(self):
         if self._top is None:
             raise EmptyStackException()
-        result = self._top._item
-        self._top = self._top._next
+        result = self._top.item
+        self._top = self._top.next
         return result
 
     def is_empty(self):
@@ -124,8 +124,8 @@ class LinkedStack:
 
     class Node:
         def __init__(self, item, next):
-            self._item = item
-            self._next = next
+            self.item = item
+            self.next = next
 ```
 
 All three stack methods take constant time.
