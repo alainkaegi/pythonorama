@@ -2,8 +2,8 @@
 ## Overview
 Programmers are constantly called upon to name variables, functions/methods, classes, and other things. Choosing names carefully can vastly improve the legibility (and therefore maintainability) of code.
 
-The guidelines below have exceptions, but any deviations should be made deliberately.
-- Be consistent, both within your own program and with the conventions of your language and organization.
+The guidelines below have exceptions, but any deviations should be deliberate.
+- Be consistent, both within your own program and with the conventions of your language and team.
 - Choose names so that code using them reads like clear prose.
   
   **Bad:**
@@ -35,7 +35,7 @@ The guidelines below have exceptions, but any deviations should be made delibera
         y = y2 - y1
         return math.sqrt((x * x) + (y * y))
     ```
-  - If you only refer to something once, it may be better to not give it a name at all.
+  - If you only refer to something once, it may be clearer to not give it a name at all.
 
     **Bad:**
     ```python
@@ -51,16 +51,15 @@ The guidelines below have exceptions, but any deviations should be made delibera
     If you only refer to something once but naming it would make an expression too complicated, or if the value is set in a separate configuration file, go ahead and give it a name.
   - The larger the scope of a name, the more descriptive its name should be. One-letter names are only appropriate when they have small scope (e.g., the inside of a small function) or are used for very standard purposes (like `i` for a loop index).
   - Avoid abbreviations and clever in-jokes. Something that makes sense to you right now will not make sense to someone (possibly you) who has to read the code a month later.
-  - Avoid having multiple very similar names, especially if they differ only in capitalization or in one character at the end.
   - Avoid the variable names `l` (which looks too much like the upper-case letter `I` and the numeral `1`) and `O` (which looks too much like the numeral `0`).
 
 ## Python-Specific Rules
 Every language has its own rules and conventions for names. Those below are specific to Python.
 
 ### Capitalization
-- Variable, method, and argument names should be `lower_case_with_underscores`, also known as "snake case".
+- Variable and method names should use `lower_case_with_underscores`, also known as "snake case".
 - Class names should use `CapitalizedWords`, also known as "Pascal case".
-- Constants should be `UPPER_CASE_WITH_UNDERSCORES`, also known as "screaming snake case".
+- Constants should use `UPPER_CASE_WITH_UNDERSCORES`, also known as "screaming snake case".
 
 ### Underscores
 - A single leading underscore, as in `_width`, indicates that the name is meant to be used only inside the current class. Some other programming languages allow you to declare an instance variable or method *private*, so that it cannot be accessed outside the class.
@@ -73,7 +72,7 @@ Every language has its own rules and conventions for names. Those below are spec
 - Benner, *Naming Things: The Hardest Problem in Software Engineering*
 
 ## Questions
-1. :star: Must the name of non-public instance variables have a leading underscore?
+1. :star: Must the name of a non-public instance variable have a leading underscore?
 1. :star: Make the following class definition adhere to the naming convention for non-public instance variables.
     ```python
     class Complex:
