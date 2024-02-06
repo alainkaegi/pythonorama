@@ -1,4 +1,28 @@
 # Names
+## Overview
+Programmers are constantly called upon to name variables, functions/methods, classes, and other things. Choosing names carefully can vastly improve the legibility (and therefore maintainability) of code.
+
+The guidelines below have exceptions, but any deviations should be made deliberately.
+
+- Choose names so that code using them reads like clear prose.
+  
+  **Bad:**
+  ```python
+  if player_turn.check_legality():
+    the_array.updating(player_turn)
+  ```
+  **Good:**
+  ```python
+  if move.is_legal():
+    board.play(move)
+  ```
+- Use appropriate parts of speech:
+  - Variable and class names should be nouns, like `filename` or `Editor`.
+  - Function and method names shoud be verbs, like `get_shipping_price` or `is_legal_move`.
+- Give something a name if, and only if, it will be referred to more than once.
+  - If you need a value more than once, storing it in a variable both removes redundant code and avoids redundant computation.
+  - 
+
 ## Methods and Instance Variables
 Python's programming convention suggests that you name your non-public methods and instance variables with *one* leading underscore.
 
