@@ -17,20 +17,20 @@ The table below shows which topics are covered in which courses. Links are to ex
 
 Topic | CS 171<br>(CS1) | CS 172<br>(CS2) | CS 383<br>(Algo) | CS 488<br>(SofDev) | DSCI 140<br>(DataSci)
 -|-|-|-|-|-
-<b>Development Tools</b> | | | | |
+**Development Tools**
 &nbsp;&nbsp;&nbsp;&nbsp;[Command Line](development_tools/command_line.md) | x | x | x | x |
 &nbsp;&nbsp;&nbsp;&nbsp;[Visual Studio Code](development_tools/vs_code.md) | | x | | |
-&nbsp;&nbsp;&nbsp;&nbsp;PyCharm | | | x | |
+&nbsp;&nbsp;&nbsp;&nbsp;PyCharm | | | x | x |
 &nbsp;&nbsp;&nbsp;&nbsp;Git | | | | x |
 &nbsp;&nbsp;&nbsp;&nbsp;Jupyter / Google Colab | | | | | x
-<b>Control Structures</b> | | | | |
+**Control Structures**
 &nbsp;&nbsp;&nbsp;&nbsp;[Your First Program](control_structures/your_first_program.md) | x | x | x | x | x
 &nbsp;&nbsp;&nbsp;&nbsp;[If Statements](control_structures/if_else.md) | x | x | x | x | x
 &nbsp;&nbsp;&nbsp;&nbsp;[Loops](control_structures/loops.md) | x | x | x | x | x
 &nbsp;&nbsp;&nbsp;&nbsp;[Functional Decomposition](control_structures/functional_decomposition.md) | x | x | x | x | x
 &nbsp;&nbsp;&nbsp;&nbsp;[Recursion](control_structures/recursion.md) | | x | x | x |
 &nbsp;&nbsp;&nbsp;&nbsp;Higher-Order Functions | | | x | x |
-<b>Data Structures</b> | | | | |
+**Data Structures**
 &nbsp;&nbsp;&nbsp;&nbsp;[Built-in Types](data_structures/built_in_types.md) | x | x | x | x | x
 &nbsp;&nbsp;&nbsp;&nbsp;[Operators](data_structures/operators.md) | x | x | x | x | x
 &nbsp;&nbsp;&nbsp;&nbsp;[Variables](data_structures/variables.md) | x | x | x | x | x
@@ -42,9 +42,9 @@ Topic | CS 171<br>(CS1) | CS 172<br>(CS2) | CS 383<br>(Algo) | CS 488<br>(SofDev
 &nbsp;&nbsp;&nbsp;&nbsp;[Sets](data_structures/sets.md) | | x | x | x | x
 &nbsp;&nbsp;&nbsp;&nbsp;Dictionaries | | x | x | x | x
 &nbsp;&nbsp;&nbsp;&nbsp;Abstract Base Classes | | | | x |
-&nbsp;&nbsp;&nbsp;&nbsp;[Linked Lists](data_structures/linked_lists.md) | | x | x | x |
-&nbsp;&nbsp;&nbsp;&nbsp;[Stacks](data_structures/stacks.md) | | x | x | x |
-&nbsp;&nbsp;&nbsp;&nbsp;[Queues](data_structures/queues.md) | | x | x | x |
+&nbsp;&nbsp;&nbsp;&nbsp;[Linked Lists](data_structures/linked_lists.md) | | x | x |  |
+&nbsp;&nbsp;&nbsp;&nbsp;[Stacks](data_structures/stacks.md) | | x | x |  |
+&nbsp;&nbsp;&nbsp;&nbsp;[Queues](data_structures/queues.md) | | x | x |  |
 &nbsp;&nbsp;&nbsp;&nbsp;Implementing Collections | | x | x | |
 &nbsp;&nbsp;&nbsp;&nbsp;Trees | | x | x | x | x
 &nbsp;&nbsp;&nbsp;&nbsp;Graphs | | x | x | x |
@@ -52,7 +52,42 @@ Topic | CS 171<br>(CS1) | CS 172<br>(CS2) | CS 383<br>(Algo) | CS 488<br>(SofDev
 &nbsp;&nbsp;&nbsp;&nbsp;Hash Tables | | | x | |
 &nbsp;&nbsp;&nbsp;&nbsp;Priority Queues | | | x | |
 &nbsp;&nbsp;&nbsp;&nbsp;Union-Find | | | x | |
-<b>Algorithms</b> | | | | |
+**Algorithms**
+&nbsp;&nbsp;&nbsp;&nbsp;[Analysis of Algorithms](algorithms/analysis.md) | | x | x | |
+&nbsp;&nbsp;&nbsp;&nbsp;[Search](algorithms/search.md) | | x | x | |
+&nbsp;&nbsp;&nbsp;&nbsp;Traversal | | x | x | |
+&nbsp;&nbsp;&nbsp;&nbsp;Algorithmic Strategies | | | x | |
+&nbsp;&nbsp;&nbsp;&nbsp;Sorting | | | x | |
+&nbsp;&nbsp;&nbsp;&nbsp;Graph Algorithms | | | x | |
+**Style**
+&nbsp;&nbsp;&nbsp;&nbsp;[Documentation](style/documentation.md) | | x | x | x |
+&nbsp;&nbsp;&nbsp;&nbsp;[Omitting Needless Code](style/omitting_needless_code.md) | | x | x | x |
+&nbsp;&nbsp;&nbsp;&nbsp;[Names](style/names.md) | x | x | x | x | x
+&nbsp;&nbsp;&nbsp;&nbsp;[Defensive Programming](style/defensive_programming.md) | | | | x |
+**Object-Oriented Programming**
+&nbsp;&nbsp;&nbsp;&nbsp;[Classes and Initializers](oop/classes.md) | | x | x | x |
+&nbsp;&nbsp;&nbsp;&nbsp;[Methods](oop/methods.md) | | x | x | x |
+&nbsp;&nbsp;&nbsp;&nbsp;[Magic Methods](oop/magic.md) | | x | x | x |
+&nbsp;&nbsp;&nbsp;&nbsp;Inheritance | | | | x |
+&nbsp;&nbsp;&nbsp;&nbsp;Packages | | | | x |
+&nbsp;&nbsp;&nbsp;&nbsp;Exceptions | | | | x |
+**Libraries**
+&nbsp;&nbsp;&nbsp;&nbsp;[stdlib](libraries/stdlib.md) | | x | | |
+&nbsp;&nbsp;&nbsp;&nbsp;tkinter | | | x | x |
+&nbsp;&nbsp;&nbsp;&nbsp;numpy | | | | | x
+&nbsp;&nbsp;&nbsp;&nbsp;pandas | | | | | x
+&nbsp;&nbsp;&nbsp;&nbsp;scikit-learn | | | | | x
+**Software Development**
+&nbsp;&nbsp;&nbsp;&nbsp;Time Management | x | x | x | x | x
+&nbsp;&nbsp;&nbsp;&nbsp;[Iterative Development](software_development/iterative_development.md) | | x | x | x | x
+&nbsp;&nbsp;&nbsp;&nbsp;[Pair Programming](software_development/pair_programming.md) | | x | x | x |
+&nbsp;&nbsp;&nbsp;&nbsp;[Testing](software_development/testing.md) | | x | x | x |
+&nbsp;&nbsp;&nbsp;&nbsp;[Debugging](software_development/debugging.md) | x | x | x | x |
+&nbsp;&nbsp;&nbsp;&nbsp;Teamwork | | | | x | x
+&nbsp;&nbsp;&nbsp;&nbsp;Extreme Programming | | | |  x|
+&nbsp;&nbsp;&nbsp;&nbsp;UML | | | | x |
+&nbsp;&nbsp;&nbsp;&nbsp;Object-Oriented Design | | | | x |
+&nbsp;&nbsp;&nbsp;&nbsp;Design Patterns | | | | x |
 
 Topic | CS1 | CS2 | Algorithms | Software Development
 -|-|-|-|-
