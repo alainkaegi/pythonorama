@@ -35,31 +35,33 @@ If, for efficiency reasons, you want an actual primitive array, use Python's num
 
 ```python
 class ArrayStack:
+
     def __init__(self):
         self._data = [None]
-        self._count = 0
+        self._size = 0
 
     def push(self, item):
-        if self._count == len(self._data):
+        if self._size == len(self._data):
             self._expand()
-        self._data[self._count] = item
-        self._count += 1
+        self._data[self._size] = item
+        self._size += 1
 
     def pop(self):
-        self._count -= 1
-        return self._data[self._count]
+        self._size -= 1
+        return self._data[self._size]
 
     def is_empty(self):
-        return self._count == 0
+        return self._size == 0
 
     def _expand(self):
-        new_data = [None] * self._count * 2
-        for i in range(self._count):
+        new_data = [None] * self._size * 2
+        for i in range(self._size):
             new_data[i] = self._data[i]
         self._data = new_data
+
 ```
 
-The class ArrayStack has two attributes, `_data` and `_count`. `_data` is a primitive array holding the items on the stack. In order to allow the stack to grow and shrink without resizing the array, the capacity of `_data` may be larger than the current height of the stack. `_count` indicates how much of the array is actually part of the stack. It also indicates the index of the next available slot in the array.
+The class ArrayStack has two attributes, `_data` and `_size`. `_data` is a primitive array holding the items on the stack. In order to allow the stack to grow and shrink without resizing the array, the capacity of `_data` may be larger than the current height of the stack. `_size` indicates how much of the array is actually part of the stack. It also indicates the index of the next available slot in the array.
 
 For example, an ArrayStack with capacity for 8 items, but currently only holding 5, would look like this:
 
@@ -75,8 +77,52 @@ DIAGRAM
 The new array is not merely one slot larger but *twice* as large, keeping the amortized running time of `pop` constant.
 
 # Queues
+
+```python
+class ArrayQueue:
+
+    def __init__(self):
+        self._data = [None]
+        self._front = 0
+        self._back = 0
+
+    def dequeue(self):
+        result = self._data[self._front]
+        self._front = (self._front + 1) % len(self._data)
+        return result
+
+    def enqueue(self, item):
+        if (self._back + 1) % len(self._data) == self._front:
+            self._expand()
+        self._data[self._back] = item
+        self._back = (self._back + 1) % len(self._data)
+
+    def is_empty(self):
+        return self._front == self._back
+
+    def _expand(self):
+        n = len(self._data)
+        new_data = [None] * n * 2
+        for i in range(n):
+            new_data[i] = self._data[(self._front + i) % n]
+        self._data = new_data
+```
+
+ArrayQueue is similar to ArrayStack, with the front of the queue at index 0, but there are complications.
+
+Enqueuing works just like pushing at first. To dequeue, you need to return the item at index 0, but then what? You could shift everything over (and decrement `_size`) so that that the queue begins at index 0, but that would take linear time. A better solution is to maintain two numbers, `_front` and `_back`. The front item is at index `_front` and the next available index is `_back`.
+
+This approach causes another problem: after a series of enqueue and dequeue operations, the queue will march down the array, so the indices close to 0 are unused but unavailable.
+
+DIAGRAM
+
+To avoid wasting space, the queue is made to wrap around to the beginning. Here is the queue above after enqueueing two more items.
+
+The last detail is that a full queue (requiring copying everything into a larger array) and an empty queue would look exactly the same: `_front == _back`. The solution is to store at most $n - 1$ items in an array of length $n$.
+
 # Lists
 # Sets
+# Dictionaries
 
 # Resources
 
