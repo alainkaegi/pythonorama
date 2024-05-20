@@ -121,8 +121,58 @@ To avoid wasting space, the queue is made to wrap around to the beginning. Here 
 The last detail is that a full queue (requiring copying everything into a larger array) and an empty queue would look exactly the same: `_front == _back`. The solution is to store at most $n - 1$ items in an array of length $n$.
 
 # Lists
-# Sets
-# Dictionaries
+
+Replicating all of the features of a Python list would require a great deal of code, but the class ArrayList provides basic functionality. It is similar to the ArrayStack.
+
+```python
+class ArrayList:
+
+    def __init__(self):
+        self._data = [None]
+        self._size = 0
+
+    def __getitem__(self, index):
+        return self._data[index]
+
+    def __setitem__(self, index, item):
+        self._data[index] = item
+
+    def __len__(self):
+        return self._size
+
+    def __str__(self):
+        result = '<'
+        if self._size > 0:
+            result += self._data[0]
+        for i in range(1, self._size):
+            result += ', ' + self._data[i]
+        return result + '>'
+
+    def add_at(self, index, item):
+        if self._size == len(self._data):
+            self._expand()
+        for j in range(self._size, index, -1):
+            self._data[j] = self._data[j - 1]
+        self._data[index] = item
+        self._size += 1
+
+    def remove_at(self, index):
+        for j in range(index, self._size - 1):
+            self._data[j] = self._data[j + 1]
+        self._size -= 1
+
+    def _expand(self):
+        new_data = [None] * self._size * 2
+        for i in range(self._size):
+            new_data[i] = self._data[i]
+        self._data = new_data
+```
+
+The `__getitem__` and `__setitem__` magic methods allow elements of an ArrayList to be accessed using the usual square brackets. For example, you can say things like `a[2] = 100`. `__len__` and `__str__` make `len` and `str` work.
+
+The `add_at` and `remove_at` methods insert and remove an item from the list, respectively. Since these potentially require shifting over all of the existing items (e.g., when adding an item at index 0), they take linear time in the worst case.
+
+Sets and dictionaries can be implemented using similar techniques. Search, insertion, and deletion would require linear time, so more sophisticated data structures, such as hash tables, are preferred.
 
 # Resources
 
@@ -130,3 +180,4 @@ The last detail is that a full queue (requiring copying everything into a larger
 1. shrinking stack when it gets far under capacity
 
 # Answers
+1. 1/4
