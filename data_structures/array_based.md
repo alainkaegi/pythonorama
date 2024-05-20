@@ -72,7 +72,6 @@ This simple implementation's behavior is undefined if a user pops an empty stack
 ## Resizing the data array
 What if a user pushes something onto a stack that is full? Stacks should behave as if they have unlimited capacity. In this situation, the `_expand` method copied the data into a larger array, which then replaces `_data`.
 
-![Before pushing, a full ArrayStack has a data array with 4 slots and size 4. After pushing, the data array has 8 slots and size is 5.](array_resize.svg)
 
 The new array is not merely one slot larger but *twice* as large, keeping the amortized running time of `pop` constant.
 
