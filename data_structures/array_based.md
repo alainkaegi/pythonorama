@@ -118,6 +118,8 @@ DIAGRAM
 
 To avoid wasting space, the queue is made to wrap around to the beginning. Here is the queue above after enqueueing two more items.
 
+DIAGRAM
+
 The last detail is that a full queue (requiring copying everything into a larger array) and an empty queue would look exactly the same: `_front == _back`. The solution is to store at most $n - 1$ items in an array of length $n$.
 
 # Lists
