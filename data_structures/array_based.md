@@ -65,7 +65,7 @@ The class ArrayStack has two attributes, `_data` and `_size`. `_data` is a primi
 
 For example, an ArrayStack with capacity for 8 items, but currently only holding 5, would look like this:
 
-DIAGRAM
+![An object with size set to 5 and data pointing to an array of 8 slots. Slots 0 through 4 contain values, but slots 5 through 7 are shaded.](array_stack.svg)
 
 This simple implementation's behavior is undefined if a user pops an empty stack (which they should have detected by calling `is_empty`). A more robust implementation would throw an EmptyStackException instead.
 
