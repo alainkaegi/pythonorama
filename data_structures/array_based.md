@@ -1,17 +1,17 @@
 # Array-Based Structures
 
-Python uses the list as its default linear structure. Lower-level languages like C instead use primitive arrays. Key differences include:
+Python uses lists as its default linear structures. Lower-level languages like C instead use primitive arrays. Key differences include:
 - An array's size must be allocated when it is created; it cannot change.
 - Python list features, such as slicing and methods like the `count` method, are not directly available for primitive arrays.
 
 This page describes how to build various linear structures out of [Python lists masquerading as] primitive arrays. While you would normally just use Python's lists, sets, and so on, this is worthy of study because:
 - Understanding the underlying data structures and algorithms clarifies the performance of Python's fancier data structures. For example, it will help you understand why adding something to the *beginning* of a long list is much more expensive than adding something to the *end*.
 - You may someday be working in a language that uses primitive arrays.
-- You may need a data structure that is slightly different from what Python provides.
+- You may need to build a data structure that is slightly different from what Python provides.
 
 Many of these data structures can also be implemented using other techniques, such as linked lists and hash tables.
 
-## Primitive Arrays
+## Simulating Primitive Arrays
 
 To use Python's convenient list syntax while limiting yourself to what a primitive array can do, use only the following features, all of which take constant time:
 
@@ -70,7 +70,7 @@ For example, an ArrayStack with capacity for 8 items, but currently only holding
 This simple implementation's behavior is undefined if a user pops an empty stack (which they should have detected by calling `is_empty`). A more robust implementation would throw an EmptyStackException instead.
 
 ## Resizing the data array
-What if a user pushes something onto a stack that is full? Stacks should behave as if they have unlimited capacity. In this situation, the `_expand` method copied the data into a larger array, which then replaces `_data`.
+What if a user pushes something onto a stack that is full? Stacks should behave as if they have unlimited capacity. In this situation, the `_expand` method copies the data into a larger array, which then replaces `_data`.
 
 ![Before pushing, a full ArrayStack has a data array with 4 slots and size 4. After pushing, the data array has 8 slots and size is 5.](array_resize.svg)
 
@@ -124,7 +124,7 @@ The last detail is that a full queue (requiring copying everything into a larger
 
 # Lists
 
-Replicating all of the features of a Python list would require a great deal of code, but the class ArrayList provides basic functionality. It is similar to the ArrayStack.
+Replicating all of the features of a Python list would require a great deal of code, but the ArrayList class below provides basic functionality. It is similar to ArrayStack.
 
 ```python
 class ArrayList:
