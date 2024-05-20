@@ -172,12 +172,23 @@ The `__getitem__` and `__setitem__` magic methods allow elements of an ArrayList
 
 The `add_at` and `remove_at` methods insert and remove an item from the list, respectively. Since these potentially require shifting over all of the existing items (e.g., when adding an item at index 0), they take linear time in the worst case.
 
-Sets and dictionaries can be implemented using similar techniques. Search, insertion, and deletion would require linear time, so more sophisticated data structures, such as hash tables, are preferred.
+Sets and dictionaries can be implemented using similar techniques. Search, insertion, and deletion would require linear time, so more sophisticated data structures such as hash tables are preferred.
 
 # Resources
+- Sedgewick & Wayne, *Introduction to Programming in Python*, [Chapter 4](https://introcs.cs.princeton.edu/python/40algorithms/)
 
 # Questions
-1. shrinking stack when it gets far under capacity
+1. :star: Which methods from ArrayStack take linear time in the worst case?
+1. :star: Which methods from ArrayList take linear time in the worst case?
+1. :star: If ArrayList `ls` has length `n`, which is faster: `ls.remove_at(0)` or `ls.remove_at(n - 1)`?
+1. :star::star: As the code is written, what happens if you pop an empty ArrayStack?
+1. :star::star: When an item is popped from an ArrayStack, there is still a reference to it in `self._data`. Doesn't this take up memory?
+1. :star::star::star: If you enqueued many items into an ArrayQueue, then dequeued them, `self._data` would be very large, even though none of it is in use. How can this waste of memory be prevented?
 
 # Answers
-1. 1/4
+1. `push`, but its amortized time is constant.
+1. `add_at`, `remove_at`, and `__str__`.
+1. `ls.remove_at(n - 1)`, because it doesn't need to shift any items.
+1. `self._size` is decremented to -1 and the *last* element of `self._data` (which is not part of the stack) is returned.
+1. Yes -- this is called *loitering*. A more robust implementation would set this element to `None` so the garbage collector can reclaim the item.
+1. Modify `pop` to resize the array if it is too empty. By cutting the array capacity in half when it is less than a quarter full, the amortized time for both `push` and `pop` remains constant.
