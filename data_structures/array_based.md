@@ -114,11 +114,11 @@ Enqueuing works just like pushing at first. To dequeue, you need to return the i
 
 This approach causes another problem: after a series of enqueue and dequeue operations, the queue will march down the array, so the indices close to 0 are unused but unavailable.
 
-DIAGRAM
+![An ArrayQueue has an 8-slot data array, with front 3 and back 7. Slots 3, 4, 5, and 6 are therefore occupied.](array_queue.svg)
 
-To avoid wasting space, the queue is made to wrap around to the beginning. Here is the queue above after enqueueing two more items.
+To avoid wasting space, the queue is made to wrap around to the beginning. Here is the queue above after enqueueing two more items:
 
-DIAGRAM
+![The next two items have been placed at indices 7 and 0, wrapping around to the beginning of the array. Back is now 1.](queue_wrap.svg)
 
 The last detail is that a full queue (requiring copying everything into a larger array) and an empty queue would look exactly the same: `_front == _back`. The solution is to store at most $n - 1$ items in an array of length $n$.
 
