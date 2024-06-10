@@ -1,7 +1,7 @@
 # Array-Based Structures
 
 Python uses lists as its default linear structures. Lower-level languages like C instead use primitive arrays. Key differences include:
-- An array's size must be allocated when it is created; it cannot change.
+- An array's size is set when it is created; it cannot change.
 - Python list features, such as slicing and methods like the `count` method, are not directly available for primitive arrays.
 
 This page describes how to build various linear structures out of [Python lists masquerading as] primitive arrays. While you would normally just use Python's lists, sets, and so on, this is worthy of study because:
@@ -9,7 +9,7 @@ This page describes how to build various linear structures out of [Python lists 
 - You may someday be working in a language that uses primitive arrays.
 - You may need to build a data structure that is slightly different from what Python provides.
 
-Many of these data structures can also be implemented using other techniques, such as linked lists and hash tables.
+Many of these data structures can also be implemented using other techniques, such as [linked lists](linked_lists.md) and hash tables.
 
 ## Simulating Primitive Arrays
 
@@ -61,7 +61,7 @@ class ArrayStack:
 
 ```
 
-The class ArrayStack has two attributes, `_data` and `_size`. `_data` is a primitive array holding the items on the stack. In order to allow the stack to grow and shrink without resizing the array, the capacity of `_data` may be larger than the current height of the stack. `_size` indicates how much of the array is actually part of the stack. It also indicates the index of the next available slot in the array.
+The class ArrayStack has two attributes, `_data` and `_size`. `_data` is a primitive array holding the items on the stack. In order to allow the stack to grow and shrink without resizing the array, the capacity of `_data` may be larger than the current height of the stack. `_size` indicates how much of the array is actually part of the stack. It is also useful as the index of the next available slot in the array.
 
 For example, an ArrayStack with capacity for 8 items, but currently only holding 5, would look like this:
 
@@ -74,7 +74,7 @@ What if a user pushes something onto a stack that is full? Stacks should behave 
 
 ![Before pushing, a full ArrayStack has a data array with 4 slots and size 4. After pushing, the data array has 8 slots and size is 5.](array_resize.svg)
 
-The new array is not merely one slot larger but *twice* as large, keeping the amortized running time of `pop` constant.
+The new array is not merely one slot larger but *twice* as large, keeping the amortized running time of `push` constant.
 
 # Queues
 
@@ -174,7 +174,7 @@ The `__getitem__` and `__setitem__` magic methods allow elements of an ArrayList
 
 The `add_at` and `remove_at` methods insert and remove an item from the list, respectively. Since these potentially require shifting over all of the existing items (e.g., when adding an item at index 0), they take linear time in the worst case.
 
-Sets and dictionaries can be implemented using similar techniques. Search, insertion, and deletion would require linear time, so more sophisticated data structures such as hash tables are preferred.
+Sets and dictionaries can be implemented using similar techniques. If better runtime behavior is required, data structures such as hash tables might be preferred.
 
 # Resources
 - Sedgewick & Wayne, *Introduction to Programming in Python*, [Chapter 4](https://introcs.cs.princeton.edu/python/40algorithms/)
