@@ -63,7 +63,7 @@ class ArrayStack:
 
 ```
 
-The class ArrayStack has two attributes, `_data` and `_size`. `_data` is a primitive array holding the items on the stack. To allow the stack to grow and shrink without resizing the array on every access, the capacity of `_data` may be larger than the current height of the stack. `_size` indicates how much of the array is actually part of the stack. It is also useful as the index of the next available slot in the array.
+The class ArrayStack has two attributes, `_data` and `_size`. `_data` is a primitive array holding the items on the stack. To allow the stack to grow and shrink without resizing the array on every access, the capacity of `_data` may be somewhat larger than the current height of the stack. Note how this implementation doubles the capacity of the stack rather than just incrementing it by one. `_size` indicates how much of the array is actually part of the stack. It is also useful as the index of the next available slot in the array.
 
 For example, an ArrayStack with capacity for 8 items, but currently only holding 5, would look like this:
 
