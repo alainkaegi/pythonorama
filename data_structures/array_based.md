@@ -103,8 +103,10 @@ class ArrayQueue:
     def _expand(self):
         n = len(self._data)
         new_data = [None] * n * 2
-        for i in range(n):
+        for i in range(n - 1):
             new_data[i] = self._data[(self._front + i) % n]
+        self._front = 0
+        self._back = n - 1
         self._data = new_data
 ```
 
