@@ -196,5 +196,5 @@ Sets and dictionaries can be implemented using similar techniques. If better run
 1. `add_at`, `remove_at`, and `__str__`.
 1. `ls.remove_at(n - 1)`, because it doesn't need to shift any items.
 1. `self._size` is decremented to -1 and the *last* element of `self._data` (which is not part of the stack) is returned.
-1. Yes -- this is called *loitering*. A more robust implementation would set this element to `None` so the garbage collector can reclaim the item.
+1. Yes -- this is called *loitering*. A more robust implementation would set this element to `None` so the garbage collector can reclaim the item. Removing an item from an ArrayQueue or ArrayList has the same issue.
 1. Modify `pop` to resize the array if it is too empty. By cutting the array capacity in half when it is less than a quarter full, the amortized time for both `push` and `pop` remains constant.
