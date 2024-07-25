@@ -13,7 +13,7 @@ Many of these data structures can also be implemented using other techniques, su
 
 ## Simulating Primitive Arrays
 
-To use Python's convenient list syntax while limiting yourself to what a primitive array can do, use only the following features, all of which take constant time:
+To use Python's convenient list syntax while limiting yourself to what a primitive array can do, use only the following features:
 
 Operation|Syntax
 -|-
@@ -21,6 +21,8 @@ Allocate an array of length $n$|`a = [None] * n`
 Access element $i$|`a[i]`
 Set element $i$ to $x$|`a[i] = x`
 Get the length of an array|`len(a)`
+
+All of these operations clearly take constant time except allocation which, as defined above, takes linear time.  Note that in C you can allocate an array in constant time, but its content is not initialized creating a security risk.
 
 To iterate through a primitive array, use the following syntax:
 
