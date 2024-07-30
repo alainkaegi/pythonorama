@@ -22,7 +22,7 @@ Access element $i$|`a[i]`
 Set element $i$ to $x$|`a[i] = x`
 Get the length of an array|`len(a)`
 
-All of these operations clearly take constant time except allocation which, as defined above, takes linear time.  Note that in C you can allocate an array in constant time, but its content is not initialized creating a security risk.
+All of these operations clearly take constant time except allocation which, as defined above, takes linear time.  Note that in C you can allocate an array in constant time, but its content is not initialized, creating a security risk.
 
 To iterate through a primitive array, use the following syntax:
 
