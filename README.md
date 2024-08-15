@@ -1,5 +1,5 @@
 # Pythonorama
-This repository holds topic summaries and questions for some of Lewis \& Clark computer science courses based on the Python programming language.
+This repository holds topic summaries and questions for some Lewis \& Clark computer science courses that use the Python programming language.
 
 We have three purposes in creating this repository:
 1. To keep our own notes and useful links organized.
