@@ -74,6 +74,7 @@ Topic | CS 171<br>(CS1) | CS 172<br>(CS2) | CS 369<br>(AI & ML) | CS 383<br>(Alg
 **Libraries**
 &nbsp;&nbsp;&nbsp;&nbsp;[stdlib](libraries/stdlib.md) | | x | | | |
 &nbsp;&nbsp;&nbsp;&nbsp;tkinter | | | | x | x |
+&nbsp;&nbsp;&nbsp;&nbsp;matplotlib | | | | | | x
 &nbsp;&nbsp;&nbsp;&nbsp;numpy | | | x | | | x
 &nbsp;&nbsp;&nbsp;&nbsp;pandas | | | x | | | x
 &nbsp;&nbsp;&nbsp;&nbsp;scikit-learn | | | x | | | x
