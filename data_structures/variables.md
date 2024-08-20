@@ -98,9 +98,9 @@ The *scope* of a variable is the region of code where the variable can be access
 1. Yes. It doesn't make sense as algebra, where the `=` symbol is used to *state* that two expressions are equal, but it's fine in Python. It creates a variable `x`, assigns it the value 2, and then replaces that value with 3.
 1. Yes. Python allows a variable to hold values of different types over time.
 1. Yes. Since Python is case-sensitive, `variable` and `VARIABLE` are different variables.
-1. The scope of `g` is the entire file in which `g` and `fac()` are defined.
-1. The scope of `n` is the entire function `fac()`.
-1. The scope of `i` is the entire function `fac()`.
+1. The scope of `g` is the entire file in which `g` and `fac` are defined.
+1. The scope of `n` is the entire function `fac`.
+1. The scope of `i` is the entire function `fac`.
 1. If `alive == True`, `alive` is true; if not, `alive` is false. In other words, `alive` and `alive == True` always have exactly the same value. The shorter version is always preferable as it is clearer, is more concise, and avoids the risk of accidentally typing `alive = True` (which is an assignment, not a comparison).
 1. No. If `x` was 1 and `y` was 2, then `x = y` would change `x`'s value to 2, but `y = x` would change `y`'s value to 1.
 1. No. The value on the left side of an assignment statement must be a variable (or some other place where a value can be stored, like an array element).

@@ -85,7 +85,7 @@ then `x` doesn't refer to anything. Some draw this with an electrical grounding 
 
 ![s contains a reference to nothing](null.svg)
 
-Trying to do anything with `s`, such as asking for `s.lower()`, results in an `AttributeError`, raised at run time, because there are no methods associated with `None`.
+Trying to do anything with `s`, such as evaluating `s.lower()`, results in an `AttributeError`, raised at run time, because there are no methods associated with `None`.
 
 You can check if a variable refers to nothing with the `is` operator. Suppose you wish to check if `x` points to nothing, then you can use the expression `x is None`.
 

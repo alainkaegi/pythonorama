@@ -1,13 +1,13 @@
 # Methods
 ## Calling Methods
-In addition to data, an object can have *methods*: things you can ask it to do. For example, `'hello'.upper()` is asking the string `'hello'`, "give me an upper-case version of yourself". It returns
+In addition to data, an object can have *methods*: things you can ask it to do. For example, the expression `'hello'.upper()` is asking the string `'hello'`, "give me an upper-case version of yourself". It returns
 `'HELLO'`.
 
-Similarly, `'hello'.index('e')` asks the same string, "at what position does the substring `'e'` appear within you?". The returned answer is `1`.
+Similarly, the expression `'hello'.index('e')` asks the same string, "at what position does the substring `'e'` appear within you?". The returned answer is `1`.
 
 Calling a method is almost exactly like calling a regular function, but you have to call it *on* some particular object. Whereas a regular function call might look like `max(3, 2)`, a method call might look like `s.index('e')` (where `s` is some string). You are therefore *calling the `index` method on `s`*.
 
-One key advantage of this approach is that different classes can have methods with the same name. For example, suppose `c` is an instance of the `Circle` class and `s` is an instance of the `Square` class. (These classes will be defined below.) Asking for `c.area()` uses `Circle`'s `area` method, while `s.area()` uses `Square`'s. This ability for the same word to mean different things in different contexts is called *polymorphism*.
+One key advantage of this approach is that different classes can have methods with the same name. For example, suppose `c` is an instance of the `Circle` class and `s` is an instance of the `Square` class. (These classes will be defined below.) Evaluating `c.area()` uses `Circle`'s `area` method, while `s.area()` uses `Square`'s. This ability for the same word to mean different things in different contexts is called *polymorphism*.
 ## Defining Methods
 Methods are defined exactly like regular functions, but with two differences:
 - methods are defined inside a class, and
@@ -27,7 +27,7 @@ class Circle:
         return math.pi * (self.radius ** 2)
 ```
 
-Now if you define `c = Circle(1)`, then when `c.area()` is called, `self` refers to `c`. The method returns `3.141592653589793`.
+Now if you define `c = Circle(1)`, then when the expression `c.area()` is evaluated, `self` refers to `c`. The method returns `3.141592653589793`.
 
 Here is `Square`:
 

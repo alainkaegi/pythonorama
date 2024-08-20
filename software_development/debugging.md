@@ -5,7 +5,7 @@ Most of your programming time is probably spent debugging. There are several thi
 ### Preventing Bugs
 The best [bug](https://education.nationalgeographic.org/resource/worlds-first-computer-bug/) is the one that never happens. To minimize the number of bugs, keep your code clear and organized. Use well-encapsulated modules, functions, classes, and methods so that you can think about one thing at a time. The more you have to keep in your head, the more mistakes you will make.
 
-Give variables and functions names that clearly explain their purpose. For example, if you have a function to check the parity (oddness or evenness) of a number, don't call it `check_parity()`; that requires you to remember if returning true means odd or even. Instead, call it `iseven()`.
+Give variables and functions names that clearly explain their purpose. For example, if you have a function to check the parity (oddness or evenness) of a number, don't call it `check_parity`; that requires you to remember if returning true means odd or even. Instead, call it `iseven`.
 
 ### Noticing Problems
 This almost goes without saying, but you can't fix a bug until you realize there is a problem. If you have no way of knowing whether your program is working correctly, debugging it is hopeless.
@@ -32,12 +32,12 @@ For example, if you have an `IndexError` on a line like:
 
 Then either `x` or `y` must hold a value greater than the dimensions of the array.
 
-#### Using `print()` Statements
+#### Using `print` Statements
 This is a classic technique that should work in just about any programming environment. The goal is to find the place where what the program is actually doing differs from what you think it is doing.
 
-Find a sequence of statements (possibly spread across several functions) within which you are pretty sure the bug occurs. (In the limit, this is the entire program.) Put in a `print()` statement about halfway through this sequence that demonstrates that (a) the program reached this point, and (b) the variable in question has the correct value.
+Find a sequence of statements (possibly spread across several functions) within which you are pretty sure the bug occurs. (In the limit, this is the entire program.) Put in a `print` statement about halfway through this sequence that demonstrates that (a) the program reached this point, and (b) the variable in question has the correct value.
 
-Run the program. If everything is working correctly at the `print()`, the problem must occur after that line. If not, it must occur before then. Now you can put a `print()` halfway through the remaining suspicious code, and so on, until you find the culprit.
+Run the program. If everything is working correctly at the `print` statement, the problem must occur after that line. If not, it must occur before then. Now you can put a `print` statement halfway through the remaining suspicious code, and so on, until you find the culprit.
 
 This is analogous to the binary search algorithm.
 
@@ -55,8 +55,8 @@ It is also possible to set up fancier breakpoints that pause the program only un
 
 ## Questions
 1. :star: What does a breakpoint do?
-1. :star::star: When is it better to use `print()` statements versus a debugger?
+1. :star::star: When is it better to use `print` statements versus a debugger?
 
 ## Answers
 1. When you run a program in debugging mode, the debugger pauses whenever it reaches a breakpoint. You can then inspect the values of variables.
-1. Usually a debugger is preferable because you can set a breakpoint that displays all variables with a single mouse click (and remove it just as easily). You might use `print()` statements if you don't have a debugger available or if you want to quickly inspect one variable at many points during the run (such as every pass through a loop that runs a hundred times).
+1. Usually a debugger is preferable because you can set a breakpoint that displays all variables with a single mouse click (and remove it just as easily). You might use `print` statements if you don't have a debugger available or if you want to quickly inspect one variable at many points during the run (such as every pass through a loop that runs a hundred times).
