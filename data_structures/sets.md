@@ -67,7 +67,7 @@ c = {2, 3}
 5. Yes. For example, this is fine:
    ```python
    for a in {1, 2, 3}:
-     print(a)
+       print(a)
    ```
 6. One way is using a set comprehension, which is analogous to a list comprehension: `{abs(n) for n in range(-5, 6)}`
 7. No, because sets are mutable and therefore not hashable. If you really need to do this (or otherwise need an immutable set), research the `frozenset` type.
