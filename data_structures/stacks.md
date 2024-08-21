@@ -147,7 +147,7 @@ All three stack methods take constant time.
     s.pop()
     s.push(8)
     ```
-1. :star::star: It would save space to replace the expression `data.count * 2` in the `push` method of ArrayStack with `data.count + 1`. What effect would this have on the amortized running time of `push`?
+1. :star::star: It would save space to replace the expression `data.count * 2` in the `push` method of `ArrayStack` with `data.count + 1`. What effect would this have on the amortized running time of `push`?
 1. :star::star: What does the code below do?
     ```python
     from array_stack import ArrayStack

@@ -31,7 +31,7 @@ for i in range(len(a)):
     # Do something with a[i]
 ```
 
-If, for efficiency reasons, you want an actual primitive array, use Python's numpy library.
+If, for efficiency reasons, you want an actual primitive array, use Python's `numpy` library.
 
 # Stacks
 
@@ -63,9 +63,9 @@ class ArrayStack:
 
 ```
 
-The class ArrayStack has two attributes, `_data` and `_size`. `_data` is a primitive array holding the items on the stack. To allow the stack to grow and shrink without resizing the array on every access, the capacity of `_data` may be larger than the current height of the stack. `_size` indicates how much of the array is actually part of the stack. It is also useful as the index of the next available slot in the array.
+The class `ArrayStack` has two attributes, `_data` and `_size`. `_data` is a primitive array holding the items on the stack. To allow the stack to grow and shrink without resizing the array on every access, the capacity of `_data` may be larger than the current height of the stack. `_size` indicates how much of the array is actually part of the stack. It is also useful as the index of the next available slot in the array.
 
-For example, an ArrayStack with capacity for 8 items, but currently only holding 5, would look like this:
+For example, an `ArrayStack` with capacity for 8 items, but currently only holding 5, would look like this:
 
 ![An object with size set to 5 and data pointing to an array of 8 slots. Slots 0 through 4 contain values, but slots 5 through 7 are shaded.](array_stack.svg)
 
@@ -112,7 +112,7 @@ class ArrayQueue:
         self._data = new_data
 ```
 
-ArrayQueue is similar to ArrayStack, with the front of the queue at index 0, but there are complications.
+`ArrayQueue` is similar to `ArrayStack`, with the front of the queue at index 0, but there are complications.
 
 Enqueuing works just like pushing at first. To dequeue, you need to return the item at index 0, but then what? You could shift everything over (and decrement `_size`) so that that the queue begins at index 0, but that would take linear time. A better solution is to maintain two numbers, `_front` and `_back`. The front item is at index `_front` and the next available index is `_back`.
 
@@ -128,7 +128,7 @@ The last detail is that a full queue (requiring copying everything into a larger
 
 # Lists
 
-Replicating all of the features of a Python list would require a great deal of code, but the ArrayList class below provides basic functionality. It is similar to ArrayStack.
+Replicating all of the features of a Python list would require a great deal of code, but the `ArrayList` class below provides basic functionality. It is similar to `ArrayStack`.
 
 ```python
 class ArrayList:
@@ -174,7 +174,7 @@ class ArrayList:
         self._data = new_data
 ```
 
-The `__getitem__` and `__setitem__` magic methods allow elements of an ArrayList to be accessed using the usual square brackets. For example, you can say things like `a[2] = 100`. `__len__` and `__str__` make `len` and `str` work.
+The `__getitem__` and `__setitem__` magic methods allow elements of an `ArrayList` to be accessed using the usual square brackets. For example, you can say things like `a[2] = 100`. `__len__` and `__str__` make `len` and `str` work.
 
 The `add_at` and `remove_at` methods insert and remove an item from the list, respectively. Since these potentially require shifting over all of the existing items (e.g., when adding an item at index 0), they take linear time in the worst case.
 
@@ -184,17 +184,17 @@ Sets and dictionaries can be implemented using similar techniques. If better run
 - Sedgewick & Wayne, *Introduction to Programming in Python*, [Chapter 4](https://introcs.cs.princeton.edu/python/40algorithms/)
 
 # Questions
-1. :star: Which methods from ArrayStack take linear time in the worst case?
-1. :star: Which methods from ArrayList take linear time in the worst case?
-1. :star: If ArrayList `ls` has length `n`, which is faster: `ls.remove_at(0)` or `ls.remove_at(n - 1)`?
-1. :star::star: As the code is written, what happens if you pop an empty ArrayStack?
-1. :star::star: When an item is popped from an ArrayStack, there is still a reference to it in `self._data`. Doesn't this take up memory?
-1. :star::star::star: If you enqueued many items into an ArrayQueue, then dequeued them, `self._data` would be very large, even though none of it is in use. How can this waste of memory be prevented?
+1. :star: Which methods from `ArrayStack` take linear time in the worst case?
+1. :star: Which methods from `ArrayList` take linear time in the worst case?
+1. :star: If `ArrayList` `ls` has length `n`, which is faster: `ls.remove_at(0)` or `ls.remove_at(n - 1)`?
+1. :star::star: As the code is written, what happens if you pop an empty `ArrayStack`?
+1. :star::star: When an item is popped from an `ArrayStack`, there is still a reference to it in `self._data`. Doesn't this take up memory?
+1. :star::star::star: If you enqueued many items into an `ArrayQueue`, then dequeued them, `self._data` would be very large, even though none of it is in use. How can this waste of memory be prevented?
 
 # Answers
 1. `push`, but its amortized time is constant.
 1. `add_at`, `remove_at`, and `__str__`.
 1. `ls.remove_at(n - 1)`, because it doesn't need to shift any items.
 1. `self._size` is decremented to -1 and the *last* element of `self._data` (which is not part of the stack) is returned.
-1. Yes -- this is called *loitering*. A more robust implementation would set this element to `None` so the garbage collector can reclaim the item. Removing an item from an ArrayQueue or ArrayList has the same issue.
+1. Yes -- this is called *loitering*. A more robust implementation would set this element to `None` so the garbage collector can reclaim the item. Removing an item from an `ArrayQueue` or `ArrayList` has the same issue.
 1. Modify `pop` to resize the array if it is too empty. By cutting the array capacity in half when it is less than a quarter full, the amortized time for both `push` and `pop` remains constant.

@@ -45,7 +45,7 @@ class Complex:
         return str(self.real) + ' + ' + str(self.imag) + 'i'
 ```
 
-Now if we create and print an instance of Complex
+Now if we create and print an instance of `Complex`
 
 ```
 c = Complex(1.0, 1.0)
@@ -74,9 +74,9 @@ a = Complex(2.0, 3.0)
 b = Complex(2.0, 3.0)
 ```
 
-creates two instances of the Complex class. Even though their instance variables happen to have the same values, `a == b` evaluates to `False`, because `a` and `b` do not refer to *the same object*.
+creates two instances of the `Complex` class. Even though their instance variables happen to have the same values, `a == b` evaluates to `False`, because `a` and `b` do not refer to *the same object*.
 
-Here is the Complex class again, this time with a definition of what it means for two instances of that class to be equal.
+Here is the `Complex` class again, this time with a definition of what it means for two instances of that class to be equal.
 
 ```python
 class Complex:

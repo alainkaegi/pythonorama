@@ -4,7 +4,7 @@ Every value in Python is an *object*. For example, the int `5`, the list `[1, 2,
 
 Every object is an *instance* of some *class* (also known as a *type*). The `type` function lets you see the type of an object. For example, `type(3)` returns `<class 'int'>`.
 
-You can also define your own classes. Here is a first draft of the Pet class:
+You can also define your own classes. Here is a first draft of the `Pet` class:
 
 ```python
 class Pet:
@@ -29,7 +29,7 @@ p.name = 'Violet'
 p.species = 'dog'
 ```
 
-Now you can use `p.name` or `p.species` anywhere you want to know about these values, but you can use `p` to refer to the entire Pet. This ability to refer to a whole collection of named values (and, for example, pass it into or return it from a function) is a key feature of objects.
+Now you can use `p.name` or `p.species` anywhere you want to know about these values, but you can use `p` to refer to the entire `Pet`. This ability to refer to a whole collection of named values (and, for example, pass it into or return it from a function) is a key feature of objects.
 
 Each instance of the pet class can have its own values for these instance variables. If you define
 
@@ -67,7 +67,7 @@ Inside the initializer, `name` refers to the value that was passed into the init
 
 Here's what happens behind the scenes when you evaluate `p = Pet('Violet', 'dog')`:
 
-1. Python creates a new instance of Pet. Let's call it `temp`.
+1. Python creates a new instance of `Pet`. Let's call it `temp`.
 2. Python calls `__init__(temp, 'Violet', 'dog')`.
 3. Inside the initializer, `self` is `temp`, `name` is `'Violet'`, and `species` is `'dog'`. The body of the initializer is run, setting the instance variables.
 4. The initializer returns the object `temp`.

@@ -1,10 +1,10 @@
 # Linked Lists
 ## Overview
-One way to represent a sequence of items is an [array](arrays.md). Another is a *linked list*, which is a chain of Node objects, each of which contains one item and a [reference](references.md) to the next Node.
+One way to represent a sequence of items is an [array](arrays.md). Another is a *linked list*, which is a chain of `Node` objects, each of which contains one item and a [reference](references.md) to the next `Node`.
 
 ![list contains a reference to a node. That node contains 5 and a reference to the next node. The second node contains 2 and a reference to the third node. The third node contains 3 and a None reference.](linked_list.svg)
 
-If you have defined the Node class as
+If you have defined the `Node` class as
 
 ```python
 class Node:
@@ -56,7 +56,7 @@ Note: many sources, including other parts of Pythonorama, discuss linked lists i
 ## Questions
 1. :star: Write a `Node` class for building linked lists.
 1. :star: Name an advantage linked lists have over arrays.
-1. :star: What is the value of the `next` instance variable in the *last* Node in a linked list?
+1. :star: What is the value of the `next` instance variable in the *last* `Node` in a linked list?
 1. :star::star: The method below is supposed to determine the length of a linked list, but it contains an off-by-one error. How should it be fixed?
     ```python
     def length(list):
