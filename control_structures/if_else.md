@@ -62,7 +62,7 @@ Some sources call an `if` statement a *conditional statement* or *branch*.
     ```python
     if condition1:
         print('A')
-    elsif condition2:
+    elif condition2:
         print('B')
     ```
 1. :star::star: What is printed by the code below?
