@@ -24,6 +24,28 @@ If `q` is an empty queue, you might evaluate the following sequence of expressio
 |`s.dequeue()`| |`3`|
 |`s.is_empty()`| |`True`|
 
+As described below, Python lists can function as inefficient stacks. The `deque` class in the `collections` module provides a more efficient stack. A stack can also be implemented using an array-based or linked data structure.
+
+## Analysis
+
+All of the queue operations take constant time with an efficient implementation. This analysis is worst-case for an linked implementation (like `deque`) but (except for `is_empty`) only amortized for an array-based implementation.
+
+A queue holding $n$ items uses space in $\Theta(n)$.
+
+## Python Implementation
+
+A Python list *can* be used as a queue, but the `dequeue` operation (implemented as `pop(0)`) takes linear time. This should therefore be avoided unless the queue is guaranteed to remain small.
+
+The `dequeue` class, in the `collections` module, provides a more efficient, doubly-linked implementation. The name `dequeue` is short for "double-ended queue", as this implementation support inserting and removing items at both ends. A new instance can be created as `deque()`.
+
+|**Abstract data type implementation**|**List operation**|**Deque operation**|
+|--|--|--|
+|`q.is_empty()`|`q == []`|`len(q) == 0`|
+|`q.enqueue(x)`|`q.append(x)`|`q.append(x)`|
+|`q.deueue()`|`q.pop(0)`|`q.popleft()`|
+
+Both empty lists and empty deques are falsy, so you can simply say `if q: ...` to check if a queue is (not) empty.
+
 ## Array-Based Implementation
 The array-based implementation is similar to the array-implementation of a stack, with the front of the queue at index 0, but there are complications.
 
