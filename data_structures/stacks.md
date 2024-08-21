@@ -11,7 +11,25 @@ The standard metaphor for a stack is one of those spring-loaded stacks of plates
 
 Because the last item pushed onto a stack will be the first one popped, stacks are said to be *last in, first out* (LIFO).
 
-There are multiple ways to implement this data type, two of them are described below.
+As described below, Python lists can function as stacks. A stack can also be implemented using an array-based or linked data structure.
+
+## Analysis
+
+All of the stack operations take constant time. This analysis is worst-case for an linked implementation but (except for `is_empty`) only amortized for an array-based implementation. The default Python implementation discussed below is array-based.
+
+A stack holding $n$ items uses space in $\Theta(n)$.
+
+## Python Lists as Stacks
+
+Python lists provide all of the stack operations, although `push` is called `append`.
+
+| **Abstract data type operation** | **List operation** |
+|--|--|
+|`s.is_empty()`|`s == []`|
+|`s.push(x)`|`s.append(x)`|
+|`s.pop()`|`s.pop()`|
+
+Since the empty list is considered falsy, you can simply say `if s: ...` instead of `if s == []: ...`.
 
 ## Array-Based Implementation
 The items in the stack can be kept in an array. The only catch is that an array has typically a fixed size, while a stack can grow and shrink as items are pushed and popped. Two simple tricks deal with this problem:
