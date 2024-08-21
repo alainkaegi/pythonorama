@@ -18,15 +18,14 @@ Everything you do in PyCharm takes place within a project. You'll typically have
 
 When you open PyCharm, it will either open your most recent project or (if there is none) take you to the `Welcome to Python` window. If you close any project(s) you have open, it should take you back to `Welcome to Python`.
 
-From there, click on New Project to create a project. Choose the name of your project (something like `algo`) and decide in which directory you'd like to store the project (typically `PycharmProjects` within your home directory). Make sure the Pytheon version is set. If you check the `Create a welcome script` box, you'll get a simple program right away.
+From there, click on `New Project` to create a project. Choose the name of your project (something like `algo`) and decide in which directory you'd like to store the project (typically `PycharmProjects` within your home directory). Make sure the Python version is set. If you check the `Create a welcome script` box, you'll get a simple program right away.
 
 ### Running a Program
 You can run the `main.py` program in any of several ways, including:
-- Right-clicking on the name of the program in the `Project` pane on the left and choosing (for example) `Run 'main'`.
+- Right-clicking on the name of the program in the `Project` pane on the left and choosing `Run 'main'`.
 - Right-clicking within the text of the program and choosing `Run 'main'`.
 - Pressing `ctrl-r`.
-- Pressing the green "play" triangle at the upper right or in the Run pane at the lower left.
-
+- Pressing the green "play" triangle at the upper right or in the `Run` pane at the lower left.
 
 ### Creating a Program
 To create a program, right-click on the name of the project and choose `New` > `Python File`. Give the file a name; PyCharm will add the `.py` suffix for you.
@@ -39,11 +38,11 @@ print('Hello, world!')
 
 ### Importing Packages
 
-To import additional packages like `numpy`:
+To import an additional package like `numpy`:
 1. Open `PyCharm` > `Settings`.
-2. Click on the > next to the name of your project (e.g., `Project: algo`) to expand it.
+2. Click on the `>` next to the name of your project (e.g., `Project: algo`) to expand it.
 3. Click on `Project Interpreter`.
-4. Click on the + at the left side above the list of packages.
+4. Click on the `+` at the left side above the list of packages.
 5. Type the name of the package you want.
 6. Click on `Install Package` at the lower right.
 
@@ -56,7 +55,7 @@ If you want to have access to this after loading all of the definitions in a fil
 2. Choose `Modify Run Configuration...`.
 3. Click `Modify options` at the upper right.
 4. Click `Run with Python Console`.
-5. Click OK.
+5. Click `OK`.
 
 Now, whenever you run this program, you'll get a console pane where you can evaluate additional expressions.
 
@@ -82,7 +81,7 @@ See the `Help` menu or hover with your cursor over some word in your code.
 ## Questions
 1. :star: In what directory do program files generally live?
 1. :star: How do you stop a running program (e.g., one that has gone into an infinite loop)?
-1. :star::star::star: You have a data file that your program is going to read. Where should you put that file?
+1. :star::star: You have a data file that your program is going to read. Where should you put that file?
 
 ## Answers
 1. Inside the project, which is in a directory you specified when you created the project. You are free to create subdirectories for organization.
