@@ -93,7 +93,7 @@ class Vector:
             self.real = real
             self.imag = imag
         def __add__(self, other):
-            # don't reuse an existing object; create a new object instead  
+            # don't reuse an existing object; create a new object instead
             return Complex(self.real + other.real, self.imag + other.imag)
     ```
 1.

@@ -166,7 +166,7 @@ def neighbor_sum(grid, r, c):
         return colors[n]
     ```
     It would be even better to use the Python convention of naming constants using only capital letters (e.g., `COLORS`).
-    
+
     Strictly speaking, this code is not *precisely* equivalent to the original code, as it doesn't behave the same way if `n` is not a valid index into `colors`. This could be remedied by adding the following between the two lines in the function above:
     ```python
         if n < 0 or n >= len(colors):
