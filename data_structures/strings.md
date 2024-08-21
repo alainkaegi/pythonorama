@@ -6,18 +6,22 @@ String literals are surrounded in single quotes:
 ```python
 s = 'This is a string.'
 ```
+
 Or in double quotes:
 ```python
 s = "This is a string."
 ```
+
 Or in triple quotes:
 ```python
 s = """This is a single string."""
 ```
+
 If the literal contains one type of quote, you can use the other type as delimiters:
 ```python
 s = "mom's"
 ```
+
 Or escape it:
 ```python
 s = 'mom\'s'
@@ -52,6 +56,7 @@ You can use slices to extract substrings from a string. For instance:
 ```python
 'flower'[2:5]
 ```
+
 returns `'owe'``.
 
 ## Resources

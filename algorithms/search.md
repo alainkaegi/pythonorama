@@ -3,7 +3,6 @@ This section deals with the question of whether some key (value) is present in a
 
 ## Linear Search
 The obvious approach, *linear search*, is to simply look at each element of the array using a loop:
-
 ```python
 def linear_search(key, a):
     """Returns the first index at which key appears in a, or -1 if it does not."""

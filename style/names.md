@@ -5,7 +5,6 @@ Programmers are constantly called upon to name variables, functions/methods, cla
 The guidelines below have exceptions, but any deviations should be deliberate.
 - Be consistent, both within your own program and with the conventions of your language and team.
 - Choose names so that code using them reads like clear prose.
-
   **Bad:**
   ```python
   if player_turn.check_legality():
@@ -22,7 +21,6 @@ The guidelines below have exceptions, but any deviations should be deliberate.
 - A name should specify what something *represents* or *does*, not how it is implemented. `words` is preferable to `word_array`. `find_shortest_path` is preferable to `Dijkstras_algorithm`.
 - Give something a name if, and only if, it will be referred to more than once.
   - If you need a value more than once, storing it in a variable both removes redundant code and avoids redundant computation.
-
     **Bad:**
     ```python
     def hypotenuse(x1, y1, x2, y2):
@@ -36,7 +34,6 @@ The guidelines below have exceptions, but any deviations should be deliberate.
         return math.sqrt((x * x) + (y * y))
     ```
   - If you only refer to something once, it may be clearer to not give it a name at all.
-
     **Bad:**
     ```python
     def mean(numbers):

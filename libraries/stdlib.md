@@ -62,6 +62,7 @@ Now `x` and `y` hold the coordinates of the location where the mouse was clicked
     stddraw.filledRectangle(0.5, 0.5, 0.1, 0.3)
     ```
 1. :star::star::star: Write a program that draws a dot and moves it left or right a little each time the user presses and releases 'a' or 'd', respectively.
+
 ## Answers
 1. This is real Python; nothing about the language has changed. We are simply using a library that someone else has written so that we don't have to write a bunch of tedious code that isn't relevant to the topics we're studying.
 1.

@@ -8,7 +8,6 @@ Note: Some installations still have Python 2 available. On these systems, you ma
 
 The simple program below should be saved in a file called `hello.py`. You can use any simple text editor, such as [nano](https://www.nano-editor.org) (which comes pre-installed on most \*nix-based systems, including macOS),
 [Vim](https://www.vim.org/) (ditto), [Emacs](https://www.gnu.org/software/emacs/), or [Sublime Text](https://www.sublimetext.com/). Be careful not to use a word processor such as Microsoft Word, Notepad, or TextEdit, which will add extraneous formatting information to the file. Note that Python is case-sensitive.
-
 ```python
 print('hello, world')
 ```
@@ -17,6 +16,7 @@ To run this program type:
 ```
 python hello.py
 ```
+
 or, on some systems,
 ```
 python3 hello.py

@@ -1,5 +1,4 @@
 # Array-Based Structures
-
 Python uses lists as its default linear structures. Lower-level languages like C instead use primitive arrays. Key differences include:
 - An array's size is set when it is created; it cannot change.
 - Python list features, such as slicing and methods like the `count` method, are not directly available for primitive arrays.
@@ -12,7 +11,6 @@ This page describes how to build various linear structures out of [Python lists 
 Many of these data structures can also be implemented using other techniques, such as [linked lists](linked_lists.md) and hash tables.
 
 ## Simulating Primitive Arrays
-
 To use Python's convenient list syntax while limiting yourself to what a primitive array can do, use only the following features:
 
 Operation|Syntax
@@ -34,7 +32,6 @@ for i in range(len(a)):
 If, for efficiency reasons, you want an actual primitive array, use Python's `numpy` library.
 
 # Stacks
-
 ```python
 class ArrayStack:
 
@@ -66,7 +63,6 @@ class ArrayStack:
 The class `ArrayStack` has two attributes, `_data` and `_size`. `_data` is a primitive array holding the items on the stack. To allow the stack to grow and shrink without resizing the array on every access, the capacity of `_data` may be larger than the current height of the stack. `_size` indicates how much of the array is actually part of the stack. It is also useful as the index of the next available slot in the array.
 
 For example, an `ArrayStack` with capacity for 8 items, but currently only holding 5, would look like this:
-
 ![An object with size set to 5 and data pointing to an array of 8 slots. Slots 0 through 4 contain values, but slots 5 through 7 are shaded.](array_stack.svg)
 
 This simple implementation's behavior is undefined if a user pops an empty stack (which they should have detected by calling `is_empty`). A more robust implementation would throw an EmptyStackException instead.
@@ -79,7 +75,6 @@ What if a user pushes something onto a stack that is full? Stacks should behave 
 The new array is not merely one slot larger but *twice* as large, keeping the amortized running time of `push` constant.
 
 # Queues
-
 ```python
 class ArrayQueue:
 
@@ -127,7 +122,6 @@ To avoid wasting space, the queue is made to wrap around to the beginning. Here 
 The last detail is that a full queue (requiring copying everything into a larger array) and an empty queue would look exactly the same: `_front == _back`. The solution is to store at most $n - 1$ items in an array of length $n$.
 
 # Lists
-
 Replicating all of the features of a Python list would require a great deal of code, but the `ArrayList` class below provides basic functionality. It is similar to `ArrayStack`.
 
 ```python
