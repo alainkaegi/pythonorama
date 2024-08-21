@@ -1,4 +1,5 @@
 # Array-Based Structures
+## Overview
 Python uses lists as its default linear structures. Lower-level languages like C instead use primitive arrays. Key differences include:
 - An array's size is set when it is created; it cannot change.
 - Python list features, such as slicing and methods like the `count` method, are not directly available for primitive arrays.
