@@ -1,12 +1,28 @@
 # Queues
 ## Abstract Data Type
 
-A *queue* (pronounced like the letter Q) is similar to a [stack](stacks.md), but items are added at one end (the back) and removed from the other (the front). The metaphor is a line of people waiting to buy tickets: new people arrive at the back and (after buying their tickets) leave from the front. Britons call such a line a queue and will talk about "queuing up". Because items leave in the same order they arrive, queues are *first in, first out* (FIFO).
+A *queue* (pronounced like the letter Q) is similar to a [stack](stacks.md), but items are added at one end (the back) and removed from the other (the front). The metaphor is a line of people waiting to buy tickets: new people arrive at the back and (after buying their tickets) leave from the front. Britons call such a line a queue and will talk about "queuing up".
 
-The operations are:
+A queue supports the following operations:
 - `dequeue` (pronounced DQ) removes and returns the front item from the queue
 - `enqueue` (pronounced NQ) adds an item to the back of the queue
 - `is_empty` returns `True` if the queue is empty
+
+Because items leave in the same order they arrive, queues are *first in, first out* (FIFO).
+
+If `q` is an empty queue, you might evaluate the following sequence of expressions:
+
+| **Expression** | **Queue contents** | **Result** |
+|--|--|--|
+|`s.is_empty()`| |`True`|
+|`s.enqueue(1)`|`1`| |
+|`s.is_empty()`|`1`|`False`|
+|`s.enqueue(2)`|`1` `2`| |
+|`s.enqueue(3)`|`1` `2` `3`| |
+|`s.dequeue()`|`2` `3`|`1`|
+|`s.dequeue()`|`3`|`2`|
+|`s.dequeue()`| |`3`|
+|`s.is_empty()`| |`True`|
 
 ## Array-Based Implementation
 The array-based implementation is similar to the array-implementation of a stack, with the front of the queue at index 0, but there are complications.
