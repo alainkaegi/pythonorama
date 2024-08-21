@@ -29,7 +29,7 @@ to clear the window, redraw *everything*, and then
 stddraw.show(0)
 ```
 
-The function `stddraw.show()`, which takes an optional number of milliseconds as an argument, is vital for adjusting the speed of your animation.
+The function `stddraw.show`, which takes an optional number of milliseconds as an argument, is vital for adjusting the speed of your animation.
 
 ### Mouse Input
 The functions for detecting mouse and keyboard events are, perhaps surprisingly, in the `stddraw` module.
@@ -38,7 +38,7 @@ To detect a mouse click:
 ```python
 while not stddraw.mousepressed():
     # Wait for mouse to be pressed
-    # (A call to show() may be necessary to work around a potential bug.)
+    # (A call to show may be necessary to work around a potential bug.)
     stddraw.show(0)
 
 x = stddraw.mousex()
@@ -62,6 +62,7 @@ Now `x` and `y` hold the coordinates of the location where the mouse was clicked
     stddraw.filledRectangle(0.5, 0.5, 0.1, 0.3)
     ```
 1. :star::star::star: Write a program that draws a dot and moves it left or right a little each time the user presses and releases 'a' or 'd', respectively.
+
 ## Answers
 1. This is real Python; nothing about the language has changed. We are simply using a library that someone else has written so that we don't have to write a bunch of tedious code that isn't relevant to the topics we're studying.
 1.
@@ -72,7 +73,7 @@ Now `x` and `y` hold the coordinates of the location where the mouse was clicked
     ```python
     roll = random.randrange(6) + 1
     ```
-1. It must be followed by a call to `stddraw.show()`.
+1. It must be followed by a call to `stddraw.show`.
 1.
     ```python
     import stddraw

@@ -5,7 +5,6 @@ A *recursive* method is one that calls itself. This is useful for algorithms tha
 For example, suppose we want to compute ![n followed by an exclamation point](https://latex.codecogs.com/svg.latex?n!) (pronounced "![n](https://latex.codecogs.com/svg.latex?n) factorial"), which is the product of the first ![n](https://latex.codecogs.com/svg.latex?n) positive integers.
 
 Here is a recursive solution:
-
 ```python
 def factorial(n):
     if n == 1:
@@ -20,7 +19,6 @@ The second part, the *recursive case*, solves the simpler problem of computing !
 This may seem like a strange way to solve the problem. You should be able to devise a less confusing (and slightly more efficient) algorithm to find the same result using *iteration* (a [loop](loops.md)). In fact, anything that can be done with iteration can be done with recursion, and vice versa.
 
 Why, then, should you wrap your head around recursion? Some algorithms are much more naturally expressed using recursion. For example, consider the [Towers of Hanoi](https://www.mathsisfun.com/games/towerofhanoi.html) puzzle, which seeks to move `n` disks from peg `start` to peg `end`, using peg `spare` for temporary storage. A *divide and conquer* algorithm first recursively moves `n - 1` disks to `spare`, then moves the largest disk to `end`, and finally recursively moves `n - 1` disks from `spare` to `end`.
-
 ```python
 def hanoi(start, spare, end, n):
     if n == 1:
@@ -39,7 +37,6 @@ Many students scratch their heads when first encountering recursion. Isn't it ci
 To see your way out of this difficulty, remember [the call stack](functional_decomposition.md#the-call-stack). Every time a method is called, the current method is frozen and a new call frame is pushed onto the stack. The only special thing about recursion is that several of these call frames are for the same method. Each one has its own version of any local variables (including arguments) and its own memory of where it was frozen.
 
 As an example, suppose you run this program in Visual Studio Code's debugger, with a breakpoint at the beginning of `factorial`:
-
 ```python
 def factorial(n):
     if n == 1:
@@ -50,7 +47,6 @@ print(factorial(5))
 ```
 
 After a few steps, the call stack looks like this:
-
 ![call frames from top to bottom: factorial, factorial, factorial, module](recursion_stack.png)
 
 The bottom call frame corresponds to the call to `factorial(5)` in the global scope at the bottom of our little program.  `factorial(5)` called `factorial(4)`, which called `factorial(3)`, the current call frame.

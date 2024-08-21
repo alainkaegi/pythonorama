@@ -4,7 +4,6 @@
 A *queue* (pronounced like the letter Q) is similar to a [stack](stacks.md), but items are added at one end (the back) and removed from the other (the front). The metaphor is a line of people waiting to buy tickets: new people arrive at the back and (after buying their tickets) leave from the front. Britons call such a line a queue and will talk about "queuing up". Because items leave in the same order they arrive, queues are *first in, first out* (FIFO).
 
 The operations are:
-
 - `dequeue` (pronounced DQ) removes and returns the front item from the queue
 - `enqueue` (pronounced NQ) adds an item to the back of the queue
 - `is_empty` returns `True` if the queue is empty
@@ -17,7 +16,6 @@ Enqueuing works just like pushing at first. To dequeue, you need to return the i
 This approach causes another problem: after a series of enqueue and dequeue operations, the queue will march down the array, so the indices close to 0 are unused but unavailable. To avoid wasting space, the queue is made to wrap around to the beginning. This is done using the `%` (remainder) operator.
 
 Here is the code that rely on the [fixed-size array collection](stacks.md#fixed-size-array) described on the [stacks page](stacks.md):
-
 ```python
 from array import Array
 from empty_queue_exception import EmptyQueueException
@@ -63,7 +61,6 @@ Dequeuing is like popping.
 Enqueuing involves adding a new successor to the *last* node in the chain. Normally finding this node requires walking down the chain, which would take linear time. A better solution is to maintain a second reference to the last node.
 
 Here is the code:
-
 ```python
 from empty_queue_exception import EmptyQueueException
 

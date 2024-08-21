@@ -4,12 +4,11 @@ Recall that a [variable](variables.md) holds *exactly one thing*. So if you have
 ```python
 x = 5
 ```
-you can visualize this variable definition as follows:
 
+you can visualize this variable definition as follows:
 ![a box labeled x containing 5](x5.svg)
 
 This approximation is satisfactory in many situations. But more precisely, Python stores every values in objects, and variables hold references to these objects rather than storing actual values directly. So the more accurate visualization of the code snippet above is as follows:
-
 ![a box labeled x containing an arrow, pointing to a box containing 5](xref5.svg)
 
 In other words, the box for the variable contains a *reference* to an object and not directly the value held in the object. This is a realization of a famous adage in our field: all computer science problems can be solved by another level of indirection (this famous quote is attributed to [Butler Lampson](https://en.wikipedia.org/wiki/Butler_Lampson)). What problem is being solved here, you might ask? For one thing, when passing a value to a function, you do not need copy the entire contents of the object (which can be very large), you only need to pass a reference to it.
@@ -19,7 +18,6 @@ You can think of a reference as an arrow pointing to the object. For example, if
 x = [6, 2, 5]
 ```
 then pictorially:
-
 ![a labeled box containing an arrow, pointing to a row of three boxes. The three boxes contain the numbers 6, 2, and 5.](xref625.svg)
 
 The reference points to the entire object, not any particular part of it.
@@ -32,8 +30,8 @@ Now that we are aware of references, an assignment still copies the contents of 
 a = [1, 2, 3]
 b = a
 ```
-then you get two references to the same array:
 
+then you get two references to the same array:
 ![The box for a and the box for b each contain the tail of an arrow. Both arrows point at the array containing 1, 2, and 3.](alias.svg)
 
 `a` and `b` are said to be *aliases* because they refer to the same array. A consequence of aliasing is that, if you modify the array to which `a` refers, you are also modifying the array to which `b` refers (because they're the same one and arrays are mutable).
@@ -46,15 +44,18 @@ For illustration, let us look what happens if a function has received a value of
 a = [1, 2, 3]
 b = a
 ```
+
 But consider:
 ```python
 def f(x):
     x[0] = 3
 ```
+
 and then you:
 ```python
 f(a)
 ```
+
 then both arrays `a` and `b` are modified, because variables `a` and `b` are aliases.
 
 ## Equality
@@ -66,10 +67,10 @@ a = [1, 2, 3]
 b = a
 c = [1, 2, 3]
 ```
+
 Precisely, in the first statement, a new object is created, its type is an array of integers, its size is 3, its elements are initialized to `1`, `2`, and `3`, in that order, and a reference to that object is stored in the variable `a`. However, this is a mouthful, so we will often just say that `a` is assigned an array `[1, 2, 3]`. But remember that the latter description is an approximation, a shortcut.
 
 Memory now looks like this:
-
 ![a contains a reference to an array object containing 1, 2, and 3. b contains another reference to the same array. c contains a reference to a second array with identical contents.](equality.svg)
 
 Then `a == b` and `a == c` because the `==` operator asks whether its two operands refer to objects with the same *contents*. This is usually the preferred way to compare objects. This type of equality checking is sometimes referred to as *object equality* or *value equality*.
@@ -81,11 +82,11 @@ The literal value `None` is a reference to nothing. Its type is `NoneType`. If y
 ```python
 x = None
 ```
-then `x` doesn't refer to anything. Some draw this with an electrical grounding symbol:
 
+then `x` doesn't refer to anything. Some draw this with an electrical grounding symbol:
 ![s contains a reference to nothing](null.svg)
 
-Trying to do anything with `s`, such as asking for `s.lower()`, results in an `AttributeError`, raised at run time, because there are no methods associated with `None`.
+Trying to do anything with `s`, such as evaluating `s.lower()`, results in an `AttributeError`, raised at run time, because there are no methods associated with `None`.
 
 You can check if a variable refers to nothing with the `is` operator. Suppose you wish to check if `x` points to nothing, then you can use the expression `x is None`.
 
@@ -147,6 +148,7 @@ This feature of Python is in contrast to C, where it is the programmer's respons
 1. :star::star::star: What's the difference between a reference and a pointer?
 1. :star::star::star: How can you tell if two arrays `a` and `b` have the same contents?
 1. :star::star::star: What type is the literal value `None`?
+
 ## Answers
 1. Aliases.
 1. All Python types use references.

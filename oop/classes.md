@@ -4,8 +4,7 @@ Every value in Python is an *object*. For example, the int `5`, the list `[1, 2,
 
 Every object is an *instance* of some *class* (also known as a *type*). The `type` function lets you see the type of an object. For example, `type(3)` returns `<class 'int'>`.
 
-You can also define your own classes. Here is a first draft of the Pet class:
-
+You can also define your own classes. Here is a first draft of the `Pet` class:
 ```python
 class Pet:
     pass
@@ -14,7 +13,6 @@ class Pet:
 By convention, class names start with upper-case letters. If a class name involves multiple words, use PascalCase. The keyword `pass` just indicates that, for the moment, the body of the class definition is empty.
 
 You can now create an instance of `Pet`:
-
 ```python
 p = Pet()
 ```
@@ -23,16 +21,14 @@ Your object doesn't do anything yet, but you can at least ask what type it is. `
 
 ## Attributes
 You can add values called *attributes* to an object. Attributes associated with an object are also called *instance variables*. Continuing the previous example:
-
 ```python
 p.name = 'Violet'
 p.species = 'dog'
 ```
 
-Now you can use `p.name` or `p.species` anywhere you want to know about these values, but you can use `p` to refer to the entire Pet. This ability to refer to a whole collection of named values (and, for example, pass it into or return it from a function) is a key feature of objects.
+Now you can use `p.name` or `p.species` anywhere you want to know about these values, but you can use `p` to refer to the entire `Pet`. This ability to refer to a whole collection of named values (and, for example, pass it into or return it from a function) is a key feature of objects.
 
 Each instance of the pet class can have its own values for these instance variables. If you define
-
 ```python
 q = Pet()
 q.name = 'Vinnie'
@@ -43,13 +39,11 @@ then `p.species` is `'dog'` but `q.species` is `'snake'`.
 
 ## Initializers
 Rather than attaching the instance variables after the fact, it would be nicer to be able to specify them when you create the object:
-
 ```python
 p = Pet('Violet', 'dog')
 ```
 
 You can do this by defining an *initializer* inside the class. Here's the improved version:
-
 ```python
 class Pet:
     def __init__(self, name, species):
@@ -66,15 +60,14 @@ There are several things to note here:
 Inside the initializer, `name` refers to the value that was passed into the initializer, but `self.name` refers to an instance variable of the current object. The line `self.name = name` therefore takes the value that was passed in and stores it in the instance variable. This is important because, as with any functions, as soon as `__init__` ends, the parameter `name` goes away, but `self.name` remains associated with the object.
 
 Here's what happens behind the scenes when you evaluate `p = Pet('Violet', 'dog')`:
-
-1. Python creates a new instance of Pet. Let's call it `temp`.
+1. Python creates a new instance of `Pet`. Let's call it `temp`.
 2. Python calls `__init__(temp, 'Violet', 'dog')`.
 3. Inside the initializer, `self` is `temp`, `name` is `'Violet'`, and `species` is `'dog'`. The body of the initializer is run, setting the instance variables.
 4. The initializer returns the object `temp`.
 5. Now that the function call is complete, the name `p` is made to refer to the returned object.
 
-## Resources
-* Lubanovic, *Introducing Python, 3rd Edition*, Chapter 10
+## Resource
+- Lubanovic, *Introducing Python, 3rd Edition*, Chapter 10
 
 ## Questions
 1. :star: Define a class `Student` with an initializer and instance variables for first name, last name, and id number.
@@ -104,6 +97,7 @@ Here's what happens behind the scenes when you evaluate `p = Pet('Violet', 'dog'
 1. :star::star::star: Given the definition of the `Point` class above, what happens if you ask for `Point.x`?
 1. :star::star::star: What keyword used in Java, C++, and C# is analogous to Python's `self`?
 1. :star::star::star: If `int` is a class, why doesn't its name start with an upper-case letter?
+
 ## Answers
 1.
     ```python

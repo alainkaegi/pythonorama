@@ -11,7 +11,7 @@ before = time.time()
 # run the algorithm to be timed
 print(str(time.time() - before) + ' sec elapsed')
 ```
-(`time.time()` returns the number of seconds since [the beginning of 1970](https://en.wikipedia.org/wiki/Unix_time).)
+(The function `time.time` returns the number of seconds since [the beginning of 1970](https://en.wikipedia.org/wiki/Unix_time).)
 
 There are a number of problems with this approach:
 - The result may be affected by the programming language used, the speed of the physical machine, or other processes running on that machine. The last issue can be ameliorated by shutting down other programs such as web browsers, but a modern system often has dozens of processes running even when there are no other user programs running.

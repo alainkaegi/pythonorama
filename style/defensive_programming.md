@@ -5,7 +5,6 @@ Suppose we have a `Person` class with an instance variable `_height`. A conventi
 Indeed, but what if you need to get the height of person `p` in another class? Convention suggests that you shouldn't refer to `p._height` directly because it is private.
 
 The correct solution is to provide a *getter* (*accessor*) and a *setter* (*mutator*):
-
 ```python
 def get_height(self):
     return self._height
@@ -17,11 +16,10 @@ def set_height(self, height):
 Now other classses can refer to, for example, `p.get_height()`.
 
 If other classes can now modify `_height` using `set_height`, what was the point of all this? Why not just make `_height` public? Using getters and setters provides several advantages:
-
-* If you want to suggest that others can see an instance variable but not modify it, you can provide a getter but no setter.
-* You can change your internal representation without modifying the getter and setter behavior. For example, a class representing a two-dimensional vector might use rectangular or polar coordinates; someone using such a class doesn't have to know which it is and their code won't break if the representation is changed.
-* A setter can enforce constraints, such as disallowing negative heights or making sure that multiple instance variables have consistent values.
-* While debugging, you know that any change to the instance variable *should* either be in this class or go through the setter, so you only have to look at code in this class.
+- If you want to suggest that others can see an instance variable but not modify it, you can provide a getter but no setter.
+- You can change your internal representation without modifying the getter and setter behavior. For example, a class representing a two-dimensional vector might use rectangular or polar coordinates; someone using such a class doesn't have to know which it is and their code won't break if the representation is changed.
+- A setter can enforce constraints, such as disallowing negative heights or making sure that multiple instance variables have consistent values.
+- While debugging, you know that any change to the instance variable *should* either be in this class or go through the setter, so you only have to look at code in this class.
 
 While the Python compiler does not enforce the use of setters and getters to access private instance variables, other tools can verify adherence to the convention.
 
@@ -29,7 +27,6 @@ While the Python compiler does not enforce the use of setters and getters to acc
 An object is immutable if the content of the object cannot be changed without creating a new object. In other words, immutability creates an unbreakable bond between the id of an object and its content. If your program has maintained a reference to a particular object, it can be sure that the value of that object hasn't changed.
 
 Immutability is an important concept. It can help reason about the correctness of a program. For instance, it is often a programmer's expectation that a numeric type be immutable. Consider the following code snippet:
-
 ```python
 a = 2
 b = 3
@@ -44,7 +41,6 @@ Some of Python's built-in types are immutable, including `int`, `float`, `boolea
 
 ### Defensive Copies
 Designing your own immutable type with a class whose initializer takes a reference to a mutable type as an argument can be delicate. If this is the case, you cannot simply keep a copy of the provided reference (the caller might also keep a copy of that reference). Instead your initializer must take a *defensive* copy of the corresponding object.
-
 ```python
 class Vector:
     def __init__(self, arr):
@@ -93,7 +89,7 @@ class Vector:
             self.real = real
             self.imag = imag
         def __add__(self, other):
-            # don't reuse an existing object; create a new object instead  
+            # don't reuse an existing object; create a new object instead
             return Complex(self.real + other.real, self.imag + other.imag)
     ```
 1.

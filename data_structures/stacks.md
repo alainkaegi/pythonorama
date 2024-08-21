@@ -3,7 +3,6 @@
 An *abstract data type* defines a data type and associated operations. It does not say anything about how these operations are implemented; it merely conveys the idea of the data type.
 
 The *stack* abstract data type defines a stack as a vertical sequence of items, with the following operations:
-
 - `is_empty` returns `True` if the stack is empty
 - `pop` removes and returns the top item from the stack
 - `push` adds an item to the top of the stack
@@ -16,12 +15,10 @@ There are multiple ways to implement this data type, two of them are described b
 
 ## Array-Based Implementation
 The items in the stack can be kept in an array. The only catch is that an array has typically a fixed size, while a stack can grow and shrink as items are pushed and popped. Two simple tricks deal with this problem:
-
 - Maintain an instance variable `count` indicating how many items are currently in the stack. Thus, even if the array has room for 8 items, if `count` is 5, only the first 5 items are considered part of the stack.
 - If anyone tries to push onto a full stack, copy all of the current items into a new, larger array first.
 
 Here is code for the array-based implementation:
-
 ```python
 from array import Array
 from empty_stack_exception import EmptyStackException
@@ -65,7 +62,6 @@ The code above relies on a fixed-size array and the ability to raise an exceptio
 
 ### Fixed-Size Array
 Here is code for a fixed-size array:
-
 ```python
 class Array:
     def __init__(self, capacity):
@@ -93,7 +89,6 @@ class Array:
 
 ### Empty-Stack Exception
 Here is code for an empty-stack exception; it is just an empty class derived from the `Exception` base class:
-
 ```python
 class EmptyStackException(Exception):
     pass
@@ -101,7 +96,6 @@ class EmptyStackException(Exception):
 
 ## Linked Implementation
 A linked implementation uses a chain of [linked list](linked_lists.md) nodes. The LinkedStack object knows about the top node, which knows about the next node, and so on. Here is the code:
-
 ```python
 from empty_stack_exception import EmptyStackException
 
@@ -147,7 +141,7 @@ All three stack methods take constant time.
     s.pop()
     s.push(8)
     ```
-1. :star::star: It would save space to replace the expression `data.count * 2` in the `push` method of ArrayStack with `data.count + 1`. What effect would this have on the amortized running time of `push`?
+1. :star::star: It would save space to replace the expression `data.count * 2` in the `push` method of `ArrayStack` with `data.count + 1`. What effect would this have on the amortized running time of `push`?
 1. :star::star: What does the code below do?
     ```python
     from array_stack import ArrayStack

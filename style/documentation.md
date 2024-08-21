@@ -64,6 +64,6 @@ Another advantage of docstrings is that many IDEs will read them to produce a po
 
 ## Answers
 1. It is a triple-quoted string literal that appears as the first statement of the definition of a module, function, class, or method.
-1. Include a docstring before each module, function, method, or class. If a function is particularly long or confusing, include block comments within the function (or, better yet, consider breaking the function up into multiple functions). You don't have to provide docstrings for methods that are private, are completely obvious (like standard getters and setters), or override special methods (like `__str__()` or `__eq__()`).
+1. Include a docstring before each module, function, method, or class. If a function is particularly long or confusing, include block comments within the function (or, better yet, consider breaking the function up into multiple functions). You don't have to provide docstrings for methods that are private, are completely obvious (like standard getters and setters), or override special methods (like `__str__` or `__eq__`).
 1. Use docstrings before all your module, function, method, and class definitions. Use blocks comments where necessary. Use inline comments sparingly.
 1. The "documentation" for such code comes in the form of spoken words.

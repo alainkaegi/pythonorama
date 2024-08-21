@@ -11,7 +11,7 @@ Tuples share some of the same attributes as [arrays](arrays.md). Using the famil
 t[1]
 ```
 
-Also, the `len()` function, applied to a tuple, returns its arity (i.e., the number of values it holds):
+Also, the `len` function, applied to a tuple, returns its arity (i.e., the number of values it holds):
 ```python
 len(t)
 ```

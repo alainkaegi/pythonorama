@@ -49,7 +49,6 @@ This is correct and shorter than the original, but you can do even better.
 
 ### Stop As Soon As You Know The Answer
 In this example, once the value of `result` has been set, it will never change. You can therefore return as soon as you know the answer:
-
 ```python
 def iseven(n):
     if n % 2 == 0:
@@ -70,7 +69,6 @@ def iseven(int n):
 
 ### Use Shorter Expressions
 In the example, the function returns `True` if `n % 2 == 0` is true and `False` if `n % 2 == 0` is false. In other words, the value of `n % 2 == 0` is the value you want to return:
-
 ```python
 def iseven(n):
     return n % 2 == 0
@@ -88,7 +86,6 @@ Sometimes exactly the same code can handle more than one case.
 
 ### Separate Control From Data
 This function finds the sum of the four elements adjacent to element `r`, `c` in a two-dimensional array:
-
 ```python
 def neighbor_sum(grid, r, c):
     sum = 0
@@ -104,7 +101,6 @@ def neighbor_sum(grid, r, c):
 ```
 
 The four if statements differ only in their tests and in the array indices. By storing the four directions in a separate array `offsets`, you can accomplish all of these in one loop:
-
 ```python
 def neighbor_sum(grid, r, c):
     offsets = [[-1, 0], [1, 0], [0, -1], [0, 1]]
@@ -120,7 +116,6 @@ def neighbor_sum(grid, r, c):
 This improvement was made by separating the control (what to do with each neighbor) from the data (the list of offsets to find neighbors).
 
 Modifying the function to also look at the diagonal neighbors now becomes trivial; only the data has to be modified.
-
 ```python
 def neighbor_sum(grid, r, c):
     offsets = [[-1, 0], [1, 0], [0, -1], [0, 1], [-1, -1], [-1, 1], [1, -1], [1, 1]]
@@ -166,7 +161,7 @@ def neighbor_sum(grid, r, c):
         return colors[n]
     ```
     It would be even better to use the Python convention of naming constants using only capital letters (e.g., `COLORS`).
-    
+
     Strictly speaking, this code is not *precisely* equivalent to the original code, as it doesn't behave the same way if `n` is not a valid index into `colors`. This could be remedied by adding the following between the two lines in the function above:
     ```python
         if n < 0 or n >= len(colors):

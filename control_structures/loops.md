@@ -12,7 +12,7 @@ while <em>condition</em>:
 where *condition* is a boolean expression.
 
 Its flow is:
-1. If *condition* is `false`, stop.
+1. If *condition* is `False`, stop.
 1. Execute the statements in the body of the loop.
 1. Go back to step 1.
 
