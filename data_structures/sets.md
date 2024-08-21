@@ -6,10 +6,10 @@ s = {1, 2, 3}
 ```
 
 Like a list, a set is a collection of elements, but it differs in a few ways:
-* The order of the elements in a set doesn't matter, so `{1, 2, 3}` and `{1, 3, 2}` are equal. An element is either contained in a set or not.
-* A set cannot contain multiple copies of the same elements.
-* The elements of a set must be "hashable". In general, this means immutable types like `int`, `float`, `bool`, `str`, and `tuple` are okay, but mutable types like `list` are not.
-* Syntactically, a set uses curly braces (`{}`) rather than square brackets (`[]`).
+- The order of the elements in a set doesn't matter, so `{1, 2, 3}` and `{1, 3, 2}` are equal. An element is either contained in a set or not.
+- A set cannot contain multiple copies of the same elements.
+- The elements of a set must be "hashable". In general, this means immutable types like `int`, `float`, `bool`, `str`, and `tuple` are okay, but mutable types like `list` are not.
+- Syntactically, a set uses curly braces (`{}`) rather than square brackets (`[]`).
 
 ## Set Operations
 ### Creating Sets

@@ -67,7 +67,7 @@ Here's what happens behind the scenes when you evaluate `p = Pet('Violet', 'dog'
 5. Now that the function call is complete, the name `p` is made to refer to the returned object.
 
 ## Resources
-* Lubanovic, *Introducing Python, 3rd Edition*, Chapter 10
+- Lubanovic, *Introducing Python, 3rd Edition*, Chapter 10
 
 ## Questions
 1. :star: Define a class `Student` with an initializer and instance variables for first name, last name, and id number.

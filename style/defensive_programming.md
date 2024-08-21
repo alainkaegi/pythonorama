@@ -16,10 +16,10 @@ def set_height(self, height):
 Now other classses can refer to, for example, `p.get_height()`.
 
 If other classes can now modify `_height` using `set_height`, what was the point of all this? Why not just make `_height` public? Using getters and setters provides several advantages:
-* If you want to suggest that others can see an instance variable but not modify it, you can provide a getter but no setter.
-* You can change your internal representation without modifying the getter and setter behavior. For example, a class representing a two-dimensional vector might use rectangular or polar coordinates; someone using such a class doesn't have to know which it is and their code won't break if the representation is changed.
-* A setter can enforce constraints, such as disallowing negative heights or making sure that multiple instance variables have consistent values.
-* While debugging, you know that any change to the instance variable *should* either be in this class or go through the setter, so you only have to look at code in this class.
+- If you want to suggest that others can see an instance variable but not modify it, you can provide a getter but no setter.
+- You can change your internal representation without modifying the getter and setter behavior. For example, a class representing a two-dimensional vector might use rectangular or polar coordinates; someone using such a class doesn't have to know which it is and their code won't break if the representation is changed.
+- A setter can enforce constraints, such as disallowing negative heights or making sure that multiple instance variables have consistent values.
+- While debugging, you know that any change to the instance variable *should* either be in this class or go through the setter, so you only have to look at code in this class.
 
 While the Python compiler does not enforce the use of setters and getters to access private instance variables, other tools can verify adherence to the convention.
 

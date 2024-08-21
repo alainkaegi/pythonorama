@@ -115,7 +115,7 @@ Operator | Magic method
 `**` | `__pow__(self, other)`
 
 ## Resources
-* Lubanovic, *Introducing Python, 3rd Edition*, Chapter 10
+- Lubanovic, *Introducing Python, 3rd Edition*, Chapter 10
 
 ## Questions
 1. :star: Supply a plausible `__str__` method for the class below.
