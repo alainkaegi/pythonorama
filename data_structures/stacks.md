@@ -2,12 +2,12 @@
 ## Abstract Data Type
 An *abstract data type* defines a data type and associated operations. It does not say anything about how these operations are implemented; it merely conveys the idea of the data type.
 
-The *stack* abstract data type defines a stack as a vertical sequence of items, with the following operations:
+The *stack* abstract data type defines a stack as a vertical sequence of items. The standard metaphor for a stack is one of those spring-loaded stacks of plates you might find in a cafeteria. You can push a new plate onto the stack or pop one off the top, but there's no way to access the plates underneath. The sequence of previously-viewed pages that your web browser maintains to allow you to go back is also represented as a stack.
+
+A stack supports the following operations:
 - `is_empty` returns `True` if the stack is empty
 - `pop` removes and returns the top item from the stack
 - `push` adds an item to the top of the stack
-
-The standard metaphor for a stack is one of those spring-loaded stacks of plates you might find in a cafeteria. You can push a new plate onto the stack or pop one off the top, but there's no way to access the plates underneath. The sequence of previously-viewed pages that your web browser maintains to allow you to go back is also represented as a stack.
 
 Because the last item pushed onto a stack will be the first one popped, stacks are said to be *last in, first out* (LIFO).
 
