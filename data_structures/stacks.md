@@ -11,7 +11,7 @@ A stack supports the following operations:
 
 Because the last item pushed onto a stack will be the first one popped, stacks are said to be *last in, first out* (LIFO).
 
-For example, if `s` is an empty stack, you might evaluate the following sequence of expressions:
+If `s` is an empty stack, you might evaluate the following sequence of expressions:
 
 | **Expression** | **Stack contents** | **Result** |
 |--|--|--|
