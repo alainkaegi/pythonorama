@@ -38,7 +38,7 @@ class Square:
         return self.width ** 2
 ```
 
-## Resources
+## Resource
 - Lubanovic, *Introducing Python, 3rd Edition*, Chapter 10
 
 ## Questions

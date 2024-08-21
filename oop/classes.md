@@ -66,7 +66,7 @@ Here's what happens behind the scenes when you evaluate `p = Pet('Violet', 'dog'
 4. The initializer returns the object `temp`.
 5. Now that the function call is complete, the name `p` is made to refer to the returned object.
 
-## Resources
+## Resource
 - Lubanovic, *Introducing Python, 3rd Edition*, Chapter 10
 
 ## Questions

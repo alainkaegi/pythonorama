@@ -114,7 +114,7 @@ Operator | Magic method
 `%` | `__mod__(self, other)`
 `**` | `__pow__(self, other)`
 
-## Resources
+## Resource
 - Lubanovic, *Introducing Python, 3rd Edition*, Chapter 10
 
 ## Questions

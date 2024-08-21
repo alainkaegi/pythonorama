@@ -55,7 +55,7 @@ c = {2, 3}
 |Proper superset|Second set contains all elements from second, plus at least one more|`b > c`|`True`|
 | | |`b > b`|`False`|
 
-## Resources
+## Resource
 - Lubanovic, *Introducing Python: Modern Computing in Simple Packages (2nd Edition)*, pp. 129-136.
 
 ## Questions
