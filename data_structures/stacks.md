@@ -11,6 +11,20 @@ The standard metaphor for a stack is one of those spring-loaded stacks of plates
 
 Because the last item pushed onto a stack will be the first one popped, stacks are said to be *last in, first out* (LIFO).
 
+For example, if `s` is an empty stack, you might evaluate the following sequence of expressions:
+
+| **Expression** | **Stack contents** | **Result** |
+|--|--|--|
+|`s.is_empty()`| |`True`|
+|`s.push(1)`|`1`| |
+|`s.is_empty()`|`1`|`False`|
+|`s.push(2)`|`2`<br>`1`| |
+|`s.push(3)`|`3`<br>`2`<br>`1`| |
+|`s.pop()`|`2`<br>`1`|`3`|
+|`s.pop()`|`1`|`2`|
+|`s.pop()`||`1`|
+|`s.is_empty()`| |`True`|
+
 As described below, Python lists can function as stacks. A stack can also be implemented using an array-based or linked data structure.
 
 ## Analysis
