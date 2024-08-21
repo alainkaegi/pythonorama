@@ -47,7 +47,7 @@ class Complex:
 
 Now if we create and print an instance of `Complex`
 
-```
+```python
 c = Complex(1.0, 1.0)
 print(str(c))
 ```
@@ -69,7 +69,7 @@ If you don't define `__str__` for your class, your class inherits a default vers
 
 Unless you define an appropriate method (`__eq__`), two distinct objects are considered different even if their contents match. For example,
 
-```
+```python
 a = Complex(2.0, 3.0)
 b = Complex(2.0, 3.0)
 ```
