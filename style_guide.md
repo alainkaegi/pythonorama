@@ -4,7 +4,7 @@ This is the style guide for this repository.
 - Use the second voice (“you”).
 - Capitalize every word of titles except for conjunctions, articles, two-letter prepositions, and the word “for” (mnemonic: “CAP4”). Examples:
   - “Asymptotic Notation” (rather than “Asymptotic notation”)
-  - ”Getters and Setters” (rather than “Getters and setters or “Getters And Setter”)
+  - ”Getters and Setters” (rather than “Getters and setters or “Getters And Setters”)
 - Backtick Python expressions embedded in the text. Example:
   - The Python expression `(2 + 3) * 4` evaluates to `20`
 - Avoid unnecessary empty lines and trailing spaces
