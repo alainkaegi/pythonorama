@@ -27,7 +27,7 @@ else:
     <em>statement</em>
     ...
 </pre>
-where *condition*, *condition1*, and *condition2* are a boolean expressions. The first version executes the statements in the body if the value of *condition* is `true`. The second executes the first batch of statements if *condition* is `true` and the second batch if it is `false`. The third executes the first batch of statements if *condition1* is `true`, the second batch if it is false and *condition2* is `true`, and the third batch if both *condition1* and *condition2* are `false`.
+where *condition*, *condition1*, and *condition2* are a boolean expressions. The first version executes the statements in the body if the value of *condition* is `True`. The second executes the first batch of statements if *condition* is `True` and the second batch if it is `False`. The third executes the first batch of statements if *condition1* is `True`, the second batch if it is false and *condition2* is `True`, and the third batch if both *condition1* and *condition2* are `False`.
 
 Like other control structures, `if` statements can be nested inside each other.
 
@@ -82,7 +82,7 @@ Some sources call an `if` statement a *conditional statement* or *branch*.
 
 ## Answers
 1. The second version only prints `B` if *both* `condition1` and `condition2` are true.
-1. The second version only prints `B` if `condition1` is `false` *and* `condition2` is `true`.
+1. The second version only prints `B` if `condition1` is `False` *and* `condition2` is `True`.
 1. `B`. The indentation is significant; only the first `print` statement is part of the `if` statement. Unlike C or Java, Python does not group statements using curly braces. Instead, Python uses indentation to group statements.
 1.
     ```python
@@ -91,7 +91,7 @@ Some sources call an `if` statement a *conditional statement* or *branch*.
     else:
         print('B')
     ```
-    If `condition` was `false`, then `not condition` *must* be `true`; there's no need to waste code or computation checking `condition` again.
+    If `condition` was `False`, then `not condition` *must* be `True`; there's no need to waste code or computation checking `condition` again.
 1. The canonical implementation of a three-way decision in Python looks as follows:
     <pre>
     if <em>condition1</em>:
