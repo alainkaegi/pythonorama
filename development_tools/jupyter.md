@@ -25,7 +25,42 @@ In a new notebook, there is already one code cell present. You can type a Python
 2 + 2
 ```
 
-Run this cell by pressing `shift-return`. The first time you run a cell in a notebook, it will take a moment for Google Colab to set things up. Subsequent runs will be much faster.
+### Creating and Editing Cells
 
-### Creating Cells
+To create a new cell under the current one, click on `+ Code` or `+ Text` at the upper left.
 
+In a text cell, you can simply type text. Buttons are provide for bold, italics, bulleted lists, and other fancy text. The raw text (in a language called markdown) is shown on the left side; the formatted text is on the right. If you are not currently editing a text cell, only the formatted text is shown.
+
+In a code cell, you can type all the Python code you want. The notebook provide some support such as color syntax highlighting and automatic indentation.
+
+### Running Cells
+
+To run a code cell, either press `shift-return` or click on the little "play" triangle to the left of the cell. The output will appear under the cell.
+
+The first time you run a cell in a notebook, it will take a moment for Google Colab to set things up. Subsequent runs will be much faster.
+
+If a cell goes into an infinite loop, you can stop it by clicking on the square that has replaced the play button.
+
+If you define something, like a variable or function, in one cell, you can refer to that definition in another cell *provided that the first cell has been run*.
+
+You can run a bunch of cells using the `Runtime` menu.
+
+## Left Sidebar
+
+There are a series of icons on the left side of the notebook.
+
+## Resources
+
+- [Jupyter Notebook documentation](https://jupyter-notebook.readthedocs.io/en/latest/notebook.html)
+
+## Questions
+1. :star: How do you run a cell?
+1. :star::star: In one cell, you have defined `x = 2`. In the cell below, you have `x + 2`. When you run the second cell, Python complains that `'x' is not defined`. What's going on? 
+1. :star::star::star: Why is Jupyter spelled that way?
+1. :star::star::star: Can text cells contain LaTeX math?
+
+## Answers
+1. By pressing `shift-return` or clicking on the little "play" triangle to the left of the cell.
+1. You have to run the first cell before running the second cell.
+1. It combines the names of the three languages the notebooks were originally designed to support: Julia, Python, and R.
+1. Yes. Inline LaTeX should be surrounded by dollar signs: `$\int_{a}^{b} x^2 \,dx$`. For a block equation, use double dollar signs: `$$\sum_{n=1}^{\infty} 2^{-n} = 1$$`.
