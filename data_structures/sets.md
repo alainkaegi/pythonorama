@@ -52,23 +52,23 @@ c = {2, 3}
 - Lubanovic, *Introducing Python: Modern Computing in Simple Packages (2nd Edition)*, pp. 129-136.
 ## Questions
 1. :star: How do you create an empty set?
-2. :star: Is `{1, 2, 3} == {3, 2, 1}`?
-3. :star::star: What happens if you add an element to a set that already contains that element?
-4. :star::star: What happens if you remove an element from a set that doesn't contain that element?
-5. :star::star: Can you use a `for` loop to iterate through the elements of a set?
-6. :star::star: How might you create the set of absolute values of the integers from -5 through 5?
-7. :star::star: Can you make a set of sets?
-8. :star::star::star: Can you use `set` to convert a zip into a set?
+1. :star: Is `{1, 2, 3} == {3, 2, 1}`?
+1. :star::star: What happens if you add an element to a set that already contains that element?
+1. :star::star: What happens if you remove an element from a set that doesn't contain that element?
+1. :star::star: Can you use a `for` loop to iterate through the elements of a set?
+1. :star::star: How might you create the set of absolute values of the integers from -5 through 5?
+1. :star::star: Can you make a set of sets?
+1. :star::star::star: Can you use `set` to convert a zip into a set?
 ## Answers
 1. `set()`
-2. Yes, because the order of elements doesn't matter.
-3. Nothing, because duplicates are discarded.
-4. You get a KeyError, because the element (key) is not present. Use `in` to verify that an element is present before removing it.
-5. Yes. For example, this is fine:
+1. Yes, because the order of elements doesn't matter.
+1. Nothing, because duplicates are discarded.
+1. You get a KeyError, because the element (key) is not present. Use `in` to verify that an element is present before removing it.
+1. Yes. For example, this is fine:
    ```python
    for a in {1, 2, 3}:
        print(a)
    ```
-6. One way is using a set comprehension, which is analogous to a list comprehension: `{abs(n) for n in range(-5, 6)}`
-7. No, because sets are mutable and therefore not hashable. If you really need to do this (or otherwise need an immutable set), research the `frozenset` type.
-8. Yes. `set` works on any Iterable type. This includes `zip` and `generator`, as well as Collection types (such as `tuple`, `range`, `str`, `list`, `set`, and `dict`).
+1. One way is using a set comprehension, which is analogous to a list comprehension: `{abs(n) for n in range(-5, 6)}`
+1. No, because sets are mutable and therefore not hashable. If you really need to do this (or otherwise need an immutable set), research the `frozenset` type.
+1. Yes. `set` works on any Iterable type. This includes `zip` and `generator`, as well as Collection types (such as `tuple`, `range`, `str`, `list`, `set`, and `dict`).
