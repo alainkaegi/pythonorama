@@ -1,6 +1,7 @@
 # Linked Lists
 ## Overview
 One way to represent a sequence of items is an [array](arrays.md). Another is a *linked list*, which is a chain of `Node` objects, each of which contains one item and a [reference](references.md) to the next `Node`.
+
 ![list contains a reference to a node. That node contains 5 and a reference to the next node. The second node contains 2 and a reference to the third node. The third node contains 3 and a None reference.](linked_list.svg)
 
 If you have defined the `Node` class as

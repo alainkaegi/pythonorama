@@ -12,6 +12,7 @@ stddraw.show()
 ```
 
 creates this picture:
+
 ![A circle, of radius 0.2, centered at x equals 0.5 and y = 0.75](stddraw_circle.png)
 
 The three arguments in the case are the *x* coordinate, the *y* coordinate, and the radius.

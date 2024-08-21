@@ -47,6 +47,7 @@ print(factorial(5))
 ```
 
 After a few steps, the call stack looks like this:
+
 ![call frames from top to bottom: factorial, factorial, factorial, module](recursion_stack.png)
 
 The bottom call frame corresponds to the call to `factorial(5)` in the global scope at the bottom of our little program.  `factorial(5)` called `factorial(4)`, which called `factorial(3)`, the current call frame.

@@ -5,6 +5,7 @@ The simplest way to create an array in Python is to assign a variable a composit
 a = [3, 1, 4, 7]
 ```
 While the distinction is irrelevant in *most* situations, it's best to think of the array variable as holding a *reference to* a sequence of *references* to values contained in the array:
+
 ![A box labeled a, containing an arrow pointing to a row of four boxes with 4 references to each of the values 3, 1, 4, and 1](array.svg)
 
 You can initialize an array with values other than integers.
@@ -21,6 +22,7 @@ You can use this to access or change any element of an array. If we take our arr
 arr[2] = 8
 ```
 then the array looks like this:
+
 ![The third value now contains an 8 instead of a 4](array_modified.svg)
 
 The expression `len(a)` returns the length of the array (which in this case is 4).

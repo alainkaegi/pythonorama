@@ -3,6 +3,7 @@
 In computer science, a *variable* is a named location to store a value. (Mathematicians and statisticians use the word in slightly different ways.)
 
 In Python, it is imprecise but convenient to think of a variable as a labeled box that holds something:
+
 ![a box labeled x, the box is empty](x.svg)
 
 Before the variable can be used, it must be *initialized*, that is, assigned an initial value:
@@ -10,6 +11,7 @@ Before the variable can be used, it must be *initialized*, that is, assigned an 
 x = 5
 ```
 Now there's something in the box:
+
 ![a box labeled x containing 5](x5.svg)
 
 A variable is also assigned a type, depending on the value stored in it. If the assigned value is of type `float`, then the variable has type `float`. If the assigned value is of type `int`, then the variable has type `int`. Et cetera.
