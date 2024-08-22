@@ -1,6 +1,7 @@
-# Linked Lists
+# Linked Structures
+
 ## Overview
-Linear structures like stacks, queues, and lists can be implemented using either [arrays](array_based.md) or linked data structures. A linked list is a chain of node objects, each of which holds one item and knows about the next node (if there is one).
+Linear structures like stacks, queues, and lists can be implemented using either [arrays](array_based.md) or linked data structures. A *linked list* is a chain of node objects, each of which holds one item and knows about the next node (if there is one).
 
 ![list contains a reference to a node. That node contains 5 and a reference to the next node. The second node contains 2 and a reference to the third node. The third node contains 3 and a None reference.](linked_list.svg)
 
@@ -59,7 +60,8 @@ For example, the stack
 
 would be represented like this:
 
-TODO DIAGRAM
+![_top contains a reference to a Node. That Node has item 5 and next is a reference to the Node below it. The second node has item 2 and next is a reference to the third Node. The third node has item 7 and next is a reference to None.](linked_stack.svg)
+
 
 ## Queues
 
@@ -96,7 +98,7 @@ The queue
 
 would be represented like this:
 
-TODO DIAGRAM
+![The LinkedQueue has two attributes, _front and _back. _front contains a reference to a Node. That Node has item 5 and next is a reference to the Node below it. The second node has item 2 and next is a reference to the third Node. The third node has item 7 and next is a reference to None. Back in the LinkedQueue, _back also refers to the third and final Node.](linked_queue.svg)
 
 `dequeue` works just like `pop`, but must handle the special case of the dequeuing the *last* item. `enqueue` modifies the last node and must account for the possibility that the queue was previously empty.
 
