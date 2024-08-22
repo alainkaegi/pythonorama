@@ -24,7 +24,7 @@ a = Node(5, b)
 list = a
 ```
 
-(The temporary variables `a`, `b`, and `c` are not shown in the diagram.) Note that `c`'s `next` instance variable is set to `None`, indicating that there is no next node.
+(The temporary variables `a`, `b`, and `c` are not shown in the diagram.) Note that `c`'s `next` attribute is set to `None`, indicating that there is no next node.
 
 A linked list is a [recursive](../control_structures/recursion.md) data structure, in that a linked list is either:
 - empty (represented as `None`), or
