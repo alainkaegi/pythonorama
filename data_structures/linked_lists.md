@@ -175,7 +175,7 @@ Sets and dictionaries can be implemented using similar techniques. If better run
 
 ### Advantages of Linked Structures
 - There is never a need to copy the structure, so stack and queue operations take constant time in the worst case, not just amortized.
-- An item can be added to or removed from the front of a linked list in constnat, rather than linear, time.
+- An item can be added to or removed from the front of a linked list in constant, rather than linear, time.
 
 ## Resources
 
@@ -188,17 +188,28 @@ TODO REVISE
 1. :star: Write a `Node` class for building linked lists.
 1. :star: Name an advantage linked lists have over arrays.
 1. :star: What is the value of the `next` instance variable in the *last* `Node` in a linked list?
-1. :star::star: What would happen if the `enqueue` method in `LinkedQueue` didn't account for the possibility that the queue was previously empty?
-1. :star::star: What would happen if the `dequeue` method in `LinkedQueue` didn't account for the possibility that the item being dequeued is the last one?
-1. :star::star: The method below is supposed to determine the length of a linked list, but it contains an off-by-one error. How should it be fixed?
+1. :star::star: What would happen if this method was used in `LinkedQueue`?
     ```python
-    def length(list):
-        count = 0
-        n = list.next
-        while n != None:
-            count += 1
-            n = n.next
-        return count
+    def enqueue(self, item):
+        self._back.next = Node(item, None)
+        self._back = self._back.next
+    ```
+1. :star::star: What would happen if this method was used in `LinkedQueue`?
+   ```python
+   def dequeue(self):
+       result = self._front.item
+       self._front = self._front.next
+       return result
+   ```
+1. :star::star: What would happen if this method was used in `LinkedList`?
+    ```python
+    def __len__(self):
+        node = self._front.next
+        result = 0
+        while node:
+            result += 1
+            node = node.next
+        return result
     ```
 1. :star::star::star: What is a doubly-linked list?
 
@@ -209,9 +220,9 @@ TODO REVISE
             self.item = item
             self.next = next
     ```
-1. A linked list can grow longer or shorter. An array, in many programming languages, must have its length specified when it is created.
-1. When the code got to the line `self._back.next = Node(item, None)`, there would be an AttributeError because `self._back`, being `None`, has no `next`.
+1. There is never a need to copy the structure, so stack and queue operations take constant time in the worst case, not just amortized.
+1. If the queue was empty, when the code got to the line `self._back.next = Node(item, None)`, there would be an AttributeError because `self._back`, being `None`, has no `next`.
 1. An empty queue might still have `_back` pointing at an otherwise unreachable item. This would not interfere with the functioning of the queue, but the "loitering" item would take up memory.
 1. `None`.
-1. `n` should start at `list`, not `list.next`.
+1. In general, it would return a value one less than the correct answer. For an empty list, it would throw an error.
 1. A linked list where each node knows about the previous node as well as the next node. This requires some extra bookkeeping, but is useful in some situations. For example, a double-ended queue, where items can be inserted at or removed from either end, can be implemented to run in constant time using doubly-linked list.
