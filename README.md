@@ -42,10 +42,10 @@ Topic | CS 171<br>(CS1) | CS 172<br>(CS2) | CS 369<br>(AI & ML) | CS 383<br>(Alg
 &nbsp;&nbsp;&nbsp;&nbsp;[Sets](data_structures/sets.md) | | x | x | x | x | x
 &nbsp;&nbsp;&nbsp;&nbsp;Dictionaries | | x | x | x | x | x
 &nbsp;&nbsp;&nbsp;&nbsp;Abstract Base Classes | | | | | x |
-&nbsp;&nbsp;&nbsp;&nbsp;[Linked Lists](data_structures/linked_lists.md) | | x | | x |  |
 &nbsp;&nbsp;&nbsp;&nbsp;[Stacks](data_structures/stacks.md) | | x | x | x |  |
 &nbsp;&nbsp;&nbsp;&nbsp;[Queues](data_structures/queues.md) | | x | x | x |  |
-&nbsp;&nbsp;&nbsp;&nbsp;Implementing Collections | | x | | x | |
+&nbsp;&nbsp;&nbsp;&nbsp;[Array-based Structures](data_structures/array_based.md) | | x | | x |  |
+&nbsp;&nbsp;&nbsp;&nbsp;[Linked Structures](data_structures/linked_lists.md) | | x | | x |  |
 &nbsp;&nbsp;&nbsp;&nbsp;Trees | | x | x | x | x | x
 &nbsp;&nbsp;&nbsp;&nbsp;Graphs | | x | x | x | x |
 &nbsp;&nbsp;&nbsp;&nbsp;Binary Search Trees | | | | x | |
