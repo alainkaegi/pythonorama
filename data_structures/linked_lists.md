@@ -92,6 +92,8 @@ class LinkedQueue:
 
 `LinkedQueue` is similar to `LinkedStack`, but it keeps track of both the front and the back of the queue.
 
+`dequeue` works just like `pop`, but must handle the special case of the dequeuing the *last* item. `enqueue` modifies the last node and must account for the possibility that the queue was previously empty.
+
 The queue
 
 `5` `2` `7`
@@ -99,8 +101,6 @@ The queue
 would be represented like this:
 
 ![The LinkedQueue has two attributes, _front and _back. _front contains a reference to a Node. That Node has item 5 and next is a reference to the Node below it. The second node has item 2 and next is a reference to the third Node. The third node has item 7 and next is a reference to None. Back in the LinkedQueue, _back also refers to the third and final Node.](linked_queue.svg)
-
-`dequeue` works just like `pop`, but must handle the special case of the dequeuing the *last* item. `enqueue` modifies the last node and must account for the possibility that the queue was previously empty.
 
 ## Lists
 
@@ -171,9 +171,9 @@ Sets and dictionaries can be implemented using similar techniques. If better run
 *All other things being equal*, array-based implementations are considered better for building general-purpose data structures. Linked structures are useful in some specific circumstances. Practicing with linked lists is also important because trees generally require linked structures.
 
 ### Advantages of Array-Based Structures
-- The items in an array are near each other in memory. Since computer hardware is built with the assumption that nearby memory locations are likely to be accessed together, this can make loops over arrays faster than loops over linked structures.
 - Any item in an array can be accessed in constant, rather than linear, time.
 - There is no overhead for creating or storing `Node` objects.
+- In languages like C and Java, primitive items in an array are near each other in memory. Since computer hardware is built with the assumption that nearby memory locations are likely to be accessed together, this can make loops over arrays faster than loops over linked structures.
 
 ### Advantages of Linked Structures
 - There is never a need to copy the structure, so stack and queue operations take constant time in the worst case, not just amortized.
