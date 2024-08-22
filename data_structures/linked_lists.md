@@ -63,7 +63,30 @@ TODO DIAGRAM
 
 ## Queues
 
-TODO CODE
+```python
+class LinkedQueue:
+    def __init__(self):
+        self._front = None
+        self._back = None
+
+    def enqueue(self, item):
+        if self._front:
+            self._back.next = Node(item, None)
+            self._back = self._back.next
+        else:
+            self._front = Node(item, None)
+            self._back = self._front
+
+    def dequeue(self):
+        result = self._front.item
+        self._front = self._front.next
+        if self._front is None:
+            self._back = None
+        return result
+
+    def is_empty(self):
+        return self._front is None
+```
 
 `LinkedQueue` is similar to `LinkedStack`, but it keeps track of both the front and the back of the queue.
 
@@ -75,7 +98,7 @@ would be represented like this:
 
 TODO DIAGRAM
 
-`dequeue` works just like `pop`, but `enqueue` modifies the *last* node. Some special handling is needed in case the queue is empty or contains exactly one item.
+`dequeue` works just like `pop`, but must handle the special case of the dequeuing the *last* item. `enqueue` modifies the last node and must account for the possibility that the queue was previously empty.
 
 ## Lists
 
@@ -106,6 +129,8 @@ TODO REVISE
 1. :star: Write a `Node` class for building linked lists.
 1. :star: Name an advantage linked lists have over arrays.
 1. :star: What is the value of the `next` instance variable in the *last* `Node` in a linked list?
+1. :star::star: What would happen if the `enqueue` method in `LinkedQueue` didn't account for the possibility that the queue was previously empty?
+1. :star::star: What would happen if the `dequeue` method in `LinkedQueue` didn't account for the possibility that the item being dequeued is the last one?
 1. :star::star: The method below is supposed to determine the length of a linked list, but it contains an off-by-one error. How should it be fixed?
     ```python
     def length(list):
@@ -125,5 +150,7 @@ TODO REVISE
             self.next = next
     ```
 1. A linked list can grow longer or shorter. An array, in many programming languages, must have its length specified when it is created.
+1. When the code got to the line `self._back.next = Node(item, None)`, there would be an AttributeError because `self._back`, being `None`, has no `next`.
+1. An empty queue might still have `_back` pointing at an otherwise unreachable item. This would not interfere with the functioning of the queue, but the "loitering" item would take up memory.
 1. `None`.
 1. `n` should start at `list`, not `list.next`.
