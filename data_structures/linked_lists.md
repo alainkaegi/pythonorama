@@ -104,19 +104,78 @@ TODO DIAGRAM
 
 Replicating all of the features of a Python list would require a great deal of code, but the `LinkedList` class below provides basic functionality. It is similar to `LinkedStack`.
 
-TODO CODE
+```python
+class LinkedList:
+    def __init__(self):
+        self._front = None
 
-TODO CHECK THE TEXT BELOW -- WHICH METHODS TAKE LINEAR TIME?
+    def __getitem__(self, index):
+        node = self._front
+        for i in range(index):
+            node = node.next
+        return node.item
+
+    def __setitem__(self, index, item):
+        node = self._front
+        for i in range(index):
+            node = node.next
+        node.item = item
+
+    def __len__(self):
+        node = self._front
+        result = 0
+        while node:
+            result += 1
+            node = node.next
+        return result
+
+    def __str__(self):
+        result = '<'
+        if self._front:
+            result += self._front.item
+            node = self._front.next
+            while node:
+                result += ', ' + node.item
+                node = node.next
+        return result + '>'
+
+    def add_at(self, index, item):
+        if index == 0:
+            self._front = Node(item, self._front)
+        else:
+            node = self._front
+            for i in range(index - 1):
+                node = node.next
+            node.next = Node(item, node.next)
+
+    def remove_at(self, index):
+        if index == 0:
+            self._front = self._front.next
+        else:
+            node = self._front
+            for i in range(index - 1):
+                node = node.next
+            node.next = node.next.next
+```
 
 The `__getitem__` and `__setitem__` magic methods allow elements of a `LinkedList` to be accessed using the usual square brackets. For example, you can say things like `a[2] = 100`. `__len__` and `__str__` make `len` and `str` work.
 
-The `add_at` and `remove_at` methods insert and remove an item from the list, respectively. Since these potentially require walking down the list to , they take linear time in the worst case.
+Since many of these methods require "walking down" the list, they take linear time in the worst case.
 
 Sets and dictionaries can be implemented using similar techniques. If better runtime behavior is required, data structures such as hash tables might be preferred.
 
 ## Array-Based vs Linked Structures
 
-TODO Advantages, disadvantages, including cache proximity
+*All other things being equal*, array-based implementations are considered better for building general-purpose data structures. Linked structures are useful in some specific circumstances. Practicing with linked lists is also important because trees generally require linked structures.
+
+### Advantages of Array-Based Structures
+- The items in an array are near each other in memory. Since computer hardware is built with the assumption that nearby memory locations are likely to be accessed together, this can make loops over arrays faster than loops over linked structures.
+- Any item in an array can be accessed in constant, rather than linear, time.
+- There is no overhead for creating or storing `Node` objects.
+
+### Advantages of Linked Structures
+- There is never a need to copy the structure, so stack and queue operations take constant time in the worst case, not just amortized.
+- An item can be added to or removed from the front of a linked list in constnat, rather than linear, time.
 
 ## Resources
 
@@ -141,6 +200,7 @@ TODO REVISE
             n = n.next
         return count
     ```
+1. :star::star::star: What is a doubly-linked list?
 
 ## Answers
 1.  ```python
@@ -154,3 +214,4 @@ TODO REVISE
 1. An empty queue might still have `_back` pointing at an otherwise unreachable item. This would not interfere with the functioning of the queue, but the "loitering" item would take up memory.
 1. `None`.
 1. `n` should start at `list`, not `list.next`.
+1. A linked list where each node knows about the previous node as well as the next node. This requires some extra bookkeeping, but is useful in some situations. For example, a double-ended queue, where items can be inserted at or removed from either end, can be implemented to run in constant time using doubly-linked list.
