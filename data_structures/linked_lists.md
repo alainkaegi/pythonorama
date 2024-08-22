@@ -211,6 +211,7 @@ TODO REVISE
             node = node.next
         return result
     ```
+1. :star::star: How could `LinkedList` be modified to make `__len__` run in constant time?
 1. :star::star::star: What is a doubly-linked list?
 
 ## Answers
@@ -225,4 +226,5 @@ TODO REVISE
 1. An empty queue might still have `_back` pointing at an otherwise unreachable item. This would not interfere with the functioning of the queue, but the "loitering" item would take up memory.
 1. `None`.
 1. In general, it would return a value one less than the correct answer. For an empty list, it would throw an error.
+1. Store the current length in a separate attribute and have `__len__` return it. Other methods that modify the list would have to update this attribute.
 1. A linked list where each node knows about the previous node as well as the next node. This requires some extra bookkeeping, but is useful in some situations. For example, a double-ended queue, where items can be inserted at or removed from either end, can be implemented to run in constant time using doubly-linked list.
