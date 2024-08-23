@@ -1,10 +1,8 @@
 # Visual Studio Code
 ## Overview
-Some of us like to use Visual Studio Code for some of our classes. An alternate choice is [PyCharm](pycharm.md). Visual Studio Code is an Integrated Development Environment (IDE). This means that several tools that would be separate command-line applications (editor, compiler, debugger) are combined into a single program. This saves time invoking different programs and allows various nice features, such as underlining of compilation errors in the editor.
+Visual Studio Code is an Integrated Development Environment (IDE). It is "integrated" in that it brings together the editor, interpreter, debugger, and other features.
 
-It is does not really matter too much which development tool you use. The most important is that you grow comfortable using one. Visual Studio Code is a fine choice because it is:
-- widely used in industry
-- free and platform-independent
+Visual Studio Code is made by Microsoft. Visual Studio Code supports other programming languages through extensions. A popular alternative is [PyCharm](pycharm.md).
 
 ## Setup
 ### Downloading
@@ -55,4 +53,4 @@ Use the `Help` menu.
 ## Answers
 1. In the directory of your choice.
 1. Hit `ctrl-C` in the `TERMINAL` window.
-1. Simple answer: put it in your project alongside your other files.
+1. In your project alongside your other files.
