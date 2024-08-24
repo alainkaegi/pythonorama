@@ -67,7 +67,7 @@ For example, an `ArrayStack` with capacity for 8 items, but currently only holdi
 
 ![An object with size set to 5 and data pointing to an array of 8 slots. Slots 0 through 4 contain values, but slots 5 through 7 are shaded.](array_stack.svg)
 
-This simple implementation's behavior is undefined if a user pops an empty stack (which they should have detected by calling `is_empty`). A more robust implementation would throw an EmptyStackException instead.
+This simple implementation's behavior is undefined if a user pops an empty stack (which they should have detected by calling `is_empty`). A more robust implementation would throw an `EmptyStackException` instead.
 
 ### Resizing the data array
 What if a user pushes something onto a stack that is full? Stacks should behave as if they have unlimited capacity. In this situation, the `_expand` method copies the data into a larger array, which then replaces `_data`.
