@@ -1,4 +1,5 @@
 # Array-Based Structures
+## Overview
 Python uses lists as its default linear structures. Lower-level languages like C instead use primitive arrays. Key differences include:
 - An array's size is set when it is created; it cannot change.
 - Python list features, such as slicing and methods like the `count` method, are not directly available for primitive arrays.
@@ -31,7 +32,7 @@ for i in range(len(a)):
 
 If, for efficiency reasons, you want an actual primitive array, use Python's `numpy` library.
 
-# Stacks
+## Stacks
 ```python
 class ArrayStack:
 
@@ -68,14 +69,14 @@ For example, an `ArrayStack` with capacity for 8 items, but currently only holdi
 
 This simple implementation's behavior is undefined if a user pops an empty stack (which they should have detected by calling `is_empty`). A more robust implementation would throw an EmptyStackException instead.
 
-## Resizing the data array
+### Resizing the data array
 What if a user pushes something onto a stack that is full? Stacks should behave as if they have unlimited capacity. In this situation, the `_expand` method copies the data into a larger array, which then replaces `_data`.
 
 ![Before pushing, a full ArrayStack has a data array with 4 slots and size 4. After pushing, the data array has 8 slots and size is 5.](array_resize.svg)
 
 The new array is not merely one slot larger but *twice* as large, keeping the amortized running time of `push` constant.
 
-# Queues
+## Queues
 ```python
 class ArrayQueue:
 
@@ -122,7 +123,7 @@ To avoid wasting space, the queue is made to wrap around to the beginning. Here 
 
 The last detail is that a full queue (requiring copying everything into a larger array) and an empty queue would look exactly the same: `_front == _back`. The solution is to store at most $n - 1$ items in an array of length $n$.
 
-# Lists
+## Lists
 Replicating all of the features of a Python list would require a great deal of code, but the `ArrayList` class below provides basic functionality. It is similar to `ArrayStack`.
 
 ```python
@@ -175,10 +176,10 @@ The `add_at` and `remove_at` methods insert and remove an item from the list, re
 
 Sets and dictionaries can be implemented using similar techniques. If better runtime behavior is required, data structures such as hash tables might be preferred.
 
-# Resource
+## Resource
 - Sedgewick & Wayne, *Introduction to Programming in Python*, [Chapter 4](https://introcs.cs.princeton.edu/python/40algorithms/)
 
-# Questions
+## Questions
 1. :star: Which methods from `ArrayStack` take linear time in the worst case?
 1. :star: Which methods from `ArrayList` take linear time in the worst case?
 1. :star: If `ArrayList` `ls` has length `n`, which is faster: `ls.remove_at(0)` or `ls.remove_at(n - 1)`?
@@ -186,7 +187,7 @@ Sets and dictionaries can be implemented using similar techniques. If better run
 1. :star::star: When an item is popped from an `ArrayStack`, there is still a reference to it in `self._data`. Doesn't this take up memory?
 1. :star::star::star: If you enqueued many items into an `ArrayQueue`, then dequeued them, `self._data` would be very large, even though none of it is in use. How can this waste of memory be prevented?
 
-# Answers
+## Answers
 1. `push`, but its amortized time is constant.
 1. `add_at`, `remove_at`, and `__str__`.
 1. `ls.remove_at(n - 1)`, because it doesn't need to shift any items.
