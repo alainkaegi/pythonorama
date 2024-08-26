@@ -78,7 +78,7 @@ Some sources call an `if` statement a *conditional statement* or *branch*.
     elif not condition:
         print('B')
     ```
-1. :star::star: The first form at the top of this page is called a *one-armed* if statement. The second form is a *two-armed* if statement. How could you use if statements to make a three-way decision? 
+1. :star::star: The first form at the top of this page is called a *one-armed* if statement. The second form is a *two-armed* if statement. How could you use if statements to make a three-way decision?
 
 ## Answers
 1. The second version only prints `B` if *both* `condition1` and `condition2` are true.
