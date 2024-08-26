@@ -19,7 +19,7 @@ Concatenation|`+`|`s1 + s2` is the concatenation of strings `s1` and `s2`.
 ## Operator Precedence
 In an expression involving multiple operators, like `2 + 3 * 4`, *operator precedence* rules determine the order in which operations are carried out. In this case, multiplication has higher precedence than addition, so the multiplication happens first, giving a result of 14.
 
-Like almost all modern languages, Python has an elaborate [operator precedence hierarchy](https://introcs.cs.princeton.edu/python/appendix_precedence/). You will gain some intuition about it with practice, but you are not expected to memorize it. If there is every any doubt, use parentheses to clarify order of operations. For example, you might write the expression above as `2 + (3 * 4)`. 
+Like almost all modern languages, Python has an elaborate [operator precedence hierarchy](https://introcs.cs.princeton.edu/python/appendix_precedence/). You will gain some intuition about it with practice, but you are not expected to memorize it. If there is every any doubt, use parentheses to clarify order of operations. For example, you might write the expression above as `2 + (3 * 4)`.
 
 ## Resources
 - Sedgewick, Wayne, and Dondero, *Introduction to Programming in Python*, [Section 1.2](https://introcs.cs.princeton.edu/python/12types/)

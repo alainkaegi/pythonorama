@@ -62,7 +62,7 @@ The first line of code above can be read, "for each `n` in `numbers`...".
     ```python
     for i in range(0, 5):
         print(i, end='')
-    ```    
+    ```
 1. :star: Explain how an `if` loop works.
 1. :star: How would you write the `for` loop below as a `while` loop?
     ```python

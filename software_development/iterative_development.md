@@ -5,7 +5,7 @@ If you are asked to write a *very* simple program, perhaps a few lines long, the
 The accepted solution to this conundrum (across many fields of design, not just software development) is the process of *iterative development*.
 
 Start by writing down a list of tasks that you will need to accomplish to solve the problem. Don't worry about making this list perfect; you'll be able to change it later.
- 
+
 Now write a ridiculously simple program and get it to work. Even getting the classic "Hello, world!" program to run can help you resolve issues with installing and using your editor, compiler, debugger, libraries, and other tools.
 
 Once you have something running, make a series of passes (iterations) through the following steps:
@@ -14,7 +14,7 @@ Once you have something running, make a series of passes (iterations) through th
 1. Make the change. Avoid the dangerous temptation to change more than one thing. If you see other things that could be improved, add them to your task list for future iterations.
 1. Evaluate your change. Did it work? How do you know? If this improvement is complete, make any needed changes to the task list and go back to step 1. Otherwise, go back to step 2 to correct or finish this change.
 
-Maintaining the task list on paper (or electronically) and performing many short iterations reduces the number of things you need to keep in your head. This in turn makes your work faster, more accurate, and less stressful. 
+Maintaining the task list on paper (or electronically) and performing many short iterations reduces the number of things you need to keep in your head. This in turn makes your work faster, more accurate, and less stressful.
 
 ## Resource
 - [John Green on iterative development of novels](https://www.youtube.com/watch?v=PCTO91aBFXk)

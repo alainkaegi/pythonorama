@@ -6,7 +6,7 @@ A long program can be greatly improved by breaking it down into multiple *functi
 - Individual functions can be [tested](../software_development/testing.md), making the code easier to debug.
 - Functions can often be reused to solve other problems.
 
-A well-designed function should *do only one thing*: either return a value or have some side effect (modify a data structure in memory, draw something on the screen, etc.). 
+A well-designed function should *do only one thing*: either return a value or have some side effect (modify a data structure in memory, draw something on the screen, etc.).
 
 ### Calling Functions
 To call a function defined in the same module, use the syntax:
