@@ -88,7 +88,7 @@ The literal value `None` is a reference to nothing. Its type is `NoneType`. If y
 x = None
 ```
 
-then `x` doesn't refer to anything. Some draw this with an electrical grounding symbol:
+then `x` doesn't refer to anything. In these pages, we will denote this with a line ending with a bullet:
 
 ![s contains a reference to nothing](null.svg)
 
