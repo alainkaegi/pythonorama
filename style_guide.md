@@ -16,5 +16,5 @@ This is the style guide for this repository.
   - Use single quotes (') as a delimiter for strings by default.
   - Backtick text-embedded names referring to symbols (e.g., class, variable, and function names) appearing in code snippets. Example:
     - Class `Foo` contains instance variable `bar`
-  - Omit the parentheses when referring to a function. Example
+  - Omit the parentheses when referring to a function. Example:
     - The class also defines function `baz`
