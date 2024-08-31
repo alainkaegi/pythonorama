@@ -21,3 +21,13 @@ This is the style guide for this repository.
 - Application menus
   - Use a greater-than sign (“>”) to separate cascading menu elements. Example:
     - `File` > `New File...`
+- Drawings
+  - Use `draw.io`
+  - Collect multiple, related drawings in one `.drawio` file
+  - Select a given figure to export as an `.svg` file
+    1. Select the figure
+    2. `File` > `Export as` > `SVG...`
+    3. `Selection Only`
+    4. `Appearance:` “Light”
+    5. `Do not include a copy of my diagram`
+    6. `Export`
