@@ -18,3 +18,6 @@ This is the style guide for this repository.
     - Class `Foo` contains instance variable `bar`
   - Omit the parentheses when referring to a function. Example:
     - The class also defines function `baz`
+- Application menus
+  - Use a greater-than sign (“>”) to separate cascading menu elements. Example:
+    - `File` > `New File...`
