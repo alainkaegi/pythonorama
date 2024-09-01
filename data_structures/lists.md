@@ -9,7 +9,7 @@ a = [3, 1, 4, 7]
 
 While the distinction is irrelevant in *most* situations, it's best to think of the list variable as holding a *[reference](references.md) to* a sequence of *references* to values contained in the list:
 
-![A box labeled a, containing an arrow pointing to a row of four boxes with 4 references to each of the values 3, 1, 4, and 1](array.svg)
+![A box labeled a, containing an arrow pointing to a row of four boxes with 4 references to each of the values 3, 1, 4, and 1](list.svg)
 
 You can initialize a list with values other than integers.
 ```python
@@ -41,7 +41,7 @@ a[2] = 8
 
 then the list looks like this:
 
-![The third value now contains an 8 instead of a 4](array_modified.svg)
+![The third value now contains an 8 instead of a 4](list_modified.svg)
 
 ### Multidimensional Arrays
 A structure like a matrix or a checkerboard is often represented as a multidimensional array. Such an array can be created using a list of lists:
