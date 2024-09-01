@@ -7,9 +7,11 @@ The simplest way to create a list in Python is to assign a variable a composite 
 a = [3, 1, 4, 7]
 ```
 
-While the distinction is irrelevant in *most* situations, it's best to think of the list variable as holding a *[reference](references.md) to* a sequence of *references* to values contained in the list:
+This list would look like this:
 
-![A box labeled a, containing an arrow pointing to a row of four boxes with 4 references to each of the values 3, 1, 4, and 1](list.svg)
+![A box, labeled a, containing a row of four smaller boxes, each containing values 3, 1, 4, and 1, respectively](list.svg)
+
+While the distinction is irrelevant in *most* situations, technically, the list contains references to the objects inside it. See the page about [references](references.md) for more details.
 
 You can initialize a list with values other than integers.
 ```python
