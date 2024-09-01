@@ -35,7 +35,7 @@ Topic | CS 171<br>(CS1) | CS 172<br>(CS2) | CS 369<br>(AI & ML) | CS 383<br>(Alg
 &nbsp;&nbsp;&nbsp;&nbsp;[Operators](data_structures/operators.md) | x | x | x | x | x | x
 &nbsp;&nbsp;&nbsp;&nbsp;[Variables](data_structures/variables.md) | x | x | x | x | x | x
 &nbsp;&nbsp;&nbsp;&nbsp;[Strings](data_structures/strings.md) | x | x | x | x | x | x
-&nbsp;&nbsp;&nbsp;&nbsp;[Arrays](data_structures/arrays.md) | x | x | x | x | x | x
+&nbsp;&nbsp;&nbsp;&nbsp;[Lists](data_structures/lists.md) | x | x | x | x | x | x
 &nbsp;&nbsp;&nbsp;&nbsp;[References](data_structures/references.md) | | x | x | x | x | x
 &nbsp;&nbsp;&nbsp;&nbsp;Equality | | x | x | x | x | x
 &nbsp;&nbsp;&nbsp;&nbsp;[Tuples](data_structures/tuples.md) | | x | x | x | x | x
