@@ -13,7 +13,7 @@ This approximation is satisfactory in many situations. But more precisely, Pytho
 
 ![a box labeled x containing an arrow, pointing to a box containing 5](xref5.svg)
 
-In other words, the box for the variable contains a *reference* to an object and not directly the value held in the object. This is a realization of a famous adage in our field: all computer science problems can be solved by another level of indirection (this famous quote is attributed to [Butler Lampson](https://en.wikipedia.org/wiki/Butler_Lampson)). What problem is being solved here, you might ask? For one thing, when passing a value to a function, you do not need copy the entire contents of the object (which can be very large), you only need to pass a reference to it.
+In other words, the variable contains a *reference* to an object and not directly the value held in the object. This is a realization of a famous adage in our field: all computer science problems can be solved by another level of indirection (this famous quote is attributed to [Butler Lampson](https://en.wikipedia.org/wiki/Butler_Lampson)). What problem is being solved here, you might ask? For one thing, when passing a value to a function, you do not need copy the entire contents of the object (which can be very large), you only need to pass a reference to it.
 
 You can think of a reference as an arrow pointing to the object. For example, if you have:
 ```python
@@ -26,9 +26,9 @@ then pictorially:
 The reference points to the entire object, not any particular part of it.
 
 ## Assignment and Aliases
-The `=` assignment operator copies the contents of one box into another.
+The `=` assignment operator copies a reference, not the content of an object.
 
-Now that we are aware of references, an assignment still copies the contents of the box, but with our new understanding that means copying the *reference*, not the object on the other end. For example, if you have:
+Now that we are aware of references, an assignment still makes a copy, but with our new understanding that means copying the *reference*, not the object on the other end. For example, if you have:
 ```python
 a = [1, 2, 3]
 b = a
