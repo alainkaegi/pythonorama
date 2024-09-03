@@ -19,6 +19,7 @@ This is the style guide for this repository.
   - Omit the parentheses when referring to a function. Example:
     - The class also defines function `baz`
 - Application menus
+  - Enclose menu elements in backticks
   - Use a greater-than sign (“>”) to separate cascading menu elements. Example:
     - `File` > `New File...`
 - Keyboard shortcuts
