@@ -21,6 +21,10 @@ This is the style guide for this repository.
 - Application menus
   - Use a greater-than sign (“>”) to separate cascading menu elements. Example:
     - `File` > `New File...`
+- Keyboard shortcuts
+  - Use lowercase letters, dash as a separator
+  - Enclose in backticks
+  - Use conventional key designations (e.g., `ctrl`, `cmd`, `alt`, `shift`)
 - Drawings
   - Use `draw.io`
   - Collect multiple, related drawings in one `.drawio` file
