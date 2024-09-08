@@ -62,7 +62,7 @@ To access a particular element of `m`, it might be best to continue with the arr
 ## Slices
 *Slicing* is the action of getting a *copy* of a contiguous sequence of elements within a list into a new list. For instance, the expression `a[1:3]` evaluates to list `[1, 8]`.
 
-More precisely, the expression `a[i:j]` returns a new list whose elements are `a[i]`, `a[i + 1]`, `a[i + 2]`, ..., `a[j - 1]`. If you omit the first argument of the slice (i.e., `a[:j]`), then you get a new list whose elements are `a[0]` through `a[j - 1]`. Likewise, if you omit second argument (i.e., `a[i:]`), then you get a new list with elements `a[i]` through `a[len(a) - 1]`.
+More precisely, the expression `a[i:j]` returns a new list whose elements are `a[i]`, `a[i + 1]`, `a[i + 2]`, ..., `a[j - 1]`. If you omit the first argument of the slice (i.e., `a[:j]`), then you get a new list whose elements are `a[0]` through `a[j - 1]`. Likewise, if you omit the second argument (i.e., `a[i:]`), then you get a new list with elements `a[i]` through `a[len(a) - 1]`.
 
 ## Resource
 - Sedgewick, Wayne, and Dondero, *Introduction to Programming in Python*, [Section 1.4](https://introcs.cs.princeton.edu/python/14array/)
