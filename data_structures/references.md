@@ -160,8 +160,8 @@ This feature of Python is in contrast to C, where it is the programmer's respons
 1. All Python types use references.
 1. No. The only way to get a reference is to create a new object through a literal, sequence creation, or calling a constructor. The only way to get rid of an object is to set the last reference to it to `None` or another object.
 1. Not strictly speaking; you can't have an object that is truly unreachable. If, however, you stored extra references to objects in a list and then changed the original references, the objects would still be reachable and they would therefore not be garbage collected.
-1. Yes. Evaluation of this expression doesn't cause an AttributeError because this check doesn't look at what's on the other end of the reference.
-1. Yes. `==` compares the contents of the box for `s` to the literal value `None` and determines that they're the same. Evaluation of this expression doesn't cause an AttributeError because this check doesn't look at what's on the other end of the reference. Note that idiomatic Python prefers the expression `s is None` for this purpose.
+1. Yes. Evaluation of this expression doesn't cause an `AttributeError` because this check doesn't look at what's on the other end of the reference.
+1. Yes. `==` compares the contents of the box for `s` to the literal value `None` and determines that they're the same. Evaluation of this expression doesn't cause an `AttributeError` because this check doesn't look at what's on the other end of the reference. Note that idiomatic Python prefers the expression `s is None` for this purpose.
 1.
     1. Yes (`a` and `b` have the same contents)
     1. No (`a` and `b` refer to different objects)

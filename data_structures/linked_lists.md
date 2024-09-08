@@ -211,7 +211,7 @@ Sets and dictionaries can be implemented using similar techniques. If better run
     ```
 1. There is never a need to copy the structure, so stack and queue operations take constant time in the worst case, not just amortized.
 1. `None`.
-1. If the queue was empty, when the code got to the line `self._back.next = Node(item, None)`, there would be an AttributeError because `self._back`, being `None`, has no `next`.
+1. If the queue was empty, when the code got to the line `self._back.next = Node(item, None)`, there would be an `AttributeError` because `self._back`, being `None`, has no `next`.
 1. An empty queue might still have `_back` pointing at an otherwise unreachable item. This would not interfere with the functioning of the queue, but the "loitering" item would take up memory.
 1. In general, it would return a value one less than the correct answer. For an empty list, it would throw an error.
 1. Store the current length in a separate attribute and have `__len__` return it. Other methods that modify the list would have to update this attribute.
