@@ -53,6 +53,10 @@ m = [[3, 1, 5, 1],
      [5, 3, 9, 2]]
 ```
 
+then pictorially:
+
+![an 3 by 4 multidimensional array with elements 3, 1, 5, and 1 in the first row, followed by elements 8, 3, 6, and 0, and finally elements 5, 3, 9, and 2](multi_array.svg)
+
 To access a particular element of `m`, it might be best to continue with the array metaphor where you specify first the row, then the column. For instance, the expression `m[1][2]` refers to the value `6` in the structure above.
 
 ## Slices
