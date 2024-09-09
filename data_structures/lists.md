@@ -53,10 +53,16 @@ m = [[3, 1, 5, 1],
      [5, 3, 9, 2]]
 ```
 
+then pictorially:
+
+![an 3 by 4 multidimensional array with elements 3, 1, 5, and 1 in the first row, followed by elements 8, 3, 6, and 0, and finally elements 5, 3, 9, and 2](multi_array.svg)
+
 To access a particular element of `m`, it might be best to continue with the array metaphor where you specify first the row, then the column. For instance, the expression `m[1][2]` refers to the value `6` in the structure above.
 
 ## Slices
-*Slicing* is the action of getting a *copy* of a contiguous sequence of elements within a list into a new list. For instance, the expression `a[i:j]` returns a new list whose elements are `a[i]`, `a[i + 1]`, `a[i + 2]`, ..., `a[j - 1]`. If you omit the first argument of the slice (i.e., `a[:j]`), then you get a new list whose elements are `a[0]` through `a[j - 1]`. Likewise, if you omit second argument (i.e., `a[i:]`), then you get a new list with elements `a[i]` through `a[len(a) - 1]`.
+*Slicing* is the action of getting a *copy* of a contiguous sequence of elements within a list into a new list. For instance, the expression `a[1:3]` evaluates to list `[1, 8]`.
+
+More precisely, the expression `a[i:j]` returns a new list whose elements are `a[i]`, `a[i + 1]`, `a[i + 2]`, ..., `a[j - 1]`. If you omit the first argument of the slice (i.e., `a[:j]`), then you get a new list whose elements are `a[0]` through `a[j - 1]`. Likewise, if you omit second argument (i.e., `a[i:]`), then you get a new list with elements `a[i]` through `a[len(a) - 1]`.
 
 ## Resource
 - Sedgewick, Wayne, and Dondero, *Introduction to Programming in Python*, [Section 1.4](https://introcs.cs.princeton.edu/python/14array/)
