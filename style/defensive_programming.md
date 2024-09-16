@@ -37,7 +37,7 @@ It would come as a big surprise to many, if after executing this sequence the co
 
 Immutable types are typically easier to use and harder to misuse. Unfortunately, the use of immutable types can lead to the creation of many object instances.
 
-Some of Python's built-in types are immutable, including `int`, `float`, `boolean`, `str`, and tuples. Lists are, however, mutable.
+Some of Python's built-in types are immutable, including `int`, `float`, `boolean`, `str`, and [tuples](../data_structures/tuples.md). [Lists](../data_structures/lists.md) are, however, mutable.
 
 ### Defensive Copies
 Designing your own immutable type with a class whose initializer takes a reference to a mutable type as an argument can be delicate. If this is the case, you cannot simply keep a copy of the provided reference (the caller might also keep a copy of that reference). Instead your initializer must take a *defensive* copy of the corresponding object.
