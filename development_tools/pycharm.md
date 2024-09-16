@@ -58,6 +58,8 @@ Now, whenever you run this program, you'll get a console pane where you can eval
 ### Gotchas and Gimmes
 Here are some things to be aware of:
 
+As with other IDEs, it is better to open PyCharm and open files in the project from there rather than opening files directly from the operating system. If you open a file by itself, PyCharm doesn't know what project it's associated with.
+
 PyCharm saves your edits automatically every few seconds.
 
 When creating a file, it should be within your project but *not* within the `.venv` directory.
