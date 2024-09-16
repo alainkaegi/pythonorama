@@ -52,7 +52,7 @@ Because, in most cases, string methods return a new string, you can chain calls.
 ```
 to find out if our string starts with either `'fl'` or `'Fl'`.
 
-You can use slices to extract substrings from a string. For instance:
+You can use [slices](lists.md#slices) to extract substrings from a string. For instance:
 ```python
 'flower'[2:5]
 ```
