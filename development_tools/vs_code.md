@@ -49,8 +49,10 @@ Use the `Help` menu.
 1. :star: In what directory do program files generally live?
 1. :star::star: How do you stop a running program (e.g., one that has gone into an infinite loop)?
 1. :star::star::star: You have a data file that your program is going to read. Where should you put that file?
+1. :star::star::star: Is Visual Studio Code the same as Visual Studio or Visual Studio for Mac?
 
 ## Answers
 1. In the directory of your choice.
 1. Hit `ctrl-C` in the `TERMINAL` window.
 1. In your project alongside your other files.
+1. No, each of these IDEs are distinct and not to be confused with each other. Also Visual Studio for Mac is now discontinued.
