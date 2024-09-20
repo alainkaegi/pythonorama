@@ -37,7 +37,7 @@ The `dequeue` class, in the `collections` module, provides a more efficient, dou
 |-|-|-|
 |`q.is_empty()`|`q == []`|`len(q) == 0`|
 |`q.enqueue(x)`|`q.append(x)`|`q.append(x)`|
-|`q.deueue()`|`q.pop(0)`|`q.popleft()`|
+|`q.dequeue()`|`q.pop(0)`|`q.popleft()`|
 
 Both empty lists and empty deques are falsy, so you can simply say `if q: ...` to check if a queue is (not) empty.
 
