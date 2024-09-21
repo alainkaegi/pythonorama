@@ -32,7 +32,7 @@ A queue holding $n$ items uses space in $\Theta(n)$.
 ## Python Implementation
 A Python list *can* be used as a queue, but the `dequeue` operation (implemented as `pop(0)`) takes linear time. This should therefore be avoided unless the queue is guaranteed to remain small.
 
-The `dequeue` class, in the `collections` module, provides a more efficient, doubly-linked implementation. The name `dequeue` is short for "double-ended queue", as this implementation support inserting and removing items at both ends. A new instance can be created as `deque()`.
+The `deque` class, in the `collections` module, provides a more efficient, doubly-linked implementation. The name `deque` is short for "double-ended queue", as this implementation support inserting and removing items at both ends. A new instance can be created as `deque()`.
 |**Abstract data type implementation**|**List operation**|**Deque operation**|
 |-|-|-|
 |`q.is_empty()`|`q == []`|`len(q) == 0`|
