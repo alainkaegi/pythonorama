@@ -22,10 +22,10 @@ If `q` is an empty queue, you might evaluate the following sequence of expressio
 |`s.dequeue()`| |`3`|
 |`s.is_empty()`| |`True`|
 
-As described below, Python lists can function as inefficient stacks. The `deque` class in the `collections` module provides a more efficient stack. A stack can also be implemented using an array-based or linked data structure.
+As described below, Python lists can function as inefficient queues. The [`deque`](https://docs.python.org/3/library/collections.html#collections.deque) class in the [`collections`](https://docs.python.org/3/library/collections.html) module provides a more efficient queue. A queue can also be implemented using an array-based or linked data structure.
 
 ## Analysis
-All of the queue operations take constant time with an efficient implementation. This analysis is worst-case for an linked implementation (like `deque`) but (except for `is_empty`) only amortized for an array-based implementation.
+All of the queue operations take constant time with an efficient implementation. This analysis is worst-case for a linked implementation (like `deque`) but (except for `is_empty`) only amortized for an array-based implementation.
 
 A queue holding $n$ items uses space in $\Theta(n)$.
 
@@ -41,8 +41,11 @@ The `deque` class, in the `collections` module, provides a more efficient, doubl
 
 Both empty lists and empty deques are falsy, so you can simply say `if q: ...` to check if a queue is (not) empty.
 
-## Resource
+## Resources
 - Sedgewick, Wayne, and Dondero, *Introduction to Programming in Python*, [Section 4.3](https://introcs.cs.princeton.edu/python/43stack/)
+- Python official documentation, The Python Standard Library, [`collections` —
+ Container datatypes](https://docs.python.org/3/library/collections.html)
+- Python official documentation, The Python Standard Library, [`deque` objects](https://docs.python.org/3/library/collections.html#collections.deque)
 
 ## Questions
 1. :star: What is the difference between a stack and a queue?
