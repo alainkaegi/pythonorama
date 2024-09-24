@@ -22,7 +22,7 @@ If `q` is an empty queue, you might evaluate the following sequence of expressio
 |`s.dequeue()`| |`3`|
 |`s.is_empty()`| |`True`|
 
-As described below, Python lists can function as inefficient queues. The [`deque`](https://docs.python.org/3/library/collections.html#collections.deque) class in the [`collections`](https://docs.python.org/3/library/collections.html) module provides a more efficient queue. A queue can also be implemented using an array-based or linked data structure.
+As described below, Python lists can function as inefficient queues. The [`deque`](https://docs.python.org/3/library/collections.html#collections.deque) (pronounced deck) class in the [`collections`](https://docs.python.org/3/library/collections.html) module provides a more efficient queue. A queue can also be implemented using an array-based or linked data structure.
 
 ## Analysis
 All of the queue operations take constant time with an efficient implementation. This analysis is worst-case for a linked implementation (like `deque`) but (except for `is_empty`) only amortized for an array-based implementation.
