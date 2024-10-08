@@ -72,12 +72,12 @@ More precisely, the expression `a[i:j]` returns a new list whose elements are `a
 1. :star: What is the index of the *last* element of a list `a`?
 1. :star: Given
     ```python
-    m = [[0, 0], [0, 0], [0,0]]
+    m = [[0, 0], [0, 0], [0, 0]]
     ```
     what is `len(m)`?
 1. :star: Given
     ```python
-    m = [[0, 0], [0, 0], [0,0]]
+    m = [[0, 0], [0, 0], [0, 0]]
     ```
     what is `len(m[0])`?
 1. :star: How would you initialize a three-dimensional array of floats?
