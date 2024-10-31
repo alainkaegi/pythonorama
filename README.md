@@ -18,6 +18,7 @@ The table below shows which topics are covered in which courses. Links are to ex
 Topic | CS 171<br>(CS1) | CS 172<br>(CS2) | CS 369<br>(AI & ML) | CS 383<br>(Algo) | CS 488<br>(SofDev) | DSCI 140<br>(DataSci)
 -|-|-|-|-|-|-
 [Basic Python Cheat Sheet](python_cheat_sheet.pdf) | x | x | x | x | x | x
+[NumPy/Pandas/Matplotlib Cheat Sheet](numpy_pandas_matplotlib_cheat_sheet.pdf) |  |  | x |  |  | x
 **Development Tools**
 &nbsp;&nbsp;&nbsp;&nbsp;[Command Line](development_tools/command_line.md) | x | x | | x | x |
 &nbsp;&nbsp;&nbsp;&nbsp;[Visual Studio Code](development_tools/vs_code.md) | | x | | | |
