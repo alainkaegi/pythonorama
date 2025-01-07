@@ -23,7 +23,7 @@ Topic | CS 171<br>(CS1) | CS 172<br>(CS2) | CS 369<br>(AI & ML) | CS 383<br>(Alg
 &nbsp;&nbsp;&nbsp;&nbsp;[Command Line](development_tools/command_line.md) | x | x | | x | x |
 &nbsp;&nbsp;&nbsp;&nbsp;[Visual Studio Code](development_tools/vs_code.md) | | x | | | |
 &nbsp;&nbsp;&nbsp;&nbsp;[PyCharm](development_tools/pycharm.md) | | | x | x | x |
-&nbsp;&nbsp;&nbsp;&nbsp;Git | | | | | x |
+&nbsp;&nbsp;&nbsp;&nbsp;[Git](software_development/git.md) | | | | | x |
 &nbsp;&nbsp;&nbsp;&nbsp;[Jupyter / Google Colab](development_tools/jupyter.md) | | | | | | x
 **Control Structures**
 &nbsp;&nbsp;&nbsp;&nbsp;[Your First Program](control_structures/your_first_program.md) | x | x | x | x | x | x
