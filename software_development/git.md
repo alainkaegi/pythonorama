@@ -63,7 +63,7 @@ git reset --hard HEAD
 ### Working With Past Commits
 You can view the history of your repository with this command:
 ```
-git log --pretty=oneline --graph --all
+git log --oneline --graph --all
 ```
 Each line represents one commit. It shows the hash (a number that identifies the state of the files) and the commit message. Some additional information like `HEAD -> main` tells you which one is the current commit.
 
@@ -78,7 +78,9 @@ git checkout 456b31
 ```
 The hexadecimal number at the end is a prefix of the hash, enough to uniquely identify it. If you now examine your files, you'll see that they're back to the way they were after the first commit!
 
-The newer commit (b36155...) is still in the repository. Once something is in the repository, it's fairly difficult to destroy it. There are git commands that allow you to modify the past, but it's a Bad Idea; you're likely to end up becoming your own grandparent or tearing a hole in the spacetime continuum.
+The newer commit (b36155...) is still in the repository. Once something is in the repository, it's fairly difficult to destroy it.
+> [!Caution]
+> There are git commands that allow you to modify the past, but it's a bad idea; you're likely to lose work, become your own grandparent, or tear a hole in the spacetime continuum.
 
 To go back to the newer commit, you could use a similar `checkout` command. A much better idea is to use
 ```
@@ -86,7 +88,7 @@ git checkout main
 ```
 to reattach `HEAD` to the front of the `main` branch. **Never make commits in a detached HEAD state; it could cause you to lose work.**
 ### Branches
-Sometimes you want to do some experimental work on your program without putting it into the `main` branch. This is the time to create another branch. (You should be in a clean state before doing this, but it's okay if you're in a detached HEAD state.) Here's the command:
+It's best not to put commits on the `main` branch until you're sure you want to keep them. This is the time to create another branch. (You should be in a clean state before doing this, but it's okay if you're in a detached HEAD state.) Here's the command:
 ```
 git checkout -b experiment
 ```
@@ -132,6 +134,7 @@ This serves two purposes:
 - [A Visual Git Reference](http://marklodato.github.io/visual-git-guide/index-en.html)
 - [git](https://git-scm.com/)
 - [GitHub](https://github.com/)
+- [GitLab](https://about.gitlab.com/)
 - [PyCharm Documentation on Git](https://www.jetbrains.com/help/pycharm/using-git-integration.html) (See the table of contents on the left side of this page.)
 - [Untrack files already added to git repository based on .gitignore](http://www.codeblocq.com/2016/01/Untrack-files-already-added-to-git-repository-based-on-gitignore/)
 - [Cache your GitHub credentials so you don't have to type your password every time you push](https://docs.github.com/en/github/getting-started-with-github/caching-your-github-credentials-in-git)
