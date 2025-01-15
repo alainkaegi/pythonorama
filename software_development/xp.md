@@ -15,7 +15,7 @@ XP emphasizes certain values and practices.
 ### Practices
 
 * Testing first
-* Pair programming
+* [Pair programming](pair_programming.md)
 * Sustainable pace
 * Simple design
 * Refactoring
