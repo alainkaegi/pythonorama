@@ -49,6 +49,9 @@ The resulting message tells you what branch you're on if you have changes since 
 nothing to commit, working tree clean
 ```
 
+> [!IMPORTANT]
+> The status message also tells you what branch you're on. If somehow you're on `main` or in a headless state, [create a branch](#2.iii-check-out-your-branch) before committing.
+
 #### To commit
 
 The instructions below also push your changes up to GitHub *on your branch*. There's nothing wrong with doing this every time you commit locally. You should *definitely* push when you make the last commit in a session.
@@ -71,7 +74,7 @@ git push
 
 #### To throw away your work since your last commit
 > [!CAUTION]
-> **_THIS IS USUALLY NOT WHAT YOU WANT. ONLY DO THIS IF YOU ARE ABSOLUTELY SURE YOU WANT TO THROW AWAY ALL CHANGES SINCE YOUR LAST COMMIT._**
+> This is usually *not* what you want. Only do this if you are absolutely sure you want to throw away all changes since your last commit.
 
 ```
 git reset --hard HEAD
@@ -87,7 +90,8 @@ git pull --all
 
 ### 2.iii Check out your branch
 
-**_YOU SHOULD NEVER DO ANY CODING WHILE ON THE MAIN BRANCH. ALSO, TWO DIFFERENT PAIRS SHOULD NEVER BE WORKING ON THE SAME BRANCH._**
+> [!IMPORTANT]
+> You should never do any coding while on the `main` branch. Also, two different programming pairs should never be working on the same branch.
 
 If you're creating a new branch:
 ```
