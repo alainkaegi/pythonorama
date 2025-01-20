@@ -47,6 +47,7 @@ Since the empty list is considered falsy, you can simply say `if s: ...` instead
 
 ## Questions
 1. :star: What is the amortized running time of all three stack operations in both array-based and linked implementations?
+1. :star: What does the acronym LIFO stand for?
 1. :star::star: Here is a stack `s`:
 
     `5`<br>`2`<br>`7`
@@ -72,5 +73,6 @@ Since the empty list is considered falsy, you can simply say `if s: ...` instead
 
 ## Answers
 1. Constant.
+1. Last in, first out.
 1. `8`<br>`2`<br>`7`
 1. It prints the lines of `file.txt` in reverse order.
