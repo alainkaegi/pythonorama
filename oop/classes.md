@@ -85,25 +85,25 @@ class Pet:
     ```python
     class Box:
         def __init__(self):
-            x = 5
+            _x = 5
 
-    print(Box().x)
+    print(Box()._x)
     ```
 1. :star::star: If you define the class
     ```python
     class Point:
         def __init__(self, x, y):
-            self.x = x
-            self.y = y
+            self._x = x
+            self._y = y
     ```
     what is printed by the code below?
     ```python
     p = Point(3, 4)
-    print(p.x)
+    print(p._x)
     ```
 1. :star::star: This seems like a lot of work. Couldn't you just use a list (or a tuple) like `p = [3, 4]` instead of defining the class and then doing `p = Point(3, 4)`?
 1. :star::star: Couldn't you just use a dictionary like `p = {'x':3, 'y':4}` instead?
-1. :star::star::star: Given the definition of the `Point` class above, what happens if you ask for `Point.x`?
+1. :star::star::star: Given the definition of the `Point` class above, what happens if you ask for `Point._x`?
 1. :star::star::star: What keyword used in Java, C++, and C# is analogous to Python's `self`?
 1. :star::star::star: If `int` is a class, why doesn't its name start with an upper-case letter?
 
@@ -112,15 +112,15 @@ class Pet:
     ```python
     class Student:
         def __init__(self, first_name, last_name, id):
-            self.first_name = first_name
-            self.last_name = last_name
-            self.id = id
+            self._first_name = first_name
+            self._last_name = last_name
+            self._id = id
     ```
 1. Yes. You might say something like `forest = [Tree('oak'), Tree('spruce'), Tree('pine')]`.
-1. The initializer does not set an instance variable. It merely creates a local variable `x` which goes away when the initalizer ends. The line should be `self.x = 5`.
-1. 3, which is the value of `p`'s instance variable `x`.
-1. You could, and in some cases it would be reasonable. One major difference is that the elements of a list can only be accessed by their numeric indices, so you'd have to ask for `p[0]` and `p[1]` instead of `p.x` and `p.y`. Another is the ability of classes to define methods.
+1. The initializer does not set an instance variable. It merely creates a local variable `_x` which goes away when the initalizer ends. The line should be `self._x = 5`.
+1. 3, which is the value of `p`'s instance variable `_x`.
+1. You could, and in some cases it would be reasonable. One major difference is that the elements of a list can only be accessed by their numeric indices, so you'd have to ask for `p[0]` and `p[1]` instead of `p._x` and `p._y`. Another is the ability of classes to define methods.
 1. You could, although `p = Point(3, 4)` is slightly shorter and clearer. Defining a class is also more efficient at runtime, allows you to see the type of an object, and allows you define methods.
-1. You get `AttributeError: type object 'Point' has no attribute 'x'`. This is because `Point.x` is asking for the `x` attribute of the *class* rather than a specific *instance*. Otherwise, since there may be many Points, Python doesn't know which one to look in for an `x` value.
+1. You get `AttributeError: type object 'Point' has no attribute '_x'`. This is because `Point._x` is asking for the `_x` attribute of the *class* rather than a specific *instance*. Otherwise, since there may be many Points, Python doesn't know which one to look in for an `_x` value.
 1. `this`. Note that `self` is not actually a reserved keyword in Python, just the conventional name for this parameter.
 1. For historical reasons, a few core built-in types like int, list, and dict have lower-case names. Class names in libraries and your own code should be PascalCase.

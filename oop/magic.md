@@ -11,8 +11,8 @@ Say you wanted to define your own data type to support complex numbers. (Python 
 class Complex:
 
     def __init__(self, r, i):
-        self.real = r
-        self.imag = i
+        self._real = r
+        self._imag = i
 ```
 
 With this definition, if we create an instance of a complex number and tried to print its value
@@ -33,11 +33,11 @@ So let us add a pertinent definition for `__str__`:
 class Complex:
 
     def __init__(self, r, i):
-        self.real = r
-        self.imag = i
+        self._real = r
+        self._imag = i
 
     def __str__(self):
-        return str(self.real) + ' + ' + str(self.imag) + 'i'
+        return str(self._real) + ' + ' + str(self._imag) + 'i'
 ```
 
 Now if we create and print an instance of `Complex`
@@ -72,14 +72,14 @@ Here is the `Complex` class again, this time with a definition of what it means 
 class Complex:
 
     def __init__(self, r, i):
-        self.real = r
-        self.imag = i
+        self._real = r
+        self._imag = i
 
     def __str__(self):
-        return str(self.real) + ' + ' + str(self.imag) + 'i'
+        return str(self._real) + ' + ' + str(self._imag) + 'i'
 
     def __eq__(self, other):
-        return self.real == other.real and self.imag == other.imag
+        return self._real == other._real and self._imag == other._imag
 ```
 
 Here's what happens behind the scenes when you evaluate `c1 == c2`:
@@ -122,15 +122,15 @@ Operator | Magic method
     ```python
     class Position:
         def __init__(self, x, y):
-            self.x = x
-            self.y = y
+            self._x = x
+            self._y = y
    ```
 1. :star: Supply a plausible `__eq__` method for the class below.
     ```python
     class Position:
         def __init__(self, x, y):
-            self.x = x
-            self.y = y
+            self._x = x
+            self._y = y
    ```
 1. :star: Can one overload the addition operator (`+`) in Python?
 1. :star: What is the name of the method one must define to overload the multiplication operator (`*`) in Python?
@@ -143,11 +143,11 @@ Operator | Magic method
 ## Answers
 1. ```python
         def __str__(self):
-            return '<' + str(self.x) + ', ' + str(self.y) + '>'
+            return '<' + str(self._x) + ', ' + str(self._y) + '>'
    ```
 1. ```python
         def __eq__(self, other):
-            return self.x == other.x and self.y == other.y
+            return self._x == other._x and self._y == other._y
    ```
 1. Yes. To do so, one must supply a definition for the magic method call `__add__`.
 1. `__mul__`

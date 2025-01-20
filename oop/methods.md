@@ -20,10 +20,10 @@ import math
 
 class Circle:
     def __init__(self, radius):
-        self.radius = radius
+        self._radius = radius
 
     def area(self):
-        return math.pi * (self.radius ** 2)
+        return math.pi * (self._radius ** 2)
 ```
 
 Now if you define `c = Circle(1)`, then when the expression `c.area()` is evaluated, `self` refers to `c`. The method returns `3.141592653589793`.
@@ -32,10 +32,10 @@ Here is `Square`:
 ```python
 class Square:
     def __init__(self, width):
-        self.width = width
+        self._width = width
 
     def area(self):
-        return self.width ** 2
+        return self._width ** 2
 ```
 
 ## Resource
@@ -53,9 +53,9 @@ class Square:
    ```python
    def area(shape):
        if isinstance(shape, Circle):
-           return math.pi * (shape.radius ** 2)
+           return math.pi * (shape._radius ** 2)
        elif isinstance(shape, Square):
-           return shape.width ** 2
+           return shape._width ** 2
    ```
 
 ## Answers
@@ -64,13 +64,13 @@ class Square:
     ```python
     class Square:
         def __init__(self, width):
-            self.width = width
+            self._width = width
 
         def area(self):
-            return self.width ** 2
+            return self._width ** 2
 
         def perimeter(self):
-            return self.width * 4
+            return self._width * 4
     ```
 1. No, but it is the conventional name for this argument. Using is consistenly will make your code more legible to other Python users.
 1. The difference is largely one of organization, which is no small concern for large software projects. The functional approach keeps all of the information about *areas* together, while the object-oriented approach keeps all of the information about *circles* together. The object-oriented approach can also be more efficient, because each object knows where to find its own methods; you don't have to go through a potentially long if/elif/else chain.
