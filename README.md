@@ -88,7 +88,7 @@ Topic | CS 171<br>(CS1) | CS 172<br>(CS2) | CS 369<br>(AI & ML) | CS 383<br>(Alg
 &nbsp;&nbsp;&nbsp;&nbsp;[Testing](software_development/testing.md) | | x | | x | x |
 &nbsp;&nbsp;&nbsp;&nbsp;[Debugging](software_development/debugging.md) | x | x | x | x | x |
 &nbsp;&nbsp;&nbsp;&nbsp;Teamwork | | | x | | x | x
-&nbsp;&nbsp;&nbsp;&nbsp;Extreme Programming | | | | |  x|
+&nbsp;&nbsp;&nbsp;&nbsp;[Extreme Programming](software_development/xp.md) | | | | |  x|
 &nbsp;&nbsp;&nbsp;&nbsp;UML | | | | | x |
 &nbsp;&nbsp;&nbsp;&nbsp;Object-Oriented Design | | | | | x |
 &nbsp;&nbsp;&nbsp;&nbsp;Design Patterns | | | | | x |
