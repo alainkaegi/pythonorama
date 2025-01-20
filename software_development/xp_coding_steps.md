@@ -27,7 +27,7 @@ Don't spend hours in any one step. Keep moving so that commits and merges are fr
     1. [Get the latest version of your team's work](#4i-get-the-latest-version-of-your-teams-work)
     1. [Issue a pull request](#4ii-issue-a-pull-request)
     1. [Review code](#4iii-review-code)
-    1. [Move on to next task or merge](#4iv-indicate-your-progress-on-trello)
+    1. [Move on to next task or merge](#4iv-move-on-to-next-task-or-merge)
     1. [If it's not the end of the session, go back to (1)](#4v-if-its-not-the-end-of-the-session-go-back-to-1)
 
 ## 1 Choose a task
@@ -38,7 +38,7 @@ If the story has a checklist of tasks in it, pick one of the tasks in the list.
 
 ## 2 Get the latest version of your team's work
 ### 2.i Make sure you are in a clean state
-Remember that you must always be in a clean state before trying to do anything else with git or GitHub; failure to do so is a good way to lose your work. If you are *not* in a clean state, you need to either *commit* or (on rare occasions) *throw away your work since the last commit* before proceeding.
+Remember that you must always be in a clean state before trying to do anything else with Git or GitHub; failure to do so is a good way to lose your work. If you are *not* in a clean state, you need to either *commit* or (on rare occasions) *throw away your work since the last commit* before proceeding.
 
 #### To check if you are in a clean state
 ```
