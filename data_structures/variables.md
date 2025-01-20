@@ -88,6 +88,7 @@ The *scope* of a variable is the region of code where the variable can be access
        return p
    ```
 1. :star::star: If `alive` is a boolean variable, how can `alive == True` be replaced with a shorter expression?
+1. :star::star: If `alive` is a boolean variable, how can `alive == False` be replaced with a shorter expression?
 1. :star::star: Do `x = y` and `y = x` mean the same thing?
 1. :star::star: Is `3 = x` a legal statement?
 1. :star::star: How would you swap the values of two variables `x` and `y`?
@@ -103,6 +104,7 @@ The *scope* of a variable is the region of code where the variable can be access
 1. The scope of `n` is the entire function `fac`.
 1. The scope of `i` is the entire function `fac`.
 1. If `alive == True`, `alive` is true; if not, `alive` is false. In other words, `alive` and `alive == True` always have exactly the same value. The shorter version is always preferable as it is clearer, is more concise, and avoids the risk of accidentally typing `alive = True` (which is an assignment, not a comparison).
+1. `not alive`
 1. No. If `x` was 1 and `y` was 2, then `x = y` would change `x`'s value to 2, but `y = x` would change `y`'s value to 1.
 1. No. The value on the left side of an assignment statement must be a variable (or some other place where a value can be stored, like an array element).
 1. Many programmers would use the following code sequence:
