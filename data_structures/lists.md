@@ -84,7 +84,7 @@ More precisely, the expression `a[i:j]` returns a new list whose elements are `a
 1. :star: How many elements are in a two-dimensional array with seven rows and five columns?
 1. :star: Is there a good way to remember that it's rows, columns and not the other way around?
 1. :star: How can you determine the number of *columns* in a two-dimensional array `m`?
-1. :star: Assuming `a` is a list, what is the result of evaluating the expression `a[:]`
+1. :star: Assuming `a` is a list, what is the result of evaluating the expression `a[:]`?
 1. :star: How do I get a new list whose elements are copies of the first three elements of list `a`?
 1. :star: How do I get a new list whose elements are copies of the last three elements of list `a`?
 
