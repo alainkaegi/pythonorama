@@ -15,7 +15,7 @@ Don't spend hours in any one step. Keep moving so that commits and merges are fr
     1. [Make sure you are in a clean state](#2i-make-sure-you-are-in-a-clean-state)
     1. [Pull everything](#2ii-pull-everything)
     1. [Check out your branch](#2iii-check-out-your-branch)
-    1. [Merge from main](#2iv-merge-from-main)
+    1. [Merge from `main`](#2iv-merge-from-main)
 1. [Write/edit code](#3-writeedit-code)
     1. [Make sure you are in a clean state and on the right branch](#3i-make-sure-you-are-in-a-clean-state-and-on-the-right-branch)
     1. [Unless you're just refactoring, write new unit tests](#3ii-unless-youre-just-refactoring-write-new-unit-tests)
@@ -99,9 +99,9 @@ git checkout -b branchname
 ```
 If you're just checking out an existing branch, leave out the `-b`.
 
-### 2.iv Merge from main
+### 2.iv Merge from `main`
 
-This step merges all of the changes from the main branch (including work by other members of your team) into your branch.
+This step merges all of the changes from the `main` branch (including work by other members of your team) into your branch.
 
 ```
 git merge main
@@ -136,7 +136,7 @@ You will probably spend most of your time in (3.ii) through (3.vi). This should 
 
 ## 4 Share your work with your team
 
-You've finished a task, so it's time to incorporate it into the main branch.
+You've finished a task, so it's time to incorporate it into the `main` branch.
 
 ### 4.i Get the latest version of your team's work
 
@@ -146,7 +146,7 @@ This is exactly the same as step (2).
 
 Go to the GitHub website for your project. Choose the branch you're on (using the selector on the left end of the line that has the green `Clone or download` button on the right) and choose `New pull request`.
 
-This tells your team, "Our branch has some new functionality. Let's merge it into main." Confusingly, it does not mean "I want to pull" but rather "I want the team to pull from my branch into the main branch."
+This tells your team, "Our branch has some new functionality. Let's merge it into `main`." Confusingly, it does not mean "I want to pull" but rather "I want the team to pull from my branch into the `main` branch."
 
 Move your story to the `Completed in Branch` column.
 
