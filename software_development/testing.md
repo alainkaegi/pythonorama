@@ -5,6 +5,8 @@ Testing is how we know whether our software is working correctly, that is, doing
 - *Unit testing* tests individual parts of the program (e.g., methods). Unit testing has two big advantages over system testing. First, it can happen a lot earlier, before the entire system has been built. This is important because it gives you a chance to fix one bug before introducing the next one. Second, if a bug is found, unit testing gives a strong indication of where it is.
 - *Regression testing* re-tests the system (or units thereof) after making a change to the program, to ensure that nothing broke.
 
+But remember that no amount of testing can prove the absence of bugs.
+
 ## `pytest`
 Manual testing is fine for very small, simple programs but it quickly becomes tedious and error-prone for larger ones. When you hear "tedious and error-prone", you should think, "Can I automate this?" `pytest` is a tool for automating unit tests in Python. (Other languages have similar frameworks.)
 
