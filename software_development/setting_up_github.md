@@ -20,7 +20,7 @@ Optionally, set up a test directory and a sample class and test.
 1. Click `Create repository`.
 1. Copy the https URL to the clipboard.
    
-## Push initial commit
+## Push Initial Commit
 1. `ctrl-k` to open version control tool window. (On a Mac, replace `ctrl` with `command`.)
 1. Click on the project at the top so all files are selected.
 1. Click `Commit and Push`.
@@ -28,10 +28,10 @@ Optionally, set up a test directory and a sample class and test.
 1. Paste the URL copied from the green `Code` button on GitHub.
 1. Click `Push`.
 
-## Protect the main Branch
+## Protect the `main` Branch
 On GitHub, in `Settings` | `Branches`, add a rule to the `main` branch that requires a pull request before merging. This prevents anyone from accidentally pushing to `main`.
 
-## Add other team members as collaborators
+## Add Other Team Members as Collaborators
 On the GitHub website, from the repository: `Settings` | `Collaborators`.
 
 ## References
