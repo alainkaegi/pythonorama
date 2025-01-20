@@ -37,13 +37,25 @@ Function | Description
 - Wired, [No, 'Gangnam Style' Didn't Break YouTube. We Did the Math](https://www.wired.com/2014/12/gangnam-style-youtube-math/)
 
 ## Questions
+1. :star: What's the difference between a literal and and a constant?
 1. :star: How many different boolean values are there?
 1. :star: What's the difference between `'x'` and `"x"`?
+1. :star: What's `int('-3')`?
+1. :star: What's `float('-3')`?
+1. :star: What's `round(-3.5)`?
+1. :star::star: What's `int(-3.5)`?
 1. :star::star: What is the maximum value of an `int`?
 1. :star::star: What does the literal `float('nan')` mean?
+1. :star::star: What's `int('  +12_345')`?
 
 ## Answers
+1. Both are fixed values. A literal is a fixed value directly used in the code (e.g., `3.1415`). A constant is a fixed value assigned a name (e.g., `math.pi`).
 1. Two: `True` and `False`.
 1. There is no difference in this particular example. The use of either type of quotes is appropriate to specify a string literal. The use of one type of quotes is useful to embed the other type in a string without having to escape it. For example, `"mom's"` might be more readable than the equivalent `'mom\'s'`.
+1. The int `-3`.
+1. The float `-3.0`.
+1. The int `-4`.
+1. The int `-3`. The function `int` can also take a float, in which case it truncates the input towards zero.
 1. An `int` value can be arbitrarily large, only constrained by the amount of available memory in your computer.
 1. `float('nan')` is the float value *not a number*. It is the result of calculations such as `Infinity - Infinity`.
+1. The int `12345`. The input string can be surrounded by whitespaces and digits interspersed with underscores (but there cannot be whitespaces after the optional sign).
