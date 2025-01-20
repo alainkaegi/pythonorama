@@ -66,6 +66,15 @@ Here's what happens behind the scenes when you evaluate `p = Pet('Violet', 'dog'
 4. The initializer returns the object `temp`.
 5. Now that the function call is complete, the name `p` is made to refer to the returned object.
 
+## Visibility
+A principled approach to object-oriented programming generally frowns upon code outside a class directly accessing its attributes. Instead [methods](methods.md) should provide such accesses. Python cannot enforce this discipline (unlike other languages like Java and its keyword `private`). But a programmer can still [indicate](../style/names.md#underscores) that an attribute is meant to be used only inside the current class by prefixing its name with a single underscore. Here is the final version of our class:
+```python
+class Pet:
+    def __init__(self, name, species):
+        self._name = name
+        self._species = species
+```
+
 ## Resource
 - Lubanovic, *Introducing Python, 3rd Edition*, Chapter 10
 
