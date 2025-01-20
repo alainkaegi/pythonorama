@@ -69,16 +69,16 @@ Each line represents one commit. It shows the hash (a number that identifies the
 
 For a example to work with, suppose the output of the log command looks like this:
 ```
-* b3615564012377ecab73e0b693aa7542f84e39df (HEAD -> main) My poem is now twice as long
-* 456b316a09a835b22b8822c0f1fd0906c12ae2a5 Initial project version
+* b361556 (HEAD -> main) My poem is now twice as long
+* 456b316 Initial project version
 ```
 If you want to go back to the previous version, do something like this:
 ```
-git checkout 456b31
+git checkout 456b316
 ```
 The hexadecimal number at the end is a prefix of the hash, enough to uniquely identify it. If you now examine your files, you'll see that they're back to the way they were after the first commit!
 
-The newer commit (b36155...) is still in the repository. Once something is in the repository, it's fairly difficult to destroy it.
+The newer commit (b361556) is still in the repository. Once something is in the repository, it's fairly difficult to destroy it.
 > [!Caution]
 > There are Git commands that allow you to modify the past, but it's a bad idea; you're likely to lose work, become your own grandparent, or tear a hole in the spacetime continuum.
 
