@@ -42,7 +42,7 @@ The average running time is also logarithmic because about half of the array ele
 ## Answers
 1. ![order log n](https://latex.codecogs.com/svg.latex?\Theta(\log&space;n))
 1. It must be sorted.
-1. Constant. This would happen if the first element of the array was they key being sought.
+1. Constant. This would happen if the first element of the array was the key being sought.
 1.
     ```python
     def linear_search(key, a):
