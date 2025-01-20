@@ -104,7 +104,7 @@ git merge main
 ```
 If you commit and merge often, and are a little lucky, merging will succeed automatically. Git is quite clever about this; if the changes on two branches are to different files, or even to different methods within the same file, Git can figure out how to keep both sets of changes.
 
-Occasionally, though, it won't be obvious to Git how to combine the changes. This is the dreaded *merge conflict*. When this happens, Git will open your editor (we specified nano above) and ask you to resolve the conflict, i.e., edit the files to keep the parts you want. **After you have the files the way you want them, commit again to complete the merge:** `git commit -a`.
+Occasionally, though, it won't be obvious to Git how to combine the changes. This is the dreaded *merge conflict*. When this happens, Git will open your editor (we specified nano above) and ask you to resolve the conflict, i.e., edit the files to keep the parts you want. **After you have the files the way you want them, commit again to complete the merge:** `git commit`.
 ### Remote Repositories
 Everything above has been about a local repository on your own machine. This is useful, but the real power of Git lies in collaborating with others, using a remote repository stored at someplace like [GitHub](https://github.com/).
 
