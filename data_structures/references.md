@@ -112,7 +112,7 @@ This feature of Python is in contrast to C, where it is the programmer's respons
 1. :star::star: Is it possible to create a memory leak in Python?
 1. :star::star: If you define `s = None`, does `s is None` return `True`?
 1. :star::star: If you define `s = None`, is `s == None`?
-1. :star::star: Suppose you execute the following code (assuming Point is a class with well-defined `__eq__` and `__ne__` methods):
+1. :star::star: Suppose you execute the following code (assuming `Point` is a class with well-defined `__eq__` and `__ne__` methods):
     ```python
     a = Point(1, 2)
     b = Point(1, 2)
