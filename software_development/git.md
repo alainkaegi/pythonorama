@@ -1,15 +1,15 @@
 # Git
 ## Overview
-Git is a *version control system*, allowing you to keep track of multiple versions of a piece of software and coordinate changes with other developers. While manually making backup copies and emailing them around is fine for small programs, a tool like git becomes essential for larger projects.
+Git is a *version control system*, allowing you to keep track of multiple versions of a piece of software and coordinate changes with other developers. While manually making backup copies and emailing them around is fine for small programs, a tool like Git becomes essential for larger projects.
 ## Setup
 ### Installation
-You can check if git is installed on your system with this command:
+You can check if Git is installed on your system with this command:
 ```
 git --version
 ```
-If it isn't, it will complain. You can download it from the [git website](https://git-scm.com/).
+If it isn't, it will complain. You can download it from the [Git website](https://git-scm.com/).
 ### Configuration
-It's a good idea to run the commands below (with "your name" replaced appropriately) before using git for the first time:
+It's a good idea to run the commands below (with "your name" replaced appropriately) before using Git for the first time:
 ```
 git config --global user.name "Your Name"
 git config --global user.email yourname@yourdomain.edu
@@ -31,7 +31,7 @@ To see the status of the repository, use this command:
 ```
 git status
 ```
-The output tells you that you are on the main branch (more about branches later), you haven't made any *commits* (snapshots), and your file is still untracked. You have to explicitly tell git which files to keep track of.
+The output tells you that you are on the main branch (more about branches later), you haven't made any *commits* (snapshots), and your file is still untracked. You have to explicitly tell Git which files to keep track of.
 
 To add a file to version control:
 ```
@@ -43,7 +43,7 @@ git commit -am 'Initial project version'
 ```
 The part at the end is the commit message, explaining what you changed.
 
-If you check the status again, you will see that there is now "nothing to commit" -- your current workspace of files matches the most recent commit. In general, working with git is a cycle of making changes to your files and then committing them.
+If you check the status again, you will see that there is now "nothing to commit" -- your current workspace of files matches the most recent commit. In general, working with Git is a cycle of making changes to your files and then committing them.
 ## Working With Git
 ### Committing
 Edit a file. Alternately, create a new file and add it to version control.
@@ -56,7 +56,7 @@ git commit -am 'My poem is now twice as long'
 ```
 Check the status again to make sure it worked.
 
-**You should *always* be in a clean state before trying to do anything else with git.** Usually this means committing. Occasionally you will decide that you instead want to throw away all of your work since the last commit. **If you are *absolutely sure* that you want to do this**, here is the command:
+**You should *always* be in a clean state before trying to do anything else with Git.** Usually this means committing. Occasionally you will decide that you instead want to throw away all of your work since the last commit. **If you are *absolutely sure* that you want to do this**, here is the command:
 ```
 git reset --hard HEAD
 ```
@@ -80,7 +80,7 @@ The hexadecimal number at the end is a prefix of the hash, enough to uniquely id
 
 The newer commit (b36155...) is still in the repository. Once something is in the repository, it's fairly difficult to destroy it.
 > [!Caution]
-> There are git commands that allow you to modify the past, but it's a bad idea; you're likely to lose work, become your own grandparent, or tear a hole in the spacetime continuum.
+> There are Git commands that allow you to modify the past, but it's a bad idea; you're likely to lose work, become your own grandparent, or tear a hole in the spacetime continuum.
 
 To go back to the newer commit, you could use a similar `checkout` command. A much better idea is to use
 ```
@@ -102,11 +102,11 @@ Now suppose your experiment went well and you want to merge the two branches. If
 ```
 git merge main
 ```
-If you commit and merge often, and are a little lucky, merging will succeed automatically. Git is quite clever about this; if the changes on two branches are to different files, or even to different methods within the same file, git can figure out how to keep both sets of changes.
+If you commit and merge often, and are a little lucky, merging will succeed automatically. Git is quite clever about this; if the changes on two branches are to different files, or even to different methods within the same file, Git can figure out how to keep both sets of changes.
 
-Occasionally, though, it won't be obvious to git how to combine the changes. This is the dreaded *merge conflict*. When this happens, git will open your editor (we specified nano above) and ask you to resolve the conflict, i.e., edit the files to keep the parts you want. **After you have the files the way you want them, commit again to complete the merge:** `git commit -a`.
+Occasionally, though, it won't be obvious to Git how to combine the changes. This is the dreaded *merge conflict*. When this happens, Git will open your editor (we specified nano above) and ask you to resolve the conflict, i.e., edit the files to keep the parts you want. **After you have the files the way you want them, commit again to complete the merge:** `git commit -a`.
 ### Remote Repositories
-Everything above has been about a local repository on your own machine. This is useful, but the real power of git lies in collaborating with others, using a remote repository stored at someplace like [GitHub](https://github.com/).
+Everything above has been about a local repository on your own machine. This is useful, but the real power of Git lies in collaborating with others, using a remote repository stored at someplace like [GitHub](https://github.com/).
 
 Once you have cloned a remote repository to get a local one, you can work along in your local repository. You should avoid working on the `main` branch, but stable code will be merged into it.
 
@@ -132,11 +132,11 @@ This serves two purposes:
 - Evans, [*How Git Works*](https://wizardzines.com/zines/git/)
 - DZone, [Getting Started with Git Refcard](https://dzone.com/refcardz/getting-started-git?chapter=1)
 - [A Visual Git Reference](http://marklodato.github.io/visual-git-guide/index-en.html)
-- [git](https://git-scm.com/)
+- [Git](https://git-scm.com/)
 - [GitHub](https://github.com/)
 - [GitLab](https://about.gitlab.com/)
 - [PyCharm Documentation on Git](https://www.jetbrains.com/help/pycharm/using-git-integration.html) (See the table of contents on the left side of this page.)
-- [Untrack files already added to git repository based on .gitignore](http://www.codeblocq.com/2016/01/Untrack-files-already-added-to-git-repository-based-on-gitignore/)
+- [Untrack files already added to Git repository based on .gitignore](http://www.codeblocq.com/2016/01/Untrack-files-already-added-to-git-repository-based-on-gitignore/)
 - [Cache your GitHub credentials so you don't have to type your password every time you push](https://docs.github.com/en/github/getting-started-with-github/caching-your-github-credentials-in-git)
 - [Version Control (Git)](https://missing.csail.mit.edu/2020/version-control/) (A video lecture with notes. Part of [The Missing Semester of Your CS Education](https://missing.csail.mit.edu/) from MIT.)
 
@@ -147,7 +147,7 @@ This serves two purposes:
 1. :star::star: Why would you ever have files in a directory that are not under version control?
 
 ## Answers
-1. Often -- several times an hour. Part of the point of git is to allow you to go back to a previous commit if you make a mistake, so you want to have many options as to how far to go back.
+1. Often -- several times an hour. Part of the point of Git is to allow you to go back to a previous commit if you make a mistake, so you want to have many options as to how far to go back.
 1. In a hidden directory called `.git` inside the directory where you ran `git init`.
 1. No. Git is clever enough to store only the differences between commits.
 1. There is no reason to store compiled code, as it can be generated from the source code. Huge, unchanging data files that are available elsewhere are also often left out of version control.
