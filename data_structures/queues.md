@@ -49,6 +49,7 @@ Both empty lists and empty deques are falsy, so you can simply say `if q: ...` t
 
 ## Questions
 1. :star: What is the difference between a stack and a queue?
+1. :star: What does the acronym FIFO stand for?
 1. :star::star: Here is queue `q`:
 
     `5` `2` `7`
@@ -74,5 +75,6 @@ Both empty lists and empty deques are falsy, so you can simply say `if q: ...` t
 
 ## Answers
 1. A stack is last in, first out while a queue is first in, first out.
+1. First in, first out.
 1. `7` `4` `8`
 1. It prints the lines of `file.txt` in their original order.
