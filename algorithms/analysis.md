@@ -205,7 +205,7 @@ Recurrence Relation | Solution Order
    1. What can you conclude about the relationship between ![the order of f of n](https://latex.codecogs.com/svg.latex?\Theta(f(n))) and ![the order of h of n](https://latex.codecogs.com/svg.latex?\Theta(h(n)))?
    1. What can you conclude about the relationship between ![the order of g of n](https://latex.codecogs.com/svg.latex?\Theta(g(n))) and ![the order of h of n](https://latex.codecogs.com/svg.latex?\Theta(h(n)))?
 1. :star::star: Suppose you know that ![f of n is in big o of g of n](https://latex.codecogs.com/svg.latex?f(n)\in&space;O(g\left(n\right))). Can you conclude that ![f of n is less than or equal to g of n](https://latex.codecogs.com/svg.latex?f(n)\leq&space;g(n)) for small values of ![n](https://latex.codecogs.com/svg.latex?n)? What about for large values?
-1. :star::star: What is the order of the running time of the `linearSearch` algorithm above when `key` is not present in `a`?
+1. :star::star: What is the order of the running time of the `linear_search` algorithm above when `key` is not present in `a`?
 1. :star::star: What's wrong with the following statement?
    > The best case for the algorithm I'm analyzing occurs when ![n equals 1](https://latex.codecogs.com/svg.latex?n=1).
 1. :star::star: What is the order of the worst-case running time of the method below?
