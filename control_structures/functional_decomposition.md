@@ -88,6 +88,7 @@ Of course, a function called by your program may in turn call another function. 
 1. :star::star: Is it legal to have two functions with the same name in two different modules?
 1. :star::star::star: Is it legal to have more than one function with the same name in the same module?
 1. :star::star::star: Can you define a function inside another function?
+1. :star::star::star: Take a function that does not return any value (e.g., `print`). Is it an error to call this function within an expression?
 
 ## Answers
 1. Don't put anything between the parentheses:
@@ -109,3 +110,4 @@ Of course, a function called by your program may in turn call another function. 
 1. Yes. It occurs frequently.
 1. Yes, but it should probably be considered poor style as the second definition will overwrite the first one.
 1. The short answer is no, although there are some obscure special cases like lambda expressions.
+1. No. In Python all functions return a value. A function that does not explicitly return a value is treated as a function that returns a value of type `NoneType`. If such a function is called within an expression context, it will be considered to have returned the value `None`.
