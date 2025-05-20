@@ -75,6 +75,53 @@ Simple recursive methods don't involve loops. Some more complicated ones might u
 ## Questions
 1. :star: What happens if a recursive function with no base case is called?
 1. :star: When is recursion preferable to iteration (using loops)?
+1. :star::star: Assuming non-negative integer arguments, what does the function below compute?
+    ```
+    def v(a, b):
+        if a == 0:
+            return b
+        return 1 + v(a - 1, b)
+    ```
+1. :star::star: Assuming non-negative integer arguments, what does the function below compute?
+    ```
+    def w(a, b):
+        if a == 0:
+            return 0
+        if a == 1:
+            return b
+        return b + w(a - 1, b)
+    ```
+1. :star::star: Assuming non-negative integer arguments, what does the function below compute?
+    ```
+    def x(a, b):
+        if a == 0:
+            return 0
+        if a % 2 == 0:
+            return     x(a // 2, b * 2)
+        else:
+            return b + x(a // 2, b * 2)
+    ```
+1. :star::star: Assuming non-negative integer arguments, what does the function below compute?
+    ```
+    def y(a, b):
+        if b == 0:
+            return 1
+        if a == 0:
+            return 0
+        return a * y(a, b - 1)
+    ```
+1. :star::star: Assuming non-negative integer arguments, what does the function below compute?
+    ```
+    def z(a, b):
+        if b == 0:
+            return 1
+        if a == 0:
+            return 0
+        if b % 2 == 0:
+            return     z(a * a, b // 2)
+        else:
+            return a * z(a * a, b // 2)
+    ```
 1. :star::star: Given the code below, under what conditions does `check(s)` return `True`?
     ```python
     def _check(s, lo, hi):
@@ -90,5 +137,10 @@ Simple recursive methods don't involve loops. Some more complicated ones might u
 ## Answers
 1. It keeps calling itself until the call stack fills up all available memory, at which point the program crashes. This is called a stack overflow.
 1. Some algorithms are much more clearly stated using recursion rather than iteration. These are algorithms that solve a problem by first solving one or more easier problems. In general, if you can find a way to express your algorithm iteratively, do that; if, in trying to do this, you find that you need to remember work to do after solving the easier problem, recursion will probably be easier.
+1. The sum of `a` and `b` computed with trivial increments and decrements only.
+1. The product of `a` and `b` computed with additions only; this function takes time in $\Theta(a)$.
+1. The product of `a` and `b` computed with the [Russian Peasant multiplication method](https://en.wikipedia.org/wiki/Ancient_Egyptian_multiplication) which uses additions and trivial shifts only; this function takes time in $\Theta(\log a)$.
+1. `a` raised to the power of `b` computed with multiplications only; this function takes time in $\Theta(b)$.
+1. `a` raised to the power of `b` computed with multiplications and integer divisions only; this function takes time in $\Theta(\log b)$.
 1. `s` is a palindrome (that is, reads the same forward and backward).
 1. Induction.
