@@ -134,6 +134,7 @@ Simple recursive methods don't involve loops. Some more complicated ones might u
         return _check(s, 0, len(s))
     ```
 1. :star::star::star: Recursion revolves around a base case and a step from one input to a slightly larger input. What mathematical proof technique uses this same idea?
+1. :star::star::star: How many computation steps does it take to solve the Towers of Hanoi problem with $n$ disks?
 
 ## Answers
 1. It keeps calling itself until the call stack fills up all available memory, at which point the program crashes. This is called a stack overflow.
@@ -146,3 +147,4 @@ Simple recursive methods don't involve loops. Some more complicated ones might u
 1. `a` raised to the power of `b` computed with multiplications and integer divisions only; this function takes time in $\Theta(\log b)$.
 1. `s` is a palindrome (that is, reads the same forward and backward).
 1. Induction.
+1. $T(n)=2^n-1$. It is the closed-form solution to the recurrence relation $`T(n)=2*T(n-1)+1`$. The relation is derived from the timing analysis of the recursive case of the function definition. That case calls itself twice recursively ($`2*T(n-1)`$) and prints a string ($+1$).
