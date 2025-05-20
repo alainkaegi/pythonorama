@@ -74,6 +74,7 @@ Simple recursive methods don't involve loops. Some more complicated ones might u
 
 ## Questions
 1. :star: What happens if a recursive function with no base case is called?
+1. :star: What happens if a recursive function with two base cases is called?
 1. :star: When is recursion preferable to iteration (using loops)?
 1. :star::star: Assuming non-negative integer arguments, what does the function below compute?
     ```
@@ -136,6 +137,7 @@ Simple recursive methods don't involve loops. Some more complicated ones might u
 
 ## Answers
 1. It keeps calling itself until the call stack fills up all available memory, at which point the program crashes. This is called a stack overflow.
+1. It is fine. At least one base case is needed, but occasionally more than one is required.
 1. Some algorithms are much more clearly stated using recursion rather than iteration. These are algorithms that solve a problem by first solving one or more easier problems. In general, if you can find a way to express your algorithm iteratively, do that; if, in trying to do this, you find that you need to remember work to do after solving the easier problem, recursion will probably be easier.
 1. The sum of `a` and `b` computed with trivial increments and decrements only.
 1. The product of `a` and `b` computed with additions only; this function takes time in $\Theta(a)$.
