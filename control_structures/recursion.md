@@ -138,6 +138,7 @@ Simple recursive methods don't involve loops. Some more complicated ones might u
 1. :star::star::star: Give a recursive implementation for computing the *n*th element of the Fibonacci sequence that takes time in $\Theta(n)$ and avoids remembering the result of previous computations.
 1. :star::star::star: Recursion revolves around a base case and a step from one input to a slightly larger input. What mathematical proof technique uses this same idea?
 1. :star::star::star: How many computation steps does it take to solve the Towers of Hanoi problem with $n$ disks?
+1. :star::star::star::star: When is a function said to be tail recursive?
 
 ## Answers
 1. It keeps calling itself until the call stack fills up all available memory, at which point the program crashes. This is called a stack overflow.
@@ -184,3 +185,4 @@ Simple recursive methods don't involve loops. Some more complicated ones might u
    This implementation takes time in $\Theta(n)$, and space in $\Theta(1)$ with [tail call elimination](https://en.wikipedia.org/wiki/Tail_call).
 1. Induction.
 1. $T(n)=2^n-1$. It is the closed-form solution to the recurrence relation $`T(n)=2*T(n-1)+1`$. The relation is derived from the timing analysis of the recursive case of the function definition. That case calls itself twice recursively ($`2*T(n-1)`$) and prints a string ($+1$).
+1. A function is tail recursive when the last action it performs is the recursive call. It is a special case of recursive functions. It is an important special case as it enables [tail call elimination](https://en.wikipedia.org/wiki/Tail_call) essentially converting a recursion into an iteration. At this time, Python does not support this optimization.
