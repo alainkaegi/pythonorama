@@ -21,9 +21,9 @@ For a sorted array, the *binary search* algorithm starts by examining the *middl
 
 Sedgewick, Wayne, and Dondero provide [an implementation](https://introcs.cs.princeton.edu/python/42sort/binarysearch.py.html). Note that the function `search` calls `_search`, a private, more general, recursive helper function.
 
-How long does binary search take in the worst case? An equivalent question is how many times the array length ![n](https://latex.codecogs.com/svg.latex?n) can be divided in half before getting down to 1. This is the definition of ![log base 2 of n](https://latex.codecogs.com/svg.latex?\log_2&space;n). The worst case running time of binary search is therefore in ![order log n](https://latex.codecogs.com/svg.latex?\Theta(\log&space;n)).
+How long does binary search take in the worst case? An equivalent question is how many times the array length $n$ can be divided in half before getting down to 1. This is the definition of $\log_2 n$. The worst case running time of binary search is therefore in $\Theta(\log n)$.
 
-The average running time is also logarithmic because about half of the array elements won't be examined until just before giving up (that is, after ![order log n](https://latex.codecogs.com/svg.latex?\Theta(\log&space;n)) comparisons).
+The average running time is also logarithmic because about half of the array elements won't be examined until just before giving up (that is, after $\Theta(\log n)$ comparisons).
 
 ## Resource
 - Sedgewic, Wayne, and Dondero, *Introduction to Programming in Python*, [Section 4.2](https://introcs.cs.princeton.edu/python/42sort/)
@@ -40,7 +40,7 @@ The average running time is also logarithmic because about half of the array ele
 1. :star::star::star: To find the midpoint, Sedgewick, Wayne, and Dondero use the expression `(lo + hi) // 2`. Wouldn't `lo + (hi - lo) // 2` work just as well and avoid an integer overflow?
 
 ## Answers
-1. ![order log n](https://latex.codecogs.com/svg.latex?\Theta(\log&space;n))
+1. $\Theta(\log n)$
 1. It must be sorted.
 1. Constant. This would happen if the first element of the array was the key being sought.
 1.
