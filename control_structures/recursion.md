@@ -2,7 +2,7 @@
 ## Overview
 A *recursive* method is one that calls itself. This is useful for algorithms that can naturally be expressed in terms of solving a problem by first solving an easier problem.
 
-For example, suppose we want to compute ![n followed by an exclamation point](https://latex.codecogs.com/svg.latex?n!) (pronounced "![n](https://latex.codecogs.com/svg.latex?n) factorial"), which is the product of the first ![n](https://latex.codecogs.com/svg.latex?n) positive integers.
+For example, suppose we want to compute $n!$ (pronounced "$n$ factorial"), which is the product of the first $n$ positive integers.
 
 Here is a recursive solution:
 ```python
@@ -12,9 +12,9 @@ def factorial(n):
     return n * factorial(n - 1)
 ```
 
-The first part, called the *base case*, directly solves a simple problem: ![1 factorial is 1](https://latex.codecogs.com/svg.latex?n!=1).
+The first part, called the *base case*, directly solves a simple problem: $n! = 1$.
 
-The second part, the *recursive case*, solves the simpler problem of computing ![n minus 1 factorial](https://latex.codecogs.com/svg.latex?(n-1)!), then multiplies that result by ![n](https://latex.codecogs.com/svg.latex?n) to find ![n factorial](https://latex.codecogs.com/svg.latex?n!).
+The second part, the *recursive case*, solves the simpler problem of computing $(n - 1)!$, then multiplies that result by $n$ to find $n!$.
 
 This may seem like a strange way to solve the problem. You should be able to devise a less confusing (and slightly more efficient) algorithm to find the same result using *iteration* (a [loop](loops.md)). In fact, anything that can be done with iteration can be done with recursion, and vice versa.
 
@@ -59,7 +59,7 @@ For a method with multiple recursive calls, like `hanoi`, the call stack can gro
 If a recursive method doesn't include a base case, or the recursive calls don't get closer to a base case, the call stack *will* grow until the system runs out of memory, at which point the system will crash. This is called a *stack overflow*.
 
 ## Thinking Recursively
-When solving a problem recursively, start by solving a very simple instance (![n equals 1](https://latex.codecogs.com/svg.latex?n=1), the empty string, etc.). Then solve a slightly harder one. After you have several solutions, see if you find a rule connecting each one to the solution to a simpler problem. A side bonus of this approach is that your solutions make good [test](../software_development/testing.md) cases.
+When solving a problem recursively, start by solving a very simple instance ($n = 1$, the empty string, etc.). Then solve a slightly harder one. After you have several solutions, see if you find a rule connecting each one to the solution to a simpler problem. A side bonus of this approach is that your solutions make good [test](../software_development/testing.md) cases.
 
 Every recursive method must have at least one base case and at least one recursive case.
 
