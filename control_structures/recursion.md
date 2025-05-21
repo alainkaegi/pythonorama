@@ -133,6 +133,9 @@ Simple recursive methods don't involve loops. Some more complicated ones might u
     def check(s):
         return _check(s, 0, len(s))
     ```
+1. :star::star: Give a recursive implementation for computing the *n*th element of the Fibonacci sequence.
+1. :star::star::star: Give a recursive implementation for computing the *n*th element of the Fibonacci sequence that avoids unnecessary recomputations.
+1. :star::star::star: Give a recursive implementation for computing the *n*th element of the Fibonacci sequence that takes time in $\Theta(n)$ and avoids remembering the result of previous computations.
 1. :star::star::star: Recursion revolves around a base case and a step from one input to a slightly larger input. What mathematical proof technique uses this same idea?
 1. :star::star::star: How many computation steps does it take to solve the Towers of Hanoi problem with $n$ disks?
 
@@ -146,5 +149,38 @@ Simple recursive methods don't involve loops. Some more complicated ones might u
 1. `a` raised to the power of `b` computed with multiplications only; this function takes time in $\Theta(b)$.
 1. `a` raised to the power of `b` computed with multiplications and integer divisions only; this function takes time in $\Theta(\log b)$.
 1. `s` is a palindrome (that is, reads the same forward and backward).
+1. This function is a straight implementation of the defining recurrence relation.
+   ```python
+   def fib(n):
+       if n == 0:
+           return 0
+       if n == 1:
+           return 1
+       return fib(n - 1) + fib(n - 2)
+   ```
+   This function takes time in $\Theta(2^n)$.
+1. This implementation uses [memoization](https://en.wikipedia.org/wiki/Memoization), a form of dynamic programming, where we store the result of a computation for later reuse.
+   ```python
+   _fib_cache = {0: 0, 1: 1}
+   def fib(n):
+       if n in _fib_cache:
+           return _fib_cache[n]
+       _fib_cache[n] = fib(n - 1) + fib(n - 2)
+       return _fib_cache[n]
+   ```
+   This function takes time and space in $\Theta(n)$.
+1. This implementation relies on a helper function.
+   ```python
+   def _fib_helper(n, a, b):
+       if n == 0:
+           return a
+       if n == 1:
+           return b
+       return _fib_helper(n - 1, b, a + b)
+
+   def fib(n):
+       return _fib_helper(n, 0, 1)
+   ```
+   This implementation takes time in $\Theta(n)$, and space in $\Theta(1)$ with [tail call elimination](https://en.wikipedia.org/wiki/Tail_call).
 1. Induction.
 1. $T(n)=2^n-1$. It is the closed-form solution to the recurrence relation $`T(n)=2*T(n-1)+1`$. The relation is derived from the timing analysis of the recursive case of the function definition. That case calls itself twice recursively ($`2*T(n-1)`$) and prints a string ($+1$).
