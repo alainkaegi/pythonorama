@@ -58,10 +58,9 @@ The second rule tells us that $5n^2$ is in $\Theta(n^2)$, because the constant f
 
 If you know what orders two functions are in, it's easy to compare them. For example, suppose:
 
-$
-f(n) \in \Theta(n^2) \\\\
-g(n) \in \Theta(n^3)
-$
+
+$f(n) \in \Theta(n^2)$  
+$g(n) \in \Theta(n^3)$
 
 Clearly, $g(n)$ is larger for large $n$. You would therefore prefer an algorithm whose running time is $f(n)$, because it takes less time on large inputs.
 
@@ -109,15 +108,11 @@ Line            | Cost | Times   | Total
 
 This adds up to:
 
-$
-a + b + cn + c + dn + en + f
-$
+$a + b + cn + c + dn + en + f$
 
 Since lower order terms don't matter, this in the same order as
 
-$
-cn + dn + en = (c + d + e)n
-$
+$cn + dn + en = (c + d + e)n$
 
 which is in $\Theta(n)$.
 
@@ -142,9 +137,7 @@ In the worst case, `key` is in the last position (index $n - 1$), so the algorit
 
 Average case analysis can be a bit trickier, because you have to make additional assumptions about how likely various possibilities are. For this algorithm, let's assume that `key` is equally likely to be at any position in the array. The average number of passes through the loop is therefore:
 
-$
-\frac{1}{n}\sum_{i = 1}^n{i} = \frac{n + 1}{2} \in \Theta(n)
-$
+$\frac{1}{n}\sum_{i = 1}^n{i} = \frac{n + 1}{2} \in \Theta(n)$
 
 The best-case running time of an algorithm is always at least as good as its average running time, which in turn is at least as good as its worst-case running time.
 
@@ -174,9 +167,7 @@ What is the order of its running time? The non-recursive method does nothing but
 
 To analyze a recursive algorithm, you first write a special equation called a recurrence relation. For this algorithm, the recurrence relation is:
 
-$
-T(n)=\begin{cases}1 \textrm{ if } n = 1 \\\\ 1 + T(n - 1)\textrm{ otherwise }\end{cases}
-$
+$T(n)=\begin{cases}1 \textrm{ if } n = 1 \\\\ 1 + T(n - 1)\textrm{ otherwise }\end{cases}$
 
 The upper part says that the time to process $n$ numbers is constant in the base case where $n = 1$. It won't matter what the constant is, so you choose $1$ for simplicity.
 
@@ -184,9 +175,7 @@ The lower part says that, in the recursive case, the time is a constant plus the
 
 To get to an order, you need to solve the recurrence relation, that is, find an equivalent closed form equation that doesn't have $T(n)$ on the right side. In this case the solution is:
 
-$
-T(n) = n
-$
+$T(n) = n$
 
 This can be verified by substituting the solution into the recurrence relation.
 
