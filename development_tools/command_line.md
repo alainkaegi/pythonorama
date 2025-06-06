@@ -28,8 +28,10 @@ python3 hello.py
 
 ## Questions
 1. :star: What command is used to *run* a Python program from the command line?
-1. :star::star: Is it better to use the Python 2 or the Python 3 programming environment?
+1. :star: Is it better to use the Python 2 or the Python 3 programming environment?
+1. :star::star: What happens if you run Python without specifying a filename on the command line?
 
 ## Answers
 1. `python` (or `python3` on some machines)
 1. Python 3, in almost all circumstances. Support for Python 2 has ceased in 2020.
+1. Python runs in interactive mode. You may type individual Python expressions; the interpreter will evaluate each one and print the result. To exit interactive mode, enter `exit()`.
