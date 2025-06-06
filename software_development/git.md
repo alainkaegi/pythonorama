@@ -12,12 +12,12 @@ If it isn't, it will complain. You can download it from the [Git website](https:
 
 ### Configuration
 It's a good idea to run the commands below (with "your name" replaced appropriately) before using Git for the first time:
-```
-git config --global user.name "Your Name"
-git config --global user.email yourname@yourdomain.edu
+<pre>
+git config --global user.name "<em>Your Name</em>"
+git config --global user.email <em>yourname@yourdomain.edu</em>
 git config --global init.defaultBranch main
 git config --global core.editor nano
-```
+</pre>
 
 (The last one determined what text editor Git will use. `nano` is built in on Macs, but you'll have to install it on a Windows machine. If you don't specify an editor, you'll get `vim`, which is [notoriously user-surly](https://qz.com/990214/a-million-people-have-visited-this-web-page-explaining-how-to-close-vim-a-notoriously-difficult-text-editing-program/).)
 
