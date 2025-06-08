@@ -2,7 +2,7 @@
 ## Overview
 A *recursive* method is one that calls itself. This is useful for algorithms that can naturally be expressed in terms of solving a problem by first solving an easier problem.
 
-For example, suppose we want to compute $n!$ (pronounced $n$ factorial), which is the product of the first $n$ positive integers.
+For example, suppose we want to compute $n!$ (pronounced "$`n`$ factorial"), which is the product of the first $n$ positive integers.
 
 Here is a recursive solution:
 ```python
