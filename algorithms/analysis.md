@@ -236,7 +236,7 @@ $T(n) = 1 + T(n/2)$    | $\Theta(\log n)$
     ```
 1. :star::star::star: What statement in asymptotic notation is equivalent to the following?
    > There exists some $c > 0$ and some $n_0$ such that, for all $n \geq n_0$, $f(n) \leq cg(n)$.
-1. :star::star::star: Read the definition of $\sim$ notation on the Sedgewick, Wayne, & Dondero booksite. Given two functions $f(n)$ and $g(n)$, what is the relationship between the statements $f(n) \sim g(n)$ and $f(n) \in \Theta(g(n))$? In other words, does one statement imply the other, vice versa, neither, or both?
+1. :star::star::star: Read the definition of the $\sim$ notation on the Sedgewick, Wayne, and Dondero, [Section 4.1](https://introcs.cs.princeton.edu/python/41analysis/). Given two functions $f(n)$ and $g(n)$, what is the relationship between the statements $f(n) \sim g(n)$ and $f(n) \in \Theta(g(n))$? In other words, does one statement imply the other, vice versa, neither, or both?
 1. :star::star::star: The notation $f \in O(g)$ means that $f$ is either in the same order as $g$ or a lower order. Is there a notation that means $f$ is in a strictly lower order?
 
 ## Answers
