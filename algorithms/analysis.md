@@ -167,7 +167,7 @@ What is the order of its running time? The non-recursive method does nothing but
 
 To analyze a recursive algorithm, you first write a special equation called a recurrence relation. For this algorithm, the recurrence relation is:
 
-$T(n)=\begin{cases}1 \textrm{ if } n = 1 \\\\ 1 + T(n - 1)\textrm{ otherwise }\end{cases}$
+$`T(n)=\begin{cases}1 & \text{ if } n = 1 \\ 1 + T(n - 1) & \text{ otherwise }\end{cases}`$
 
 The upper part says that the time to process $n$ numbers is constant in the base case where $n = 1$. It won't matter what the constant is, so you choose $1$ for simplicity.
 
