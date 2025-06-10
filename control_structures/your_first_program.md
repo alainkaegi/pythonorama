@@ -18,7 +18,7 @@ print('The sum of the two numbers is', a + b)
 ```
 
 ### Expressions and Statements
-An *expression* has a value: `2 + 2`. Expressions can be made up of other expressions. For example, the expression `5 + (8 - 4)` is made by using the `+` operator to combine the expressions `5` and `(8 - 4)`. 
+An *expression* has a value: `2 + 2`. Expressions can be made up of other expressions. For example, the expression `5 + (8 - 4)` is made by using the `+` operator to combine the expressions `5` and `(8 - 4)`.
 
 A *statement* does something: `print('Hello, world!')`. Statements often contain expressions, such as `"Hello, world!"` within the previous statement. Complex statements, such as [loops](loops.md), can contain other statements.
 
