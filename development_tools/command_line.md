@@ -4,7 +4,8 @@ While some of us prefer to work with an integrated development environment (IDE)
 
 You must first have [Python](https://www.python.org/downloads/) installed on your machine. We *highly* recommend that you use a Python 3 programming environment. All courses and tutorials at Lewis & Clark use that version. You can verify that your installation is working by typing `python --version` on your command line.
 
-Note: Some installations still have Python 2 available. On these systems, you may need to invoke the Python 3 interpreter with the command `python3 --version`.
+> [!IMPORTANT]
+> Note: Some installations still have Python 2 available. On these systems, you may need to invoke the Python 3 interpreter with the command `python3` instead of `python`.
 
 The simple program below should be saved in a file called `hello.py`. You can use any simple text editor, such as [nano](https://www.nano-editor.org) (which comes pre-installed on most \*nix-based systems, including macOS),
 [Vim](https://www.vim.org/) (ditto), [Emacs](https://www.gnu.org/software/emacs/), or [Sublime Text](https://www.sublimetext.com/). Be careful not to use a word processor such as Microsoft Word, Notepad, or TextEdit, which will add extraneous formatting information to the file. Note that Python is case-sensitive.
@@ -15,11 +16,6 @@ print('hello, world')
 To run this program type:
 ```
 python hello.py
-```
-
-or, on some systems,
-```
-python3 hello.py
 ```
 
 ## Resource
