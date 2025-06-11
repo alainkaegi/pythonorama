@@ -15,9 +15,9 @@ You should also make sure you have [Python](https://www.python.org/) installed o
 ### Creating a Project
 Everything you do in PyCharm takes place within a project. You'll typically have one project for each of your courses.
 
-When you open PyCharm, it will either open your most recent project or (if there is none) take you to the `Welcome to Python` window. If you close any project(s) you have open, it should take you back to `Welcome to Python`.
+When you open PyCharm, it will either open your most recent project or (if there is none) take you to the `Welcome to Python` window. You can create additional projects from there or, if you have another project open, using the `File` menu.
 
-From there, click on `New Project` to create a project. Choose the name of your project (something like `algo`) and decide in which directory you'd like to store the project (typically `PycharmProjects` within your home directory). Make sure the Python version is set. If you check the `Create a welcome script` box, you'll get a simple program right away.
+When you create a new project, give it a name (something like `algo`) and decide in which directory you'd like to store the project (typically `PycharmProjects` within your home directory). Make sure the Python version is set. If you check the `Create a welcome script` box, you'll get a simple program right away.
 
 ### Running a Program
 You can run the `main.py` program in any of several ways, including:
@@ -34,14 +34,11 @@ Here's a very simple program to type in:
 print('Hello, world!')
 ```
 
-### Importing Packages
-To import an additional package like `numpy`:
-1. Open `PyCharm` > `Settings`.
-2. Click on the `>` next to the name of your project (e.g., `Project: algo`) to expand it.
-3. Click on `Project Interpreter`.
-4. Click on the `+` at the left side above the list of packages.
-5. Type the name of the package you want.
-6. Click on `Install Package` at the lower right.
+### Installing Packages
+To install an additional package like `numpy`.
+1. Find the icon at the lower left of the PyCharm window that, when hovered over with your mouse, shows the tooltip `Python Packages`. Click on it.
+1. Type the name of the package you want in the search bar.
+1. Click on `install` next to the package you want, shown below the search bar.
 
 ### Using the Interactive Interpreter
 If you just want to evaluate some Python expressions, `Tools` > `Python or Debug Console` will give you an interactive read-eval-print loop.
@@ -66,7 +63,7 @@ When creating a file, it should be within your project but *not* within the `.ve
 
 Using the green "play" triangle or `ctrl-r` to run a program runs the *most recent* program you've run, which might not be the one you're currently looking at.
 
-To stop a running program, click on the red square in the `Run` or `Python Console` pane. If you have many programs running (either because they are in infinite loops or have Python consoles waiting for commands), they can take up memory and slow down your computer until they are close. All running programms are closed automatically when you close the project.
+To stop a running program, click on the red square in the `Run` or `Python Console` pane. If you have many programs running (either because they are in infinite loops or have Python consoles waiting for commands), they can take up memory and slow down your computer until they are closed. All running programms are closed automatically when you close the project.
 
 ### Documentation
 See the `Help` menu or hover with your cursor over some word in your code.
