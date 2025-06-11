@@ -9,10 +9,10 @@ Visual Studio Code is made by Microsoft. Visual Studio Code supports other progr
 You can download [Visual Studio Code](https://code.visualstudio.com/) for free.
 
 ### Enabling Microsoft Python's Extension
-1. Click on View --> Extensions.
-1. Enter "Python" in the search box.
+1. `View` > `Extensions`. (In other words, select the `View` menu and chose `Extensions` from the dropdown list.)
+1. Enter `Python` in the search box.
 1. Select the Python extension by Microsoft.
-1. Click on Install.
+1. Click on `Install`.
 
 ### Creating a Program
 1. Start Visual Studio Code and click `New File`.
@@ -24,10 +24,10 @@ You can download [Visual Studio Code](https://code.visualstudio.com/) for free.
 
 ### Running a Program
 There are several ways to do this:
-- With the program file open, click on the white "play" triangle at the top corner of the window holding your program. Clicking on that button, causes Visual Studio Code to open a `TERMINAL` window at the bottom in which it will run your program.
-- Use the `Run` menu and select `Run Without Debuggging`.
+- With the program file open, click on the white "play" triangle at the top corner of the window displaying your program. Clicking on that button, causes Visual Studio Code to open a `TERMINAL` window at the bottom in which it will run your program.
+- `Run` > `Run Without Debuggging`.
 - Hit `ctrl-F5`.
-- Open a `TERMINAL` window (Terminal --> New Terminal) and invoke the Python interpreter manually.
+- Open a `TERMINAL` window (`Terminal` > `New Terminal`) and invoke the Python interpreter manually.
 
 ## Using Visual Studio Code
 The information on this page is enough to let you write and run programs. Everything else is just gravy, but there is a *lot* of delicious gravy to be had:
