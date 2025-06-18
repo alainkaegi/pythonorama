@@ -2,7 +2,7 @@
 ## Overview
 Loops tell the computer to execute statements repeatedly, stopping at the appropriate point. This allows you to tell the computer to do a great deal of work with very little code.
 
-The most general loop is the `while` loop -- if you were stranded on a desert island with only one loop, this is the one you would want. For common tasks, though, the `for` loop is often more convenient.
+The most general loop is the `while` loop; if you were stranded on a desert island with only one loop, this is the one you would want. For common tasks, though, the `for` loop is often more convenient.
 
 ## While Loops
 Here is a program using a `while` loop:
@@ -38,7 +38,7 @@ Its flow is:
 1. Go back to step 1.
 
 ## `break` and `continue`
-A `break` statement (just the word `break`) exits the current loop. If inside multiple nested loops, `break` only exits the innermost loop. This can be interpreted as "exit the loop".
+A `break` statement (just the word `break`) exits the current loop. If inside multiple nested loops, `break` only exits one loop. This can be interpreted as "exit the loop".
 
 A `continue` statement skips the rest of current loop iteration. This can be interpreted as "go on to the next pass through the loop".
 
@@ -138,7 +138,7 @@ There are other ways to get the computer to repeat some code, including [recursi
     for i in range(len(a) - 1, -1, -1):
         print(a[i])
     ```
-    This could also be done with a `while` loop, but it would be more code. There are even more compact notations using slices.
+    This could also be done with a `while` loop, but it would be more code. There are even more compact notations using [slices](../data_structures/lists.md#slices).
 1. A `for` loop:
     ```python
     for i in range(len(a)):
