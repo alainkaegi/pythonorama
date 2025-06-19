@@ -1,16 +1,24 @@
 # Your First Program
 ## Overview
-A simple Python program is structured like this:
-```python
-print('Hello, world!')
-```
-Any number of statements can replace the line:
+Here is a simple Python program:
 ```python
 print('Hello, world!')
 ```
 
+When run, it prints the text `Hello, world!` to the screen.
+
+In general, a program consists of a series of *statements*. Here is a slightly more complicated program:
+
+```python
+a = int(input('Enter a number: '))
+b = int(input('Enter another number: '))
+if a > b:
+    print('The first number is larger')
+print('The sum of the two numbers is', a + b)
+```
+
 ### Expressions and Statements
-An *expression* has a value: `2 + 2`. Expressions can be made up of other expressions: `5 + (8 - 4)`.
+An *expression* has a value: `2 + 2`. Expressions can be made up of other expressions. For example, the expression `5 + (8 - 4)` is made by using the `+` operator to combine the expressions `5` and `(8 - 4)`.
 
 A *statement* does something: `print('Hello, world!')`. Statements often contain expressions, such as `"Hello, world!"` within the previous statement. Complex statements, such as [loops](loops.md), can contain other statements.
 
