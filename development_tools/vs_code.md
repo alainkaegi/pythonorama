@@ -48,7 +48,7 @@ Use the `Help` menu.
 ## Questions
 1. :star: In what directory do program files generally live?
 1. :star::star: How do you stop a running program (e.g., one that has gone into an infinite loop)?
-1. :star::star::star: You have a data file that your program is going to read. Where should you put that file?
+1. :star::star: You have a data file that your program is going to read. Where should you put that file?
 1. :star::star::star: Is Visual Studio Code the same as Visual Studio or Visual Studio for Mac?
 
 ## Answers
