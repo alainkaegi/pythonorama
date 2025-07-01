@@ -24,7 +24,7 @@ git config --global core.editor nano
 ### Creating a Repository
 A *repository* (or *repo*) is a set of snapshots of your files. Each one captures the state of your files at a particular point in time.
 
-First create a directory and put a simple file in it -- say, `file.txt`.
+First create a directory and put a simple file in it, say, `file.txt`.
 
 Now, within that directory, initialize the repository with this command:
 ```
@@ -46,7 +46,7 @@ git commit -am 'Initial project version'
 ```
 The part at the end is the commit message, explaining what you changed.
 
-If you check the status again, you will see that there is now "nothing to commit" -- your current workspace of files matches the most recent commit. In general, working with Git is a cycle of making changes to your files and then committing them.
+If you check the status again, you will see that there is now "nothing to commit"; your current workspace of files matches the most recent commit. In general, working with Git is a cycle of making changes to your files and then committing them.
 
 ## Working With Git
 ### Committing
@@ -164,7 +164,7 @@ This serves two purposes:
 1. :star::star: Why would you ever have files in a directory that are not under version control?
 
 ## Answers
-1. Often -- several times an hour. Part of the point of Git is to allow you to go back to a previous commit if you make a mistake, so you want to have many options as to how far to go back.
+1. Often; several times an hour. Part of the point of Git is to allow you to go back to a previous commit if you make a mistake, so you want to have many options as to how far to go back.
 1. In a hidden directory called `.git` inside the directory where you ran `git init`.
 1. No. Git is clever enough to store only the differences between commits.
 1. There is no reason to store compiled code, as it can be generated from the source code. Huge, unchanging data files that are available elsewhere are also often left out of version control.
