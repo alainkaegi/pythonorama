@@ -156,6 +156,7 @@ This serves two purposes:
 - [Untrack files already added to Git repository based on .gitignore](http://www.codeblocq.com/2016/01/Untrack-files-already-added-to-git-repository-based-on-gitignore/)
 - [Cache your GitHub credentials so you don't have to type your password every time you push](https://docs.github.com/en/github/getting-started-with-github/caching-your-github-credentials-in-git)
 - [Version Control (Git)](https://missing.csail.mit.edu/2020/version-control/) (A video lecture with notes. Part of [The Missing Semester of Your CS Education](https://missing.csail.mit.edu/) from MIT.)
+- [How to Write Better Git Commit Messages – A Step-By-Step Guide](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/)
 
 ## Questions
 1. :star::star: How often should you commit?
