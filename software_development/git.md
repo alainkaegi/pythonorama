@@ -44,7 +44,7 @@ To make your first commit:
 ```
 git commit -am 'Initial project version'
 ```
-The part at the end is the commit message, explaining what you changed.
+The part at the end is the commit message, explaining what you changed[.](https://xkcd.com/1296/)
 
 If you check the status again, you will see that there is now "nothing to commit"; your current workspace of files matches the most recent commit. In general, working with Git is a cycle of making changes to your files and then committing them.
 
