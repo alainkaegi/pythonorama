@@ -159,7 +159,7 @@ Simple recursive methods don't involve loops. Some more complicated ones might u
            return 1
        return fib(n - 1) + fib(n - 2)
    ```
-   This function takes time in $\Theta(2^n)$.
+   This function takes time in $\Theta(\phi^n)$, where $\phi = \frac{1 + \sqrt{5}}{2}$.
 1. This implementation uses [memoization](https://en.wikipedia.org/wiki/Memoization), a form of dynamic programming, where you store the result of a computation for later reuse.
    ```python
    _fib_cache = {0: 0, 1: 1}
@@ -182,7 +182,7 @@ Simple recursive methods don't involve loops. Some more complicated ones might u
    def fib(n):
        return _fib_helper(n, 0, 1)
    ```
-   This implementation takes time in $\Theta(n)$, and space in $\Theta(1)$ with [tail call elimination](https://en.wikipedia.org/wiki/Tail_call).
+   This implementation takes time in $\Theta(n)$ and (with [tail call elimination](https://en.wikipedia.org/wiki/Tail_call)) space in $\Theta(1)$.
 1. Induction.
-1. $T(n)=2^n-1$. It is the closed-form solution to the recurrence relation $`T(n)=2*T(n-1)+1`$. The relation is derived from the timing analysis of the recursive case of the function definition. That case calls itself twice recursively ($`2*T(n-1)`$) and prints a string ($+1$).
+1. $T(n)=2^n-1$. It is the closed-form solution to the recurrence relation $`T(n)=2T(n-1)+1`$. The relation is derived from the analysis of the recursive case of the function definition. That case calls itself twice recursively ($`2T(n-1)`$) and prints a string ($+1$).
 1. A function is tail recursive when the last action it performs is the recursive call. It is a special case of recursive functions. It is an important special case as it enables [tail call elimination](https://en.wikipedia.org/wiki/Tail_call) essentially converting a recursion into an iteration. [Python does not normally perform this optimization](https://stackoverflow.com/questions/13591970/does-python-optimize-tail-recursion), but [it can be done](https://chrispenner.ca/posts/python-tail-recursion).
