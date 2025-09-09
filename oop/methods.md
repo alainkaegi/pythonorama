@@ -42,7 +42,7 @@ class Square:
 - Lubanovic, *Introducing Python, 3rd Edition*, Chapter 10
 
 ## Questions
-1. :star: Assuming `Square` has been defined, why does the code below not run?
+1. :star: Assuming `Square` has been defined with an `area` method, why does the code below not run?
     ```python
     s = Square(2)
     print(area())
