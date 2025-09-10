@@ -48,7 +48,7 @@ The guidelines below have exceptions, but any deviations should be deliberate.
     def mean(numbers):
         return sum(numbers) / len(numbers)
     ```
-    If you only refer to something once but naming it would make an expression less complicated, or make the expression much easier to understand, or if the value is set in a separate configuration file, go ahead and give it a name.
+    If you only refer to something once but naming it would make the expression easier to understand, or if the value is set in a separate configuration file, go ahead and give it a name.
   - The larger the scope of a name, the more descriptive its name should be. One-letter names are only appropriate when they have small scope (e.g., the inside of a small function) or are used for very standard purposes (like `i` for a loop index).
   - Avoid abbreviations and clever in-jokes. Something that makes sense to you right now will not make sense to someone (possibly you) who has to read the code a month later.
   - Avoid the variable names `l` (which looks too much like the upper-case letter `I` and the numeral `1`) and `O` (which looks too much like the numeral `0`).
