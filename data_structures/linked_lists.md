@@ -122,13 +122,13 @@ class LinkedList:
             node = node.next
         return result
 
-    def __str__(self):
+    def __repr__(self):
         result = '<'
         if self._front:
-            result += self._front.item
+            result += repr(self._front.item)
             node = self._front.next
             while node:
-                result += ', ' + node.item
+                result += ', ' + repr(node.item)
                 node = node.next
         return result + '>'
 
@@ -151,7 +151,7 @@ class LinkedList:
             node.next = node.next.next
 ```
 
-The `__getitem__` and `__setitem__` magic methods allow elements of a `LinkedList` to be accessed using the usual square brackets. For example, you can say things like `a[2] = 100`. `__len__` and `__str__` make `len` and `str` work.
+The `__getitem__` and `__setitem__` magic methods allow elements of a `LinkedList` to be accessed using the usual square brackets. For example, you can say things like `a[2] = 100`. `__len__` and `__repr__` make `len`, `repr`, and `str` work.
 
 Since many of these methods require "walking down" the list, they take linear time in the worst case.
 
@@ -162,6 +162,7 @@ Sets and dictionaries can be implemented using similar techniques. If better run
 
 ### Advantages of Array-Based Structures
 - Any item in an array can be accessed in constant, rather than linear, time.
+- An item can be added to or removed from the back of a array-based list in constant, rather than linear, time.
 - There is no overhead for creating or storing `Node` objects.
 - In languages like C and Java, primitive items in an array are near each other in memory. Since computer hardware is built with the assumption that nearby memory locations are likely to be accessed together, this can make loops over arrays faster than loops over linked structures.
 
