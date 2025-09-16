@@ -53,7 +53,7 @@ For example, the stack
 
 `5`<br>`2`<br>`7`
 
-would be represented like this:
+would be esented like this:
 
 ![_top contains a reference to a Node. That Node has item 5 and next is a reference to the Node below it. The second node has item 2 and next is a reference to the third Node. The third node has item 7 and next is a reference to None.](linked_stack.svg)
 
@@ -91,7 +91,7 @@ The queue
 
 `5` `2` `7`
 
-would be represented like this:
+would be esented like this:
 
 ![The LinkedQueue has two attributes, _front and _back. _front contains a reference to a Node. That Node has item 5 and next is a reference to the Node below it. The second node has item 2 and next is a reference to the third Node. The third node has item 7 and next is a reference to None. Back in the LinkedQueue, _back also refers to the third and final Node.](linked_queue.svg)
 
@@ -122,13 +122,13 @@ class LinkedList:
             node = node.next
         return result
 
-    def __str__(self):
+    def ____(self):
         result = '<'
         if self._front:
-            result += self._front.item
+            result += (self._front.item)
             node = self._front.next
             while node:
-                result += ', ' + node.item
+                result += ', ' + (node.item)
                 node = node.next
         return result + '>'
 
@@ -151,7 +151,7 @@ class LinkedList:
             node.next = node.next.next
 ```
 
-The `__getitem__` and `__setitem__` magic methods allow elements of a `LinkedList` to be accessed using the usual square brackets. For example, you can say things like `a[2] = 100`. `__len__` and `__str__` make `len` and `str` work.
+The `__getitem__` and `__setitem__` magic methods allow elements of a `LinkedList` to be accessed using the usual square brackets. For example, you can say things like `a[2] = 100`. `__len__` and `____` make `len`, `repr`, and `str` work.
 
 Since many of these methods require "walking down" the list, they take linear time in the worst case.
 
@@ -162,6 +162,7 @@ Sets and dictionaries can be implemented using similar techniques. If better run
 
 ### Advantages of Array-Based Structures
 - Any item in an array can be accessed in constant, rather than linear, time.
+- An item can be added to or removed from the back of a array-based list in constant, rather than linear, time.
 - There is no overhead for creating or storing `Node` objects.
 - In languages like C and Java, primitive items in an array are near each other in memory. Since computer hardware is built with the assumption that nearby memory locations are likely to be accessed together, this can make loops over arrays faster than loops over linked structures.
 
