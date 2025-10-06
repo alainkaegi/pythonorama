@@ -53,7 +53,7 @@ For example, the stack
 
 `5`<br>`2`<br>`7`
 
-would be esented like this:
+would be represented like this:
 
 ![_top contains a reference to a Node. That Node has item 5 and next is a reference to the Node below it. The second node has item 2 and next is a reference to the third Node. The third node has item 7 and next is a reference to None.](linked_stack.svg)
 
@@ -91,7 +91,7 @@ The queue
 
 `5` `2` `7`
 
-would be esented like this:
+would be represented like this:
 
 ![The LinkedQueue has two attributes, _front and _back. _front contains a reference to a Node. That Node has item 5 and next is a reference to the Node below it. The second node has item 2 and next is a reference to the third Node. The third node has item 7 and next is a reference to None. Back in the LinkedQueue, _back also refers to the third and final Node.](linked_queue.svg)
 
@@ -122,7 +122,7 @@ class LinkedList:
             node = node.next
         return result
 
-    def ____(self):
+    def __repr__(self):
         result = '<'
         if self._front:
             result += (self._front.item)
@@ -151,7 +151,7 @@ class LinkedList:
             node.next = node.next.next
 ```
 
-The `__getitem__` and `__setitem__` magic methods allow elements of a `LinkedList` to be accessed using the usual square brackets. For example, you can say things like `a[2] = 100`. `__len__` and `____` make `len`, `repr`, and `str` work.
+The `__getitem__` and `__setitem__` magic methods allow elements of a `LinkedList` to be accessed using the usual square brackets. For example, you can say things like `a[2] = 100`. `__len__` and `__repr__` make `len`, `repr`, and `str` work.
 
 Since many of these methods require "walking down" the list, they take linear time in the worst case.
 
