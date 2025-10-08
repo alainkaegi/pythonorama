@@ -10,7 +10,7 @@ There are at least two times when Python might try to convert an object to a str
 
 You *could* define these two methods differently if, for example, you wanted [a concise representation for printing but a detailed one for debugging](https://stackoverflow.com/a/2626364). Since you'll usually want them to the be the same, by default `__str__` just calls `__repr__`. This means that **if you only want to define one, define `__repr__`**.
 
-Say you wanted to define your own data type to support complex numbers. (Python has built-in support for complex numbers, so this example is purely for illustrative purposes). Here is an initial sketch:
+Say you want to define your own data type to support complex numbers. (Python has built-in support for complex numbers, so this example is purely for illustrative purposes). Here is an initial sketch:
 ```python
 class Complex:
 
@@ -19,7 +19,7 @@ class Complex:
         self.imag = i
 ```
 
-With this definition, if you create an instance of a complex number and tried to print its value
+With this definition, if you create an instance of a complex number and try to print its value
 ```python
 c = Complex(1.0, 1.0)
 print(c)
@@ -58,7 +58,7 @@ you obtain something more informative:
 Here's what happens behind the scenes when you evaluate `str(c)`:
 1. Python calls the function `str` with the argument `c`.
 1. `str` calls the `__str__` method on the object to which `c` refers.
-1. `__str__` calls `__repr__` and returns the resulting value.
+1. Since `__str__` is not defined in `Complex`, the default `__str__` calls `__repr__` and returns the resulting value.
 
 If you don't define `__repr__` (or `__str__`) for your class, it inherits a default version like the one that produced `<__main__.Complex object at 0x1061d0b10>` above.
 
