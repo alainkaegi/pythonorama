@@ -138,6 +138,7 @@ Operator | Magic method
    ```
 1. :star: Can one overload the addition operator (`+`) in Python?
 1. :star: What is the name of the method one must define to overload the multiplication operator (`*`) in Python?
+1. :star: If a class defines *both* `__repr__` and `__str__`. Under which circumstances is each one called? 
 1. :star::star: Assuming two distinct objects, `o1` and `o2`, of the same type, will the expression `o1 == o2` always return `True` as long as their contents are equal?
 1. :star::star: Assume class `MyType` does not define either of the magic methods `__repr__` or `__str__`. Is it an error to call `str` on an instance/object of that class?
 1. :star::star: Can you overload the `is` operator?
@@ -153,6 +154,7 @@ Operator | Magic method
         def __eq__(self, other):
             return self.x == other.x and self.y == other.y
    ```
+1. `__repr__` is called by the built-in `repr` function and when displaying the value of an expression in the interactive interpreter. `__str__` is called by the built-in functions `str` and `print`.
 1. Yes. To do so, one must supply a definition for the magic method call `__add__`.
 1. `__mul__`
 1. No. If a class does not define `__eq__`, it inherits a default version that returns `False` when used to compare distinct objects, even if their contents are the same.
