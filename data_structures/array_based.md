@@ -2,9 +2,9 @@
 ## Overview
 Python uses lists as its default linear structures. Lower-level languages like C instead use primitive arrays. Key differences include:
 - An array's size is set when it is created; it cannot change.
-- Python list features, such as slicing and methods like the `count` method, are not directly available for primitive arrays.
+- Python list features, such as slicing and methods like `count`, are not directly available for primitive arrays.
 
-This page describes how to build various linear structures out of [Python lists masquerading as] primitive arrays. While you would normally just use Python's lists, sets, and so on, this is worthy of study because:
+This page describes how to build various linear structures out of Python lists masquerading as primitive arrays. While you would normally just use Python's lists, sets, and so on, this is worthy of study because:
 - Understanding the underlying data structures and algorithms clarifies the performance of Python's fancier data structures. For example, it will help you understand why adding something to the *beginning* of a long list is much more expensive than adding something to the *end*.
 - You may someday be working in a language that uses primitive arrays.
 - You may need to build a data structure that is slightly different from what Python provides.
@@ -142,12 +142,12 @@ class ArrayList:
     def __len__(self):
         return self._size
 
-    def __str__(self):
+    def __repr__(self):
         result = '<'
         if self._size > 0:
-            result += self._data[0]
+            result += repr(self._data[0])
         for i in range(1, self._size):
-            result += ', ' + self._data[i]
+            result += ', ' + repr(self._data[i])
         return result + '>'
 
     def add_at(self, index, item):
@@ -170,7 +170,7 @@ class ArrayList:
         self._data = new_data
 ```
 
-The `__getitem__` and `__setitem__` magic methods allow elements of an `ArrayList` to be accessed using the usual square brackets. For example, you can say things like `a[2] = 100`. `__len__` and `__str__` make `len` and `str` work.
+The `__getitem__` and `__setitem__` magic methods allow elements of an `ArrayList` to be accessed using the usual square brackets. For example, you can say things like `a[2] = 100`. `__len__` and `__repr__` make `len`, `repr`, and `str` work.
 
 The `add_at` and `remove_at` methods insert and remove an item from the list, respectively. Since these potentially require shifting over all of the existing items (e.g., when adding an item at index 0), they take linear time in the worst case.
 
@@ -189,7 +189,7 @@ Sets and dictionaries can be implemented using similar techniques. If better run
 
 ## Answers
 1. `push`, but its amortized time is constant.
-1. `add_at`, `remove_at`, and `__str__`.
+1. `add_at`, `remove_at`, and `__repr__`.
 1. `ls.remove_at(n - 1)`, because it doesn't need to shift any items.
 1. `self._size` is decremented to -1 and the *last* element of `self._data` (which is not part of the stack) is returned.
 1. Yes -- this is called *loitering*. A more robust implementation would set this element to `None` so the garbage collector can reclaim the item. Removing an item from an `ArrayQueue` or `ArrayList` has the same issue.
