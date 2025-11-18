@@ -31,7 +31,7 @@ Topic | CS 171<br>(CS1) | CS 172<br>(CS2) | CS 369<br>(AI & ML) | CS 383<br>(Alg
 &nbsp;&nbsp;&nbsp;&nbsp;[Loops](control_structures/loops.md) | x | x | x | x | x | x
 &nbsp;&nbsp;&nbsp;&nbsp;[Functional Decomposition](control_structures/functional_decomposition.md) | x | x | x | x | x | x
 &nbsp;&nbsp;&nbsp;&nbsp;[Recursion](control_structures/recursion.md) | | x | x | x | x |
-&nbsp;&nbsp;&nbsp;&nbsp;Higher-Order Functions | | | x | x | x |
+&nbsp;&nbsp;&nbsp;&nbsp;[Higher-Order Functions](control_structures/higher_order.md) | | | x | x | x |
 **Data Structures**
 &nbsp;&nbsp;&nbsp;&nbsp;[Built-in Types](data_structures/built_in_types.md) | x | x | x | x | x | x
 &nbsp;&nbsp;&nbsp;&nbsp;[Operators](data_structures/operators.md) | x | x | x | x | x | x
