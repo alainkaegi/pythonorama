@@ -144,6 +144,7 @@ Operator | Magic method
 1. :star::star: Can you overload the `is` operator?
 1. :star::star: Can you overload a method or function in Python?
 1. :star::star::star: If a class defines the magic method `__eq__`, must it also also define the magic method `__ne__`?
+1. :star::star::star: `repr(None)` evaluates to `'None'`, but when you evaluate `None` in the interactive intepreter nothing is printed. Why?
 
 ## Answers
 1. ```python
@@ -162,3 +163,4 @@ Operator | Magic method
 1. No, certain Python operators cannot be overloaded. They include `is`, `not`, `and`, and `or`.
 1. No, Python does not support function or method overloading. If you define multiple functions or methods within a module or class, the last definition will overwrite all previous ones.
 1. No. If you don't specify a method `__ne__`, Python will invoke `__eq__` and return its inverse.
+1. Every function returns some value, even if it contains no `return` statement. If nothing else is specified, this value is `None`. Users would likely find it annoying or confusing if `'None'` were printed after every function call that doesn't return a meaningful value (for example, a call to `print`). For this reason, the interactive interpreter doesn't print anything when the value of an experssion is `None`.
