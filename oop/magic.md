@@ -145,6 +145,7 @@ Operator | Magic method
 1. :star::star: Can you overload a method or function in Python?
 1. :star::star::star: If a class defines the magic method `__eq__`, must it also also define the magic method `__ne__`?
 1. :star::star::star: `repr(None)` evaluates to `'None'`, but when you evaluate `None` in the interactive intepreter nothing is printed. Why?
+1. :star::star::star: When you evaluate `3` in the interactive interpreter it prints `3`, but when you evaluate `repr(3)` it prints `'3'`. Why don't these match?
 
 ## Answers
 1. ```python
@@ -164,3 +165,5 @@ Operator | Magic method
 1. No, Python does not support function or method overloading. If you define multiple functions or methods within a module or class, the last definition will overwrite all previous ones.
 1. No. If you don't specify a method `__ne__`, Python will invoke `__eq__` and return its inverse.
 1. Every function returns some value, even if it contains no `return` statement. If nothing else is specified, this value is `None`. Users would likely find it annoying or confusing if `'None'` were printed after every function call that doesn't return a meaningful value (for example, a call to `print`). For this reason, the interactive interpreter doesn't print anything when the value of an experssion is `None`.
+1. The intepreter first passes the value it receives to `repr`, then passes the result to `print`. When you evaluate `3`, `repr` adds a set of quotation marks and `print` strips them back off. When you evaluate `repr(3)`, the intepreter computes `repr(repr(3))`, which is `"'3'"`, then passes that string to `print`, which prints `'3'`.
+   
