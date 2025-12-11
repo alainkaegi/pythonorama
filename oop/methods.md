@@ -48,6 +48,7 @@ class Square:
     print(area())
     ```
 1. :star::star: Add a method `perimeter` to the `Square` class. It should take no arguments (other than `self`) and return the `Square`'s perimeter.
+1. :star::star: Define a class `Student` with an initializer and instance variables for first name, last name, and id number. Add two methods, one to access a student's last name, and another to change that student's last name.
 1. :star::star: Is `self` a reserved word?
 1. :star::star::star: You could just define `area` directly as a regular function (below). What are the pros and cons of each approach?
    ```python
@@ -72,5 +73,20 @@ class Square:
         def perimeter(self):
             return self.width * 4
     ```
+1.
+    ```python
+    class Student:
+        def __init__(self, first_name, last_name, id):
+            self.first_name = first_name
+            self.last_name = last_name
+            self.id = id
+
+        def get_last_name(self):
+            return self.last_name
+
+        def set_last_name(self, new_name):
+            self.last_name = new_name
+    ```
+   The collection of methods that access and alter a particular attribute are often referred to as *getters* and *setters*, respectively.
 1. No, but it is the conventional name for this argument. Using is consistenly will make your code more legible to other Python users.
 1. The difference is largely one of organization, which is no small concern for large software projects. The functional approach keeps all of the information about *areas* together, while the object-oriented approach keeps all of the information about *circles* together. The object-oriented approach can also be more efficient, because each object knows where to find its own methods; you don't have to go through a potentially long if/elif/else chain.
