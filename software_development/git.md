@@ -76,7 +76,7 @@ git log --oneline --graph --all
 ```
 Each line represents one commit. It shows the hash (a number that identifies the state of the files) and the commit message. Some additional information like `HEAD -> main` tells you which one is the current commit.
 
-For a example to work with, suppose the output of the log command looks like this:
+For an example to work with, suppose the output of the log command looks like this:
 ```
 * b361556 (HEAD -> main) My poem is now twice as long
 * 456b316 Initial project version
