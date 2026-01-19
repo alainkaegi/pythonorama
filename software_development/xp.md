@@ -43,7 +43,7 @@ Stories will be modified, added, and discarded as the project proceeds. Nothing 
 **One developer** should [create a new GitHub repository](setting_up_github.md). The others should then clone it to their local machines. They may need to do some setup (like marking directories as source roots or creating a Python virtual environment) because this developer-specific information is not stored in the repository.
 
 ### Iteration
-Development proceeds in a series of iterations (known in some other agile methods as sprints). For the main Software Development project, each iteration lasts two weeks.
+Development proceeds in a series of *iterations* (known in some other agile methods as *sprints*). For the main Software Development project, each iteration lasts two weeks.
 
 Each iteration consists of four stages:
 1. Customer meeting
@@ -53,8 +53,8 @@ Each iteration consists of four stages:
 
 #### Customer Meeting
 During the customer meeting, we play the "planning game". Here the developers determine the *cost* of stories and the customer determines the *value* of stories. Specifically:
-1. The customer writes stories. They may modify, add, or discard old stories. The developers and the customer should discuss these stories to make sure that everyone understands what is needed. The customer also indicates, very roughly, which stories should be tackled first. These stories are entered at the bottom of the `Backlog` column in the GitHub Project board.
-1. The developers estimate how long each story (or at least those stories in the "tackle next" category) will take. Each story is given a rating from 1 to 3 units of difficulty. As a rough approximation, 1 means that a pair of developers could complete the story in under an hour, 3 means that it would take the entire iteration, and 2 is somewhere in between. If a story seems so difficult that it cannot be accomplished in one iteration, it should be broken down into smaller stories. Note that the estimate should be for completing that story *independent of any other stories*; the developers don't yet know in what order stories will be tackled. Modify the title of each story in Trello to show its estimated difficulty, e.g., "Duck Detonation (2)". Existing stories may be re-estimated if the developers feel that work done so far, or new information, justifies doing so.
+1. The customer writes stories. They may modify, add, or discard old stories. The developers and the customer should discuss these stories to make sure that everyone understands what is needed. The customer also indicates, very roughly, which stories should be tackled first. These stories are entered in the `Backlog` column in the GitHub Project board.
+1. The developers estimate how long each story (or at least those stories in the "tackle next" category) will take. Each story is given a rating from 1 to 3 units of difficulty. As a rough approximation, 1 means that a pair of developers could complete the story in under an hour, 3 means that it would take the entire iteration, and 2 is somewhere in between. If a story seems so difficult that it cannot be accomplished in one iteration, it should be broken down into smaller stories. Note that the estimate should be for completing that story *independent of any other stories*; the developers don't yet know in what order stories will be tackled. Modify the title of each story to show its estimated difficulty, e.g., "Duck Detonation (2)". Existing stories may be re-estimated if the developers feel that work done so far, or new information, justifies doing so.
 1. The customer is given a budget to choose stories. For the first iteration, this will be 3 units times the number of developer pairs; for later iterations, it will be based on the average number of units the team has completed in each previous iteration. Given this budget, the customer chooses which stories they want the developers to work on first. This is indicated by moving the stories to the `This Iteration` column.
 
 #### Planning
@@ -73,7 +73,7 @@ When time for the iteration runs out, it is time to deliver. Resist the temptati
 
 A working version of the system is presumably in the GitHub repository on the `main` branch. It need only be checked out and put into a format the customer can use (e.g., a standalone executable) along with any necessary instructions and delivered.
 
-The customer now plays with the system. On the project board, each story in the `Merged` column should either be moved to the `Approved` column or back to the `Backlog` column; in the latter case, the customer should include comments in the card explaining why it was rejected. This also gives the customer the opportunity to discover bugs that the developers missed and think about what's important for the next iteration. Crucially, the customer agrees or disagrees with any claims the developers have made about completing stories.
+The customer now plays with the system. On the project board, each story in the `Merged` column should either be moved to the `Approved` column or back to the `Backlog` column; in the latter case, the customer should include comments in the story explaining why it was rejected. This also gives the customer the opportunity to discover bugs that the developers missed and think about what's important for the next iteration. Crucially, the customer agrees or disagrees with any claims the developers have made about which stories are complete.
 
 ## Resources
 - [Extreme Programming: A gentle introduction](http://www.extremeprogramming.org/)
