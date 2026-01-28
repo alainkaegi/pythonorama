@@ -125,6 +125,15 @@ Occasionally, though, it won't be obvious to Git how to combine the changes. Thi
 ### Remote Repositories
 Everything above has been about a local repository on your own machine. This is useful, but the real power of Git lies in collaborating with others, using a remote repository stored at someplace like [GitHub](https://github.com/).
 
+> [!IMPORTANT]
+> Note: to interact with GitHub, you'll need to install the [Git Credential Manager](https://github.com/git-ecosystem/git-credential-manager).
+> 
+> If you're using one of the Macs in Olin 305, it's already installed, but you will need to run the following command once:
+> 
+> ```
+> git-credential-manager configure
+> ```
+
 Once you have cloned a remote repository to get a local one, you can work along in your local repository. You should avoid working on the `main` branch.
 
 Occasionally, you'll want to incorporate the latest changes from the remote `main` branch into the branch you're working on (e.g., `experiment`). First make sure you are in a clean state, then:
