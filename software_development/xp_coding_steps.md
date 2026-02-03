@@ -81,10 +81,11 @@ git reset --hard HEAD
 ```
 
 ### 2.ii Pull everything
-Pulling both fetches the remote versions of all branches and tries to merge them into your local branches. This *shouldn't* result in any merge conflicts. If it does (because you and someone else were committing on the same branch), you'll have to resolve the conflicts.
+Pulling does both fetches a remote branch and tries to merge it into a local one. In other words, it makes your current local branch look like the corresponding remote one. This *shouldn't* result in any merge conflicts. If it does (because you and someone else were committing on the same branch), you'll have to resolve the conflicts.
 
 ```
-git pull --all
+git checkout main
+git pull
 ```
 
 ### 2.iii Check out your branch
