@@ -88,7 +88,7 @@ git checkout 456b316
 The hexadecimal number at the end is a prefix of the hash, enough to uniquely identify it. If you now examine your files, you'll see that they're back to the way they were after the first commit!
 
 The newer commit (b361556) is still in the repository. Once something is in the repository, it's fairly difficult to destroy it.
-> [!Caution]
+> [!CAUTION]
 > There are Git commands that allow you to modify the past, but it's a bad idea; you're likely to lose work, become your own grandparent, or tear a hole in the spacetime continuum.
 
 To go back to the newer commit, you could use a similar `checkout` command. A much better idea is to use
