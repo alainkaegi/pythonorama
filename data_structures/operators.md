@@ -28,8 +28,8 @@ Like almost all modern languages, Python has an elaborate [operator precedence h
 - Anderson, [Bit Twiddling Hacks](https://graphics.stanford.edu/~seander/bithacks.html) (These are in C, but the operators are pretty much the same in C and in Python.)
 
 ## Questions
-1. :star: What is the value of `1 + 2`
-1. :star: What is the value of `'1' + '2'`
+1. :star: What is the value of `1 + 2`?
+1. :star: What is the value of `'1' + '2'`?
 1. :star: What is the value of `5 - 2 * 3`?
 1. :star: What is the value of `83 % 10`?
 1. :star::star: `x << 1` is the same as what common arithmetic operation?
