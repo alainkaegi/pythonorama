@@ -67,7 +67,7 @@ returns `'owe'``.
 ## Questions
 1. :star: Can a string be zero characters long?
 1. :star: What does `sub in s` do?
-1. :star: How would you get the first character of a string `s`?
+1. :star: How would you get the first character of a (non-empty) string `s`?
 1. :star: How would you get the first three characters of a string `s`?
 1. :star::star: How would you get the last character of a string `s`?
 1. :star::star: How would you get the last three characters of a string `s`?
