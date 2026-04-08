@@ -77,14 +77,14 @@ Simple recursive methods don't involve loops. Some more complicated ones might u
 1. :star: What happens if a recursive function with two base cases is called?
 1. :star: When is recursion preferable to iteration (using loops)?
 1. :star::star: Assuming non-negative integer arguments, what does the function below compute?
-    ```
+    ```python
     def v(a, b):
         if a == 0:
             return b
         return 1 + v(a - 1, b)
     ```
 1. :star::star: Assuming non-negative integer arguments, what does the function below compute?
-    ```
+    ```python
     def w(a, b):
         if a == 0:
             return 0
@@ -93,7 +93,7 @@ Simple recursive methods don't involve loops. Some more complicated ones might u
         return b + w(a - 1, b)
     ```
 1. :star::star: Assuming non-negative integer arguments, what does the function below compute?
-    ```
+    ```python
     def x(a, b):
         if a == 0:
             return 0
@@ -103,7 +103,7 @@ Simple recursive methods don't involve loops. Some more complicated ones might u
             return b + x(a // 2, b * 2)
     ```
 1. :star::star: Assuming non-negative integer arguments, what does the function below compute?
-    ```
+    ```python
     def y(a, b):
         if b == 0:
             return 1
@@ -112,7 +112,7 @@ Simple recursive methods don't involve loops. Some more complicated ones might u
         return a * y(a, b - 1)
     ```
 1. :star::star: Assuming non-negative integer arguments, what does the function below compute?
-    ```
+    ```python
     def z(a, b):
         if b == 0:
             return 1
