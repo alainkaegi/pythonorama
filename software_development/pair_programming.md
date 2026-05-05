@@ -10,9 +10,9 @@
 1. :star: What are the two roles in pair programming?
 1. :star::star: What are the advantages of pair programming?
 1. :star::star: Is pair programming really used in industry or is it just an educational technique?
-1. :star::star: If the navigator has access to a second computer, what might they reasonably use it for?
-1. :star::star: If one member of the pair is significantly more experienced, which one should drive?
-1. :star::star: How often should the members of the pair switch roles?
+1. :star::star: If the navigator of the programming pair has access to a second computer, what might they reasonably use it for?
+1. :star::star: If one member of the programming pair is significantly more experienced, which one should drive?
+1. :star::star: How often should the members of the programming pair switch roles?
 
 ## Answers
 1. Driver and navigator. Some sources call the navigator the observer.
